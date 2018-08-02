@@ -1,0 +1,703 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='description', content='')
+		title Localcoin
+
+		// CSS
+		link(href='css/style.css', rel='stylesheet', media='screen')
+
+	body
+		.wrapper
+			//- .scroll-progress
+			//- 	.scroll-progress__bar.scroll-progress__bar_white
+			//- 		span Scroll
+			//- 	.scroll-progress__bar.scroll-progress__bar_green
+			//- 		span Scroll
+
+			header.header#header
+				.container
+					.hamburger.hamburger--squeeze
+						.hamburger-box
+							.hamburger-inner
+
+					a(href="#").header__logo
+						img(src="img/logo.png", srcset="img/logo-2x.png 2x", alt="Localcoin")
+					
+					.header__nav(style="display:none")
+						ul
+							li
+								a(href="#advantages") Why LocalCoin
+							li
+								a(href="#tokeninfo") Token info
+							li
+								a(href="#roadmap") Road map
+					.header__right-menu
+						ul
+							li
+								a(href="#").btn-blue.btn-blue_small Buy LLC coin
+							li
+								a(href="#").whitepaper WhitePaper
+							li
+								.header__lang.select
+									input(type="hidden" value="1").select_hidden
+									.select_in
+										span.select_title
+											img(src="img/eng.png", srcset="img/eng-2x.png 2x", alt="eng")
+										i.select_arrow
+									ul.select_list
+										li(data-value="1").is-active
+											img(src="img/eng.png", srcset="img/eng-2x.png 2x", alt="eng")
+										li(data-value="2")
+											img(src="img/svg/rus.svg", alt="rus")
+
+
+			section.main#main
+				.container
+					.main__tab-links.tab-links
+						ul
+							li
+								a(href="#preSale").gradient-text.active Pre-sale
+							li
+								a(href="#airDrop").gradient-text AirDrop
+
+					.main__tab#preSale.active
+						.pre-sale
+							h3 The 1st fully decentralised blockchain based OTC trading platform
+							a(href="#").pre-sale__btn.btn-yellow Buy LLC coin
+							.ps-circuit
+								.pre-sale__slider-wrap
+									.pre-sale__slider
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_01
+												.item-img.item-img_01
+													img(src="img/icons/pre-sale_ico1.png", srcset="img/icons/pre-sale_ico1-2x.png 2x", alt="icon1")
+												h4
+													| Decentralised 
+													br
+													| Bank
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_02
+												.item-img.item-img_02
+													img(src="img/icons/pre-sale_ico2.png", srcset="img/icons/pre-sale_ico2-2x.png 2x", alt="icon2")
+												h4
+													| Decentralised 
+													br
+													| chat
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_03
+												.item-img.item-img_03
+													img(src="img/icons/pre-sale_ico3.png", srcset="img/icons/pre-sale_ico3-2x.png 2x", alt="icon3")
+												h4
+													| OTC
+													br
+													| Trading
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_04
+												.item-img.item-img_04
+													img(src="img/icons/pre-sale_ico4.png", srcset="img/icons/pre-sale_ico4-2x.png 2x", alt="icon4")
+												h4
+													| ICO
+													br
+													| Accelerator
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_05
+												.item-img.item-img_05
+													img(src="img/icons/pre-sale_ico5.png", srcset="img/icons/pre-sale_ico5-2x.png 2x", alt="icon5")
+												h4
+													| Untraceable
+													br
+													| Transactions
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_06
+												.item-img.item-img_06
+													img(src="img/icons/pre-sale_ico6.png", srcset="img/icons/pre-sale_ico6-2x.png 2x", alt="icon6")
+												h4 Mining
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_07
+												.item-img.item-img_07
+													img(src="img/icons/pre-sale_ico7.png", srcset="img/icons/pre-sale_ico7-2x.png 2x", alt="icon7")
+												h4
+													| Social
+													br
+													| Network
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+										.pre-sale__slide
+											a(href="#").ps-circuit__item.ps-circuit__item_08
+												.item-img.item-img_08
+													img(src="img/icons/pre-sale_ico8.png", srcset="img/icons/pre-sale_ico8-2x.png 2x", alt="icon8")
+												h4
+													| Decentralised
+													br
+													| trading
+												.item-desc
+													p
+														| Blockchain based and fully encrypted decentralised Social network. 
+														span.md-lg-hidden Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network
+													.item-close
+
+					.main__tab#airDrop
+						.air-drop
+							.row
+								.col-md-6
+									.air-drop__left-block
+										h3
+											| Get you 
+											span first 100 
+											| LLC for 
+											span free 
+											| NOW!
+										.air-drop__chart-label
+											span 46 100 322 
+											| LLC AirDroped
+										.air-drop__chart
+											.air-drop__chart-inner
+												svg.mainSVG(viewbox='0 0 800 600', xmlns='http://www.w3.org/2000/svg', preserveaspectratio='xMidYMid meet')
+													g#graphTextGroup(opacity='0.5')
+														text(transform='translate(48.33 473.71)', font-size='18', fill='#fff', font-family='Roboto', font-weight='700') 0
+														text(transform='translate(48.33 301.71)', font-size='18', fill='#fff', font-family='Roboto') 200
+														text(transform='translate(48.33 101.71)', font-size='18', fill='#fff', font-family='Roboto') 400
+													g#horizontalLinesGroup(fill='none', opacity='1', stroke='#FFF', stroke-miterlimit='10')
+														line(x1='780', y1='481.7', opacity='0.3', x2='30', y2='481.7')
+														line(x1='780', y1='381.7', opacity='0.3', x2='30', y2='381.7')
+														line(x1='780', y1='281.7', opacity='0.3', x2='30', y2='281.7')
+														line(x1='780', y1='181.7', opacity='0.3', x2='30', y2='181.7')
+														line(x1='780', y1='81.7', opacity='0.3', x2='30', y2='81.7')
+													g#uiGroup
+														path#graphLine(fill='none', stroke-linecap='round', stroke='#F79819', stroke-width='4', stroke-miterlimit='1.0', d='M94.6,405.1\
+														c62.9-95,109.2-111.7,142.4-103.8c44.6,10.6,74.8,67.9,143.4,63.8c35-2.1,32.7-17.4,73.9-21.7c77.7-8.2,105.9,44,136.3,13.6\
+														c30.6-30.5,10.8-91.7,44.9-127.5c29.1-30.6,56.7,0,94.1-33.9c20.6-18.6,32.6-46.2,39.6-66.5')
+														g#connectorGroup
+															line#connector(x1='92', x2='92', y1='2', y2='2', stroke='#FFF')
+														g.box
+															rect(x='0', width='80', height='40', rx='20', ry='20', fill='#FFF')
+															text#boxLabel(x='40', y='28')
+													circle#nullDot(fill='red', cx='0', cy='0', r='0')
+													circle#graphDot(fill='#FFF', cx='0', cy='0', r='10')
+													circle#dragger(fill='rgba(240,240,240,0.1)', cx='0', cy='0', r='15', stroke='rgba(240,240,240,0.05)', stroke-width='10')
+													lineargradient#boxGrad(gradientunits='userSpaceOnUse', x1='65.7809', y1='25.7808', x2='14.2194', y2='25.7808', gradienttransform='matrix(-5.857245e-007 -1 1 -5.872379e-007 14.2192 65.7809)')
+														stop(offset='0.3858', style='stop-color:#E4386D')
+														stop(offset='0.7513', style='stop-color:#CF2156')
+
+										.air-drop__progress
+											span.s-left 56 100 322 LLC AirDropped
+											.air-drop__progress-bar
+												span.s-left.s-black 56 100 322 LLC AirDropped
+											span.s-right 56 100 322 LLC left
+
+
+								.col-md-6
+									.air-drop__right-block
+										h3 Limited Airdrop
+										h4 We will AirDrop 10 000 000 free Coins(LLC)
+										span To Telegram and Twitter users from 1st of Aug till the end of ICO Campaign
+										p From the 20th of August will be announced enhanced Bounty program with Twitter and Telegram participation. All scores of Grand AirDrop will be saved and announced to participants
+										.air-drop__reg-links
+											a(href="#").btn-yellow.btn-yellow_small Register now
+											span
+												a(href="#") Click here 
+												| to understand why 
+												a(href="#") LocalCoin is better 
+												| than others
+
+
+
+			section.advantages#advantages
+				.container
+					.row
+						.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+							a(href="https://www.youtube.com/watch?v=j90Sgieta7s?autoplay=1", data-fancybox).advantages__video
+								img(src="img/video_bg.png", alt="video")
+								h2 Why LocalCoin
+					
+					.advantages__table-wrap
+						.advantages__table
+							.advantages__table-inner
+								table
+									thead
+										tr
+											th(style="width:20.2%") &nbsp;
+											th(style="width:11.8%")
+												.t-logo
+													img(src="img/lc-logo.png", alt="logo")
+												span LocalCoin.is
+											th(style="width:11.9%")
+												.t-logo
+													img(src="img/lbc-logo.png", alt="logo")
+												span LocalBitcoin
+											th(style="width:8%")
+												.t-logo
+													img(src="img/gdax.png", alt="logo")
+												span GDAX
+											th(style="width:7.65%")
+												.t-logo
+													img(src="img/okex.png", alt="logo")
+												span OKEx
+											th(style="width:9.1%")
+												.t-logo
+													img(src="img/bin.png", alt="logo")
+												span Binatnce
+											th(style="width:9%")
+												.t-logo
+													img(src="img/bitf.png", alt="logo")
+												span Bitfinex
+											th(style="width:9.4%")
+												.t-logo
+													img(src="img/bith.png", alt="logo")
+												span Bithumb
+											th(style="width:8.1%")
+												.t-logo
+													img(src="img/gdax.png", alt="logo")
+												span GDAX
+											th &nbsp;
+									tbody
+										tr
+											td.text-left Personal wallet
+											td 
+												.t-plus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td &nbsp;
+										tr
+											td.text-left Limited Total Supply
+											td.t-best $100 Trillion
+											td $10 Trillion
+											td $1 Trillion
+											td.t-na n.a.
+											td $10 Trillion
+											td.t-na n.a.
+											td $10 Trillion
+											td.t-na n.a.
+											td &nbsp;
+										tr
+											td.text-left High Project
+											td.t-best ∞
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td &nbsp;
+										tr
+											td.text-left Investors
+											td 100+
+											td.t-best 240
+											td 41
+											td 53
+											td 12
+											td 69
+											td 5
+											td 42
+											td &nbsp;
+										tr
+											td.text-left Pure utility token
+											td
+												.t-plus
+											td
+												.t-minus
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td.t-na n.a.
+											td &nbsp;
+										tr
+											td.text-left Fast integration
+											td
+												.t-plus
+											td 24 hr
+											td
+												.t-plus
+											td 24 hr
+											td
+												.t-minus
+											td
+												.t-plus
+											td
+												.t-minus
+											td
+												.t-plus
+											td &nbsp;
+										tr
+											td.text-left Smart contract
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-minus
+											td &nbsp;
+										tr
+											td.text-left Raised
+											td
+												.t-plus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td &nbsp;
+										tr
+											td.text-left Investors
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-plus
+											td
+												.t-minus
+											td
+												.t-minus
+											td
+												.t-minus
+											td &nbsp;
+										tr
+											td.text-left High Project
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-minus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td
+												.t-plus
+											td &nbsp;
+										tr
+											td.text-left Fast integration
+											td.t-best 30 min
+											td 45 min
+											td 4 hr
+											td 2 hr
+											td 2 hr
+											td 9 hr
+											td 24 hr
+											td 1 hr
+											td &nbsp;
+										tr
+											td.text-left Investors
+											td.t-best 30 min
+											td 45 min
+											td 4 hr
+											td 2 hr
+											td 2 hr
+											td 9 hr
+											td 24 hr
+											td 1 hr
+											td &nbsp;
+										tr
+											td.text-left Limited Supply
+											td.t-best None
+											td $10 000
+											td $10 000
+											td $7 500
+											td $10 000
+											td $15 000
+											td $10 000
+											td $10 000
+											td &nbsp;
+
+
+			section.tokeninfo#tokeninfo
+				.container
+					h2 Token info
+					.row
+						.col-lg-8
+							.tokeninfo__tab-links.tab-links
+								ul
+									li
+										a(href="#shares").active
+											span.xs-hidden Allocation of shares
+											span.xs-visible Shares
+									li
+										a(href="#useOfFunds") Use of funds
+
+							.tokeninfo__tab#shares.active
+								.tokeninfo__chart
+									canvas#sharesChart(width='380', height='380')
+								.tokeninfo__chart-legend.chart-legend#sharesChartLegend
+									ul
+										li.chart-legend__item.chart-legend__item_01
+											a(href="#")
+												| 20% 
+												br
+												| Public Crowdsale
+												span 70% maximum allocation to investors through entire crowdsale with burn of unsold
+										li.chart-legend__item.chart-legend__item_02
+											a(href="#")
+												| 15% 
+												br
+												| Community Venture Fund
+												span 10% allocated to a community venture fund, the use of which is voted on by investors
+										li.chart-legend__item.chart-legend__item_03
+											a(href="#")
+												| 15% 
+												br
+												| Bounty Program
+												span 10% allocated to the development team (frozen by contract for 1 year)
+										li.chart-legend__item.chart-legend__item_04
+											a(href="#")
+												| 4% 
+												br
+												| Public Crowdsale
+												span 5% allocated to bounty program for community engagement
+
+							.tokeninfo__tab#useOfFunds
+								.tokeninfo__chart
+									canvas#useOfFundsChart(width='400', height='400')
+								.tokeninfo__chart-legend.chart-legend#useOfFundsChartLegend
+									ul
+										li.chart-legend__item.chart-legend__item_01
+											a(href="#")
+												| 25% 
+												br
+												| Public Crowdsale
+												span 70% maximum allocation to investors through entire crowdsale with burn of unsold
+										li.chart-legend__item.chart-legend__item_02
+											a(href="#")
+												| 20% 
+												br
+												| Community Venture Fund
+												span 10% allocated to a community venture fund, the use of which is voted on by investors
+										li.chart-legend__item.chart-legend__item_03
+											a(href="#")
+												| 10% 
+												br
+												| Bounty Program
+												span 10% allocated to the development team (frozen by contract for 1 year)
+										li.chart-legend__item.chart-legend__item_04
+											a(href="#")
+												| 5% 
+												br
+												| Public Crowdsale
+												span 5% allocated to bounty program for community engagement
+
+						.col-md-10.offset-md-1.col-lg-3.offset-lg-1
+							.tokeninfo__details
+								h4 Details
+								.row
+									.col-sm-4.col-lg-12
+										ul.details-col-1
+											li
+												span Name
+												| Local coin
+											li
+												span Symbol
+												| LLC
+											li
+												span Type
+												| LLC90
+									.col-sm-4.col-lg-12
+										ul.details-col-2
+											li
+												span LCS maximum total supply
+												| 100 000 000
+											li
+												span Available through pre-ICO
+												| 70 000 000
+											li
+												span Token burn
+												| All unsold
+									.col-sm-4.col-lg-12
+										ul.details-col-3
+											li
+												span Soft cap
+												| $500 000
+											li
+												span Absolute hard cap
+												| $20 000 000 
+											li
+												span Transparency
+												| Open source
+
+
+
+			section.roadmap#roadmap
+				.container
+					h2 Road map
+					.row
+						.col-md-11.offset-md-1.col-lg-12.offset-lg-0
+							ul.row
+								li.col-sm-4.col-lg-3
+									.roadmap__item.r-item.r-item_01
+										.r-item__header
+											span.r-item__year 2015
+											span.r-item__month December
+										.r-item__body
+											span.r-item__desc Company incorporation
+								li.col-sm-4.col-lg-3
+									.roadmap__item.r-item.r-item_02
+										.r-item__header
+											span.r-item__year 2016
+											span.r-item__month September
+										.r-item__body
+											span.r-item__desc Initial team members established
+								li.col-sm-4.col-lg-3
+									.roadmap__item.r-item.r-item_03
+										.r-item__header
+											span.r-item__year 2017
+											span.r-item__month March
+										.r-item__body
+											span.r-item__desc Submission for exchange listings
+								li.col-lg-3
+									.roadmap__item.r-item.r-item_04
+										.r-item__header
+											span.r-item__year 2019
+											span.r-item__month August
+										.r-item__body
+												span.r-item__desc Start of dividend distributions
+
+
+
+			section.getfree#getfree
+				.container
+					.getfree__logo
+						img(src="img/d-logo.png", srcset="img/d-logo-2x.png 2x" alt="logo")
+					h2
+						| Get 
+						span 100 LLC 
+						| for 
+						span free
+					p The first 100 000 users receive 100 LLC coins after registration on the exchange's website	
+					a(href="#").getfree__btn.btn-yellow I want to get Free 100 LLC
+
+
+			footer.footer#footer
+				.container
+					ul.footer__social.f-social
+						li
+							a(href="#").f-social__item.f-social__item_vk
+						li
+							a(href="#").f-social__item.f-social__item_fb
+						li
+							a(href="#").f-social__item.f-social__item_tm
+						li
+							a(href="#").f-social__item.f-social__item_tw
+						li
+							a(href="#").f-social__item.f-social__item_yt
+							
+					ul.footer__links
+						li
+							a(href="#").footer__wp White Paper
+						li
+							a(href="#").btn-blue Buy LLC coin
+
+					ul.footer__nav
+						li
+							a(href="#main") Home
+						li
+							a(href="#advantages") Why LocalCoin
+						li
+							a(href="#tokeninfo") Token info
+						li
+							a(href="#roadmap") Road map
+						li
+							a(href="#airDrop") AirDrop
+
+					.footer__desc ExpertOption Ltd, Saint Vincent and the Grenadines, 1510, Kingstown, Suite 305, Griffith Corporate Centre. Registration number 22863 IBC 2015
+					
+
+
+
+		// jQuery
+		script(src="js/jquery-3.3.1.min.js")
+
+		// Plugins for airDrop chart
+		script(src="js/TweenMax.min.js")
+		script(src="js/Draggable.min.js")
+		script(src="js/ThrowPropsPlugin.min.js")
+		script(src="js/DrawSVGPlugin.min.js")
+		script(src="js/AnticipateEase.min.js")
+		script(src="js/MorphSVGPlugin.min.js")
+
+		// Plugins
+		script(src="js/slick.min.js")
+		script(src="js/fancybox.min.js")
+		script(src="js/mCustomScrollbar.min.js")
+		script(src="js/Chart.min.js")
+		script(src="js/chartjs-plugin-style.min.js")
+
+		// JavaScripts
+		script(src='js/scripts.js')
