@@ -21,12 +21,6 @@
 	font-style: normal
 
 @font-face
-	font-family: 'Osnova Pro Regular'
-	src: url('../fonts/osnovapro-regular.woff2') format("woff2"), url('../fonts/osnovapro-regular.woff') format("woff"), url('../fonts/osnovapro-regular.ttf') format("truetype")
-	font-weight: normal
-	font-style: normal
-
-@font-face
 	font-family: 'Osnova Pro Medium'
 	src: url('../fonts/osnovapro-medium.woff2') format("woff2"), url('../fonts/osnovapro-medium.woff') format("woff"), url('../fonts/osnovapro-medium.ttf') format("truetype")
 	font-weight: normal
@@ -40,7 +34,6 @@
 
 $roboto: 'Roboto Regular'
 $robotob: 'Roboto Bold'
-$osnova: 'Osnova Pro Regular'
 $osnovam: 'Osnova Pro Medium'
 $osnovab: 'Osnova Pro Bold'
 
@@ -197,7 +190,7 @@ img
 	font-size: 24px
 	line-height: 1
 	color: #000
-	padding: 13px 23px
+	padding: 12px 23px
 	&_small
 		font-size: 16px
 		box-shadow: none
@@ -208,61 +201,7 @@ img
 		background-color: #de9d11
 
 
-// .scroll-progress
-// 	display: none
-// 	width: 132px
-// 	height: 14px
-// 	user-select: none
-// 	cursor: default
-// 	position: fixed
-// 	left: 50%
-// 	bottom: 80px
-// 	transform: translateX(-50%) rotate(-90deg)
-// 	z-index: 998
-// 	&__bar
-// 		position: absolute
-// 		top: 0
-// 		left: 0
-// 		width: 100%
-// 		font-size: 0
-// 		line-height: 0
-// 		user-select: none
-// 		cursor: default
-// 		&::before
-// 			content: ""
-// 			display: inline-block
-// 			width: 40px
-// 			height: 1px
-// 			background-color: #fff
-// 			vertical-align: middle
-// 			margin-right: 7px
-// 		&::after
-// 			content: ""
-// 			display: inline-block
-// 			width: 40px
-// 			height: 1px
-// 			background-color: #fff
-// 			vertical-align: middle
-// 			margin-left: 7px
-// 		span
-// 			display: inline-block
-// 			font-size: 14px
-// 			line-height: 1
-// 			vertical-align: middle
-// 		&_white
-// 			color: #fff
-// 		&_green
-// 			overflow: hidden
-// 			white-space: nowrap
-// 			color: $green
-// 			z-index: 999
-// 			&::before
-// 				background-color: $green
-// 			&::after
-// 				background-color: $green
-
-
-.select
+.select-lang
 	position: relative
 	width: 42px
 	padding-right: 15px
@@ -303,6 +242,7 @@ img
 		list-style: none
 		z-index: 1000
 		margin-left: 0
+		text-align: left
 		li
 			line-height: 1
 			padding: 0!important
@@ -360,13 +300,17 @@ img
 	position: absolute
 	top: 0
 	left: 0
+	z-index: 99
 	.container
 		position: relative
-		padding-top: 65px
+		padding-top: 15px
 		padding-bottom: 45px
 		font-size: 0
+		z-index: 1
 		@media (max-width: 1219px)
 			padding-bottom: 30px
+		@media (max-width: 999px)
+			padding-top: 65px
 	
 	&__logo
 		display: inline-block
@@ -440,6 +384,9 @@ img
 		@media (max-width: 999px)
 			display: block
 			float: right
+		@media (max-width: 767px)
+			float: none
+			text-align: center
 		ul
 			li
 				display: inline-block
@@ -475,8 +422,8 @@ img
 	&__lang
 		@media (max-width: 767px)
 			position: absolute
-			top: 80px
-			right: 20px	
+			top: 28px
+			left: 20px	
 
 
 
@@ -485,15 +432,53 @@ img
 
 ///////////////// MAIN ///////////////////
 .main
+	position: relative
+	padding: 111px 0 96px
+	//@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
 	background: #04153c url(../img/main_bg.png) center 0 no-repeat
-	background-size: 2100px auto
-	padding: 161px 0 96px
-	@media (max-width: 999px)
-		background-size: 2500px auto
+	background-size: 2500px auto
 	@media (max-width: 1219px)
 		padding: 146px 0 64px
 	@media (max-width: 767px)
 		padding: 223px 0 40px
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 0
+		overflow: hidden
+		@media (max-width: 767px)
+			display: none
+		&::before
+			content: ""
+			display: block
+			width: 100%
+			height: 100%
+			background-color: #05143d
+			opacity: .7
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+		video
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1300px
+			min-width: 100%
+			min-height: 100% 
+			object-fit: cover
+			@media (max-width: 999px)
+				height: 1600px
+			@media (max-width: 767px)
+				height: 1350px
+	.container
+		position: relative
+		z-index: 1
 
 	&__tab-links
 		text-align: center
@@ -535,13 +520,235 @@ img
 			@media (max-width: 767px)
 				line-height: 29px
 				margin-bottom: 33px
-		&__btn
-			margin-bottom: 45px
+		&__form
+			position: relative
+			font-size: 0
+			z-index: 1
+			margin-bottom: 50px
 			@media (max-width: 1219px)
-				margin-bottom: 35px
+				margin-bottom: 40px
 			@media (max-width: 767px)
-				margin-bottom: 65px
+				margin-bottom: 70px
 
+		.ps-form
+			&__input
+				display: inline-block
+				width: 290px
+				height: 48px
+				font-size: 24px
+				vertical-align: top
+				margin-right: 20px
+				@media (max-width: 999px)
+					margin: 0 0 10px
+				input
+					display: inline-block
+					width: 100%
+					height: 100%
+					font-family: $osnovam
+					font-size: 16px
+					line-height: 1
+					border: none
+					outline: none
+					padding: 0 20px
+				input[type=number]
+					width: 96px
+					height: auto
+					float: left
+					padding: 0
+					font-size: 24px
+					line-height: 1
+					position: absolute
+					top: 50%
+					left: 5px
+					transform: translateY(-50%)
+					//text-align: center
+					-moz-appearance: textfield
+					@media (max-width: 767px)
+						width: 190px
+				input[type=number]::-webkit-input-placeholder
+					line-height: 1
+					color: #000
+				input[type=number]::-webkit-outer-spin-button,
+				input[type=number]::-webkit-inner-spin-button
+					-webkit-appearance: none
+					margin: 0
+					opacity: 0
+				input[type=text]
+					height: 48px
+					border-radius: 4px
+				input[type=text]::-webkit-input-placeholder
+					line-height: 1
+					color: #a2adc7
+				&_num
+					position: relative
+					width: 175px
+					background-color: #fff
+					padding-left: 5px
+					border-radius: 0 4px 4px 0
+					@media (max-width: 767px)
+						display: block
+						width: 280px
+					&.input-coin
+						margin-right: 0
+						border-radius: 4px 0 0 4px
+						@media (max-width: 767px)
+							border-radius: 4px 4px 0 0
+							margin: 0 auto
+					&.input-llc
+						width: 155px
+						@media (max-width: 767px)
+							width: 280px
+							border-radius: 0 0 4px 4px
+							margin: 0 auto 10px
+						&::before
+							content: "LLC"
+							display: block
+							font-size: 24px
+							line-height: 1
+							color: #a2adc7
+							text-transform: uppercase
+							position: absolute
+							top: 50%
+							right: 10px
+							transform: translateY(-45%)
+							@media (max-width: 767px)
+								right: 28px
+
+					.prev-coin
+						width: 15px
+						height: 15px
+						position: absolute
+						top: 9px
+						right: 7px
+						&:hover
+							background-color: #dedede
+							cursor: pointer
+						&::before
+							content: ""
+							display: block
+							width: 6px
+							height: 6px
+							border-top: 2px solid #000
+							border-right: 2px solid #000
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -25%) rotate(-45deg)
+					.next-coin
+						width: 15px
+						height: 15px
+						position: absolute
+						right: 7px
+						bottom: 9px
+						&:hover
+							background-color: #e4e7ef
+							cursor: pointer
+						&::before
+							content: ""
+							display: block
+							width: 6px
+							height: 6px
+							border-top: 2px solid #000
+							border-right: 2px solid #000
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -75%) rotate(135deg)
+
+				&_text
+					height: auto
+					text-align: right
+					@media (max-width: 999px)
+						display: block
+						text-align: center
+						width: 360px
+						margin: 0 auto 10px
+					@media (max-width: 767px)
+						max-width: 280px
+
+			.select-coin
+				width: 50px
+				position: absolute
+				top: 50%
+				right: 25px
+				transform: translateY(-50%)
+				z-index: 99
+				&.is-opened
+					.select_arrow 
+						transform: translateY(-50%) rotate(180deg) 
+				&_in
+					position: relative
+					width: 100%
+					height: 100%
+					color: #a2adc7
+					cursor: pointer
+				&_arrow
+					display: none
+				&_title
+					display: block
+					white-space: nowrap
+					text-overflow: ellipsis
+					overflow: hidden
+				&_list
+					position: absolute
+					top: 110%
+					left: -5px
+					right: -5px
+					display: none
+					height: auto
+					background-color: #fff
+					border-radius: 4px
+					//width: 100%
+					list-style: none
+					z-index: 1000
+					margin-left: 0
+					li
+						line-height: 1
+						color: #a2adc7
+						cursor: pointer
+						padding-right: 2px
+						margin-bottom: 5px
+						&.is-active
+							display: none
+
+			&__reg
+				font-size: 16px
+				color: #fff
+				a
+					color: $green
+					&:hover
+						color: $yellow
+
+			&__arr
+				position: relative
+				display: inline-block
+				width: 30px
+				height: 48px
+				vertical-align: top
+				background-color: #e4e7ef
+				@media (max-width: 767px)
+					width: 280px
+					height: 20px
+				&::before
+					content: ""
+					display: block
+					width: 15px
+					height: 14px
+					background: url(../img/svg/arr-right.svg) center no-repeat
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					@media (max-width: 767px)
+						transform: translate(-50%, -50%) rotate(90deg)
+
+			&__btn
+				display: inline-block
+				font-family: $osnovam
+				border: none
+				vertical-align: top
+				cursor: pointer
+	
 		.ps-circuit
 			position: relative
 			width: 740px
@@ -619,63 +826,6 @@ img
 							display: inline-block
 							color: #fff
 							font-size: 16px
-					.item-close
-						display: none
-						width: 32px
-						height: 32px
-						position: absolute
-						left: 50%
-						bottom: 25px
-						transform: translateX(-50%)
-						z-index: 99
-						cursor: pointer
-						&::before
-							content: ''
-							position: absolute
-							top: 14px
-							left: -4px
-							width: 40px
-							height: 4px
-							border-radius: 4px
-							background: #10163a linear-gradient(45deg, rgba(136, 56, 255, 0.84) 0%, rgba(41, 187, 255, 0.84) 100%)
-							transform: rotate(-45deg)
-						&::after
-							content: ''
-							position: absolute
-							top: 14px
-							left: -4px
-							width: 40px
-							height: 4px
-							border-radius: 4px
-							background: #10163a linear-gradient(45deg, rgba(136, 56, 255, 0.84) 0%, rgba(41, 187, 255, 0.84) 100%)
-							transform: rotate(45deg)
-				&.active
-					z-index: 100
-					cursor: default
-					.item-img
-						z-index: 100
-					h4
-						color: #000
-						z-index: 100
-					.item-desc
-						visibility: visible
-						background-color: #fff
-						width: 394px
-						height: 394px
-						padding-top: 235px
-						box-shadow: 0 0 20px #271c55
-						border: 3px solid $violet
-						border-radius: 100%
-						position: absolute
-						top: 50%
-						left: 50%
-						transform: translate(-50%, -35%)
-						opacity: 1
-						z-index: 99
-						p
-							display: inline-block
-						.item-close
-							display: block
 				&_01
 					top: 0
 					left: 50%
@@ -702,6 +852,32 @@ img
 				&_08
 					top: 81px
 					left: 80px
+				&.item-hover
+					&:hover
+						z-index: 100
+						cursor: default
+						.item-img
+							z-index: 100
+						h4
+							color: #000
+							z-index: 100
+						.item-desc
+							visibility: visible
+							background-color: #fff
+							width: 394px
+							height: 394px
+							padding-top: 235px
+							box-shadow: 0 0 20px #271c55
+							border: 3px solid $violet
+							border-radius: 100%
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -35%)
+							opacity: 1
+							z-index: 99
+							p
+								display: inline-block
 
 
 		&__slider-wrap
@@ -719,6 +895,7 @@ img
 				margin-bottom: 60px
 			@media (max-width: 767px)
 				margin-bottom: 35px
+
 			h3
 				line-height: 1.16
 				max-width: 340px
@@ -726,8 +903,17 @@ img
 				@media (max-width: 767px)
 					max-width: 230px
 					margin-bottom: 20px
+				a
+					border-bottom: 1px solid #fff
 				span
 					color: $green
+			p
+				color: #fff
+				margin-bottom: 20px
+				a
+					color: $green
+					&:hover
+						color: $yellow
 
 		&__chart-label
 			color: #fff
@@ -739,8 +925,6 @@ img
 		&__chart
 			max-width: 88%
 			@media (max-width: 999px)
-				max-width: 75%
-			@media (max-width: 599px)
 				max-width: 100%
 			&-inner
 				position: relative
@@ -765,7 +949,7 @@ img
 				@media (max-width: 1219px)
 					left: -17px
 				@media (max-width: 999px)
-					left: -20px
+					left: -1.5%
 				@media (max-width: 767px)
 					left: -3%
 
@@ -850,12 +1034,16 @@ img
 				max-width: 340px
 				color: #fff
 				margin-bottom: 18px
+				@media (max-width: 999px)
+					max-width: 100%
 				@media (max-width: 767px)
 					font-size: 16px
 			p
 				color: #9785e8
 				max-width: 400px
 				margin-bottom: 44px
+				@media (max-width: 999px)
+					max-width: 100%
 				@media (max-width: 767px)
 					margin-bottom: 25px
 
@@ -869,12 +1057,13 @@ img
 				display: inline-block
 				vertical-align: middle
 				max-width: 400px
-				margin: 3px 0 0
+				margin: 2px 0 0
 				@media (max-width: 1219px)
 					max-width: 240px
+				@media (max-width: 999px)
+					max-width: 400px
 				@media (max-width: 767px)
 					display: block
-					max-width: 400px
 				a
 					color: $green
 					&:hover
@@ -948,6 +1137,16 @@ img
 	&__table-wrap
 		@media (max-width: 999px)
 			margin: 0 -20px
+			position: relative
+			&::after
+				content: ""
+				display: block
+				width: 70px
+				background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff)
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
 	&__table-inner
 		@media (max-width: 999px)
 			padding: 0 20px
@@ -992,9 +1191,12 @@ img
 							transform: translate(-50%, -50%)
 			tbody
 				tr
+					transition: background-color .2s ease
 					&:first-child
 						td
-							padding-top: 33px
+							padding-top: 23px
+					&:hover
+						background-color: #f2f2f2
 					td
 						position: relative
 						border-left: 1px solid rgba(162, 173, 199, .3)		
@@ -1005,6 +1207,7 @@ img
 								display: none
 						&.text-left
 							text-align: left
+							padding-left: 20px
 							border-left: none
 						&.t-best
 							&::before
@@ -1178,6 +1381,8 @@ img
 				color: #4b468e
 				margin-top: 10px
 				transition: color .2s ease
+				&.chart__small-description
+					font-size: 13px
 			&_01
 				&::before
 					background-color: #46a6ff
@@ -1270,12 +1475,32 @@ img
 		z-index: 1
 		@media (max-width: 767px)
 			display: none
+	.container
+		position: relative
+		z-index: 2
 
 	h2
 		text-align: center
 		margin-bottom: 90px
 		@media (max-width: 767px)
 			margin-bottom: 46px
+
+	.col-sm-4
+		&:nth-of-type(3n+1)
+			@media (max-width: 1219px)
+				.r-item
+					&::after
+						display: block
+		&:nth-of-type(3n)
+			@media (max-width: 1219px)
+				.r-item__header
+					&::before
+						right: -300px
+		&:last-of-type
+			@media (max-width: 1219px)
+				.r-item__header
+					&::before
+						right: -1000px
 
 	.r-item
 		position: relative
@@ -1293,8 +1518,7 @@ img
 			height: 40px
 			border-radius: 100%
 			border: 8px solid #030927
-			background-color: #5765ff
-			background-image: linear-gradient(45deg, rgba(136, 56, 255, 0.5) 0%, rgba(41, 187, 255, 0.5) 100%)
+			background-color: #151b3b
 			position: absolute
 			top: 22px
 			left: -8px
@@ -1308,39 +1532,15 @@ img
 			position: absolute
 			top: 41px
 			left: -310px
-		&.r-item_01
-			@media (max-width: 1219px)
-				&::after
-					display: block
 			@media (max-width: 767px)
-				.r-item__header
-					&::before
-						right: -300px
-		&.r-item_02
-			@media (max-width: 767px)
-				&::after
-					display: block
-				.r-item__header
-					&::before
-						right: -300px
-		&.r-item_03
-			@media (max-width: 1219px)
-				.r-item__header
-					&::before
-						right: -300px
-			@media (max-width: 767px)
-				&::after
-					display: block
-		&.r-item_04
-			margin-bottom: 0
+				display: block
+		&_complete
 			&::before
-				background: #151b3b
-			@media (max-width: 1219px)
-				&::after
-					display: block
-				.r-item__header
-					&::before
-						right: -300px
+				background-color: #5765ff
+				background-image: linear-gradient(45deg, rgba(136, 56, 255, 0.5) 0%, rgba(41, 187, 255, 0.5) 100%)
+
+
+		
 
 
 		&__header
@@ -1356,6 +1556,8 @@ img
 				right: -22px
 				bottom: -1px
 				z-index: 0
+				@media (max-width: 767px)
+					right: -300px
 		&__body
 			padding-top: 16px
 		&__year

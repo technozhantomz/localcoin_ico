@@ -4,6 +4,13 @@ $(document).ready(function() {
 	$(document).on('click', 'a[href="#"]', function(e){ e.preventDefault(); });
 
 
+	// Sticky Btn
+	$('#buy_coin_header').stick_in_parent({
+		parent: '.wrapper',
+		offset_top: 5
+	});
+
+
 	// Custom select
 	$('.select').each(function(){
 		var self = $(this);
@@ -115,21 +122,28 @@ $(document).ready(function() {
 
 	});
 
+	$('#buy_coin_header, #buy_coin_footer').on('click', function(e) {
+		e.preventDefault();
 
-	// Scroll progress
-	// $(window).scroll(function() {
-	// 	var docHeight     = $(document).height(),
-	// 			windowHeight  = $(window).height(),
-	// 			windowWidth   = $(window).width(),
-	// 			scrollPercent = $(window).scrollTop() / (docHeight - windowHeight) * 100;
+		var top = $('#main').offset().top;
 
-	// 	$('.scroll-progress__bar_green').width(scrollPercent + '%');
+		$('html, body').animate({scrollTop: top}, 1000);
+			
+		$('.main__tab-links ul li a').removeClass('active');
+		$('.main__tab').removeClass('active');
 
-	// 	if($(window).scrollTop() > windowHeight - 300 && windowWidth >= 1000) {
-	// 		$('.scroll-progress').fadeIn();
-	// 	} else $('.scroll-progress').fadeOut();
-	// });
+		$('.main__tab-links ul li a[href="#preSale"]').addClass('active');
+		$('#preSale').addClass('active');
 
+	});
+
+
+	// Pre-sale form
+	coinChange({
+		arrPrev: '.prev-coin',
+		arrNext: '.next-coin',
+		input: '.input-coin'
+	});
 
 
 	// Main Tabs
@@ -152,8 +166,8 @@ $(document).ready(function() {
 		chartIdSelector: '#sharesChart',
 		legendId: 'sharesChartLegend',
 		legendItems: '#sharesChartLegend ul li',
-		data: [20, 15, 15, 4],
-		bgColor: ['#46a6ff', '#57c2ff', '#5447eb', '#5a6cff']
+		data: [10, 80, 10],
+		bgColor: ['#46a6ff', '#57c2ff', '#5447eb']
 	});
 
 	// Use of funds
@@ -162,8 +176,8 @@ $(document).ready(function() {
 		chartIdSelector: '#useOfFundsChart',
 		legendId: 'useOfFundsChartLegend',
 		legendItems: '#useOfFundsChartLegend ul li',
-		data: [25, 20, 10, 5],
-		bgColor: ['#46a6ff', '#57c2ff', '#5447eb', '#5a6cff']
+		data: [10, 90],
+		bgColor: ['#46a6ff', '#57c2ff']
 	});
 
 
@@ -190,7 +204,7 @@ $(window).resize(function() {
 	if($(this).width() < 1000) {
 
 		$('.advantages__table').mCustomScrollbar({
-			axis:"x",
+			axis: "x",
 			autoDraggerLength: false,
 			mouseWheel:{ enable: false },
 			advanced:{ autoExpandHorizontalScroll:true }
@@ -201,27 +215,18 @@ $(window).resize(function() {
 	var slider = $('.pre-sale__slider');
 	if($(this).width() < 1000) {
 
-		$('.ps-circuit__item').off('click');
+		$('.ps-circuit__item').removeClass('item-hover');
 
 		if(!slider.hasClass('slick-initialized'))
-			slider.slick({ dots: true });
+			slider.slick({
+				dots: true,
+				adaptiveHeight: true
+			});
 
 	} else {
 
-		$('.ps-circuit__item').on('click', function() {
-			$('.ps-circuit__item').removeClass('active');
-			$(this).addClass('active');
-		});
-		$('.item-close').on('click', function() {
-			$('.ps-circuit__item').removeClass('active');
-			return false;
-		});
-		$(document).on('click', function(e) {
-			var container = $(".ps-circuit__item");
-			if (container.length && !$(e.target).closest(container).length) {
-				$('.ps-circuit__item').removeClass('active');
-			}
-		});
+		$('.ps-circuit__item').addClass('item-hover');
+	
 		
 		if(slider.hasClass('slick-initialized'))
 			slider.slick('unslick');
@@ -243,6 +248,45 @@ $(window).resize(function() {
 
 
 
+// Coin Change
+function coinChange(e) {
+	var arrPrev         = $(e.arrPrev),
+			arrNext         = $(e.arrNext),
+			input           = $(e.input),
+			selectHidden    = input.find('.select_hidden'),
+			selectListItems = input.find('.select-coin_list li'),
+			title = input.find('.select-coin_in .select-coin_title'),
+			currentVal;
+
+	arrPrev.on('click', coinPrev);
+	arrNext.on('click', coinNext);
+
+	function coinPrev() {
+		currentVal = selectHidden.val();
+
+		if(currentVal > 1) {
+			$(selectListItems[currentVal-1]).removeClass('is-active');
+			currentVal -= 1;
+			selectHidden.val(currentVal);
+			$(selectListItems[currentVal-1]).addClass('is-active');
+			$(selectListItems[currentVal-1]).html();
+			title.html($(selectListItems[currentVal-1]).html());
+		}
+	}
+
+	function coinNext() {
+		currentVal = selectHidden.val();
+
+		if(currentVal < selectListItems.length) {
+			$(selectListItems[currentVal-1]).removeClass('is-active');
+			currentVal = +currentVal + 1;
+			selectHidden.val(currentVal);
+			$(selectListItems[currentVal-1]).addClass('is-active');
+			$(selectListItems[currentVal-1]).html();
+			title.html($(selectListItems[currentVal-1]).html());
+		}
+	}
+}
 
 
 
