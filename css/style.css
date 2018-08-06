@@ -4107,8 +4107,8 @@ img {
       display: block;
       width: 100%;
       height: 100%;
-      background-color: #05143d;
-      opacity: .7;
+      background-color: #1c0265;
+	  opacity: .8;
       position: absolute;
       top: 0;
       left: 0;
@@ -4118,7 +4118,7 @@ img {
       top: 0;
       left: 0;
       width: 100%;
-      height: 1300px;
+      height: 1500px;
       min-width: 100%;
       min-height: 100%;
       -o-object-fit: cover;
