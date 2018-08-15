@@ -3,12 +3,35 @@ $(document).ready(function() {
 
 	$(document).on('click', 'a[href="#"]', function(e){ e.preventDefault(); });
 
+	// WOW Animate
+	new WOW().init();
 
-	// Sticky Btn
-	$('#buy_coin_header').stick_in_parent({
-		parent: '.wrapper',
-		offset_top: 5
+	//Fixed elements
+	$(document).scroll(function () {
+		var bodyScroll   = $('html, body').scrollTop(),
+				tablePos     = $('.a-table').offset().top,
+				tokenInfoPos = $('#tokeninfo').offset().top - 156;
+
+		if (bodyScroll > 0) {
+			$('#header').addClass('header-fixed');
+		} else {
+			$('#header').removeClass('header-fixed');
+		}
+
+		if (bodyScroll >= tablePos && bodyScroll < tokenInfoPos) {
+			$('#header').hide();
+			$('.a-table-fixed').show();
+		} else {
+			$('.a-table-fixed').hide();
+			$('#header').show();
+		}
+
 	});
+
+	$('.a-table-fixed').stick_in_parent({
+		parent: '.advantages__table-inner'
+	});
+
 
 
 	// Custom select
@@ -166,7 +189,7 @@ $(document).ready(function() {
 		chartIdSelector: '#sharesChart',
 		legendId: 'sharesChartLegend',
 		legendItems: '#sharesChartLegend ul li',
-		data: [10, 80, 10],
+		data: [10, 10, 80],
 		bgColor: ['#46a6ff', '#57c2ff', '#5447eb']
 	});
 
@@ -176,7 +199,7 @@ $(document).ready(function() {
 		chartIdSelector: '#useOfFundsChart',
 		legendId: 'useOfFundsChartLegend',
 		legendItems: '#useOfFundsChartLegend ul li',
-		data: [10, 90],
+		data: [90, 10],
 		bgColor: ['#46a6ff', '#57c2ff']
 	});
 
@@ -621,13 +644,17 @@ function tokenInfoChart(c) {
 
 	$(legendItems).each(function(index, item) {
 		$(item).on('mouseenter', function() {
-				highlightSegment(myChart, index, true);
-				$(c.legendItems).removeClass('active');
-				$(this).addClass('active');
+			var itemVal = $(this).find('a').data('value');
+
+			highlightSegment(myChart, index, true);
+			$(c.legendItems).removeClass('active');
+			$(this).addClass('active');
+			$('.chart-item-value').html(itemVal);
 		});
 		$(item).on('mouseleave', function() {
-				highlightSegment(myChart, index, false);
-				$(c.legendItems).removeClass('active');
+			highlightSegment(myChart, index, false);
+			$(c.legendItems).removeClass('active');
+			$('.chart-item-value').html('');
 		});
 	});
 
@@ -658,11 +685,14 @@ function tokenInfoChart(c) {
 				if (breakout && segmentIndex >= 0) {
 					currentBreakoutIndex = segmentIndex;
 					var targetSegment = legendItems.get(segmentIndex);
+					var targetSegmentValue = $(targetSegment).find('a').data('value');
 					$(legendItems).removeClass('active');
 					$(targetSegment).addClass('active');
+					$('.chart-item-value').html(targetSegmentValue);
 				} else {
 					currentBreakoutIndex = null;
 					legendItems.removeClass('active');
+					$('.chart-item-value').html('');
 				}
 			}
 

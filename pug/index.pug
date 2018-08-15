@@ -58,8 +58,8 @@ html(lang='en')
 								a.gradient-text(href='#airDrop') AirDrop
 					#preSale.main__tab.active
 						.pre-sale
-							h3 The 1st fully decentralised blockchain based OTC trading platform
-							.pre-sale__form
+							h3.wow.fadeInUp The 1st fully decentralised blockchain based OTC trading platform
+							.pre-sale__form.wow.fadeInUp
 								form.ps-form(action="#")
 									.ps-form__input.ps-form__input_num.input-coin
 										input(type="number" name="btc" value="0" min="0")
@@ -181,20 +181,20 @@ html(lang='en')
 							.row
 								.col-md-6
 									.air-drop__left-block
-										h3
+										h3.wow.fadeInUp
 											a(href='#')
 												| Get you 
 												span first 100 
 												| LLC for 
 												span free 
 												| NOW!
-										p
+										p.wow.fadeInUp
 											| In order to get you free 100 LLC just 
 											a(href='#') sing up here
 											|  and type your ACCOUNT NAME 
 											a(href='#') here
 											| . Your wallet will be credited with 100 LLC instantly.
-										.air-drop__chart-label
+										.air-drop__chart-label.wow.fadeInUp
 											span 46 100 322 
 											| LLC AirDroped
 										.air-drop__chart
@@ -229,7 +229,7 @@ html(lang='en')
 												span.s-left.s-black 56 100 322 LLC AirDropped
 											span.s-right 56 100 322 LLC left
 								.col-md-6
-									.air-drop__right-block
+									.air-drop__right-block.wow.fadeInUp(data-wow-duration='1.5s')
 										h3 Limited Airdrop
 										h4 We will AirDrop 10,000,000 free Coins(LLC)
 										span to Telegram and Twitter users from 1st of Aug till the end of ICO Campaign
@@ -250,11 +250,61 @@ html(lang='en')
 						.col-md-10.offset-md-1.col-lg-8.offset-lg-2
 							a.advantages__video(href='https://www.youtube.com/watch?v=j90Sgieta7s?autoplay=1', data-fancybox='')
 								img(src='img/video_bg.png', alt='video')
-								h2 Why LocalCoin
+								h2.wow.fadeInUp Why LocalCoin
 					.advantages__table-wrap
 						.advantages__table
 							.advantages__table-inner
-								table
+								table.a-table-fixed
+									thead
+										tr
+											th(style='width:22%')  
+											th(style='width:9%')
+												.t-logo
+													img(src='img/lc-logo.png', alt='logo')
+												span LocalCoin.is
+											th(style='width:9%')
+												.t-logo
+													img(src='img/lbc-logo.png', alt='logo')
+												span LocalBitcoin
+											th(style='width:9%')
+												.t-logo
+													img(src='img/gdax.png', alt='logo')
+												span GDAX
+											th(style='width:9%')
+												.t-logo
+													img(src='img/okex.png', alt='logo')
+												span OKEx
+											th(style='width:9%')
+												.t-logo
+													img(src='img/bin.png', alt='logo')
+												span Binance
+											th(style='width:9%')
+												.t-logo
+													img(src='img/bitf.png', alt='logo')
+												span Bitfinex
+											th(style='width:9%')
+												.t-logo
+													img(src='img/huobi.png', alt='logo')
+												span Huobi
+											th(style='width:9%')
+												.t-logo
+													img(src='img/hitbtc.png', alt='logo')
+												span HitBTC
+											th  
+									tbody
+										tr
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+
+								table.a-table
 									thead
 										tr
 											th(style='width:22%')  
@@ -707,9 +757,9 @@ html(lang='en')
 
 			section#tokeninfo.tokeninfo
 				.container
-					h2 Token info
+					h2.wow.fadeInUp Token info
 					.row
-						.col-lg-8
+						.col-lg-10
 							.tokeninfo__tab-links.tab-links
 								ul
 									li
@@ -721,28 +771,29 @@ html(lang='en')
 							#shares.tokeninfo__tab.active
 								.tokeninfo__chart
 									canvas#sharesChart(width='380', height='380')
+									.chart-item-value
 								#sharesChartLegend.tokeninfo__chart-legend.chart-legend
 									ul
-										li.chart-legend__item.chart-legend__item_01
-											a(href='#')
+										li.chart-legend__item.chart-legend__item_01.wow.fadeInUp
+											a(href='#' data-value='10%')
 												| 10% (10 000 000 LLC) 
 												br
 												| Air-Drop
 												span Automatically paid into the very first 100 000 registered accounts.
-										li.chart-legend__item.chart-legend__item_02
-											a(href='#')
+										li.chart-legend__item.chart-legend__item_02.wow.fadeInUp
+											a(href='#' data-value='10%')
+												| 10% (10 000 000 LLC) 
+												br
+												| Bounty Program
+												span allocated to bounty program for community engagement
+										li.chart-legend__item.chart-legend__item_03.wow.fadeInUp
+											a(href='#' data-value='80%')
 												| 80% (90 000 000 LLC) 
 												br
 												| Public Crowdsale
 												span
 													| no maximum allocation to investors through entire crowdsale without burn of unsold
-										li.chart-legend__item.chart-legend__item_03
-											a(href='#')
-												| 10% (10 000 000 LLC) 
-												br
-												| Bounty Program
-												span allocated to bounty program for community engagement
-										li.chart-legend__item.chart-legend__item_04
+										li.chart-legend__desc.wow.fadeInUp
 											a(href='#')
 												| 1 000 000 000 LLC 
 												br
@@ -751,10 +802,18 @@ html(lang='en')
 							#useOfFunds.tokeninfo__tab
 								.tokeninfo__chart
 									canvas#useOfFundsChart(width='400', height='400')
+									.chart-item-value
 								#useOfFundsChartLegend.tokeninfo__chart-legend.chart-legend
 									ul
 										li.chart-legend__item.chart-legend__item_01
-											a(href='#')
+											a(href='#' data-value='90%')
+												| 90% ($40 000 000) 
+												br
+												| BUSINESS DEVELOPMENT & MARKETING
+												span
+													| For business development, marketing & advertising. LocalCoin will implement broad marketing & advertising strategies to increase the user base of the platform upon launch. These strategies are refined and focused campaigns based on the data and analytics gathered during the LLC issuance.
+										li.chart-legend__item.chart-legend__item_02
+											a(href='#' data-value='10%')
 												| 10% ($5 000 000) 
 												br
 												| is Allocated for PLATFORM DEVELOPMENT:
@@ -770,15 +829,9 @@ html(lang='en')
 													| 5. ADMINISTRATION. Allocated for administration costs incurred during the final development of the platform.
 												span.chart__small-description
 													| 6. For further development and expansion of the platform. This will enhance scalability and the number of features which will be offered on initial launch.
-										li.chart-legend__item.chart-legend__item_02
-											a(href='#')
-												| 90% ($40 000 000) 
-												br
-												| BUSINESS DEVELOPMENT & MARKETING
-												span
-													| For business development, marketing & advertising. LocalCoin will implement broad marketing & advertising strategies to increase the user base of the platform upon launch. These strategies are refined and focused campaigns based on the data and analytics gathered during the LLC issuance.
-						.col-md-10.offset-md-1.col-lg-3.offset-lg-1
-							.tokeninfo__details
+										
+						.col-md-10.offset-md-1.col-lg-2.offset-lg-0
+							.tokeninfo__details.wow.fadeInUp(data-wow-duration='2s')
 								h4 Details
 								.row
 									.col-sm-4.col-lg-12
@@ -829,109 +882,109 @@ html(lang='en')
 
 			section#roadmap.roadmap
 				.container
-					h2 Road map
+					h2.wow.fadeInUp Road map
 					.row
 						.col-md-11.offset-md-1.col-lg-12.offset-lg-0
 							ul.row
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item.r-item_complete
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month January
 										.r-item__body
 											span.r-item__desc Founded
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item.r-item_complete
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month February
 										.r-item__body
 											span.r-item__desc Initial team members established
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item.r-item_complete
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month March
 										.r-item__body
 											span.r-item__desc Concept development
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item.r-item_complete
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month August
 										.r-item__body
 											span.r-item__desc Official Blockchain Launch
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month August
 										.r-item__body
 											span.r-item__desc Gateway for cryptocurrencies release
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month September
 										.r-item__body
 											span.r-item__desc AirDrop
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month September
 										.r-item__body
 											span.r-item__desc Web GUI and Proof-of-node release
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month September
 										.r-item__body
 											span.r-item__desc Official whitepaper launch
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month October
 										.r-item__body
 											span.r-item__desc Localcoin ICO and coin presale
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month October
 										.r-item__body
 											span.r-item__desc Launch date for exchange
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2018
 											span.r-item__month November
 										.r-item__body
 											span.r-item__desc Gateway for additional cryptocurrencies release
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2019
 											span.r-item__month January
 										.r-item__body
 											span.r-item__desc Localcoin OTC relealse
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2019
 											span.r-item__month February
 										.r-item__body
 											span.r-item__desc GUI blind transactions release
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2019
 											span.r-item__month Q2
 										.r-item__body
 											span.r-item__desc Trading chat release
-								li.col-sm-4.col-lg-3
+								li.col-sm-4.col-lg-3.wow.fadeInUp
 									.roadmap__item.r-item
 										.r-item__header
 											span.r-item__year 2019
@@ -944,12 +997,12 @@ html(lang='en')
 				.container
 					.getfree__logo
 						img(src='img/d-logo.png', srcset='img/d-logo-2x.png 2x', alt='logo')
-					h2
+					h2.wow.fadeInUp
 						| Get 
 						span 100 LLC 
 						| for 
 						span free
-					p
+					p.wow.fadeInUp
 						| The first 100 000 users receive 100 LLC coins after registration on the exchange's website
 					a.getfree__btn.btn-yellow(href='#') I want to get Free 100 LLC
 
@@ -972,7 +1025,7 @@ html(lang='en')
 							a.footer__wp(href='#') White Paper
 						li
 							a.btn-blue#buy_coin_footer(href='#') Buy LLC coin
-					ul.footer__nav
+					ul.footer__nav.wow.fadeInUp
 						li
 							a(href='#main') Home
 						li
@@ -983,8 +1036,8 @@ html(lang='en')
 							a(href='#roadmap') Road map
 						li
 							a(href='#airDrop') AirDrop
-					.footer__desc
-						| ExpertOption Ltd, Saint Vincent and the Grenadines, 1510, Kingstown, Suite 305, Griffith Corporate Centre. Registration number 22863 IBC 2015
+					.footer__desc.wow.fadeInUp
+						| LocalCoin is THE true democracy decentralised ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.
 
 
 
@@ -1001,6 +1054,7 @@ html(lang='en')
 		script(src='js/MorphSVGPlugin.min.js')
 
 		// Plugins
+		script(src='js/wow.min.js')
 		script(src='js/slick.min.js')
 		script(src='js/fancybox.min.js')
 		script(src='js/mCustomScrollbar.min.js')
