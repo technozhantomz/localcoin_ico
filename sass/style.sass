@@ -1083,8 +1083,6 @@ img
 ///////////////// ADVANTAGES ///////////////////
 .advantages
 	padding-bottom: 42px
-	@media (max-width: 767px)
-		padding-bottom: 59px
 	&__video
 		position: relative
 		display: block
@@ -1175,13 +1173,14 @@ img
 				background-color: #d9dce4
 				background-image: linear-gradient(to right, #8838ff 0%, #29bbff 100%)
 				position: absolute
-				top: 85px
+				top: 83px
 				left: 0
 				right: 0
 			&.a-table-fixed
 				display: none
 				background-color: #fff
 				z-index: 9
+				transform: translate3d(0,0,0)
 				tbody
 					td
 						padding: 0!important
@@ -1211,7 +1210,7 @@ img
 					transition: background-color .2s ease
 					&:first-child
 						td
-							padding-top: 15px
+							padding-top: 13px
 					&:hover
 						background-color: #f2f2f2
 					td

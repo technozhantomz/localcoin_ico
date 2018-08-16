@@ -7323,9 +7323,6 @@ img {
 
 .advantages {
   padding-bottom: 42px; }
-  @media (max-width: 767px) {
-    .advantages {
-      padding-bottom: 59px; } }
   .advantages__video {
     position: relative;
     display: block;
@@ -7427,13 +7424,15 @@ img {
       background-image: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#29bbff));
       background-image: linear-gradient(to right, #8838ff 0%, #29bbff 100%);
       position: absolute;
-      top: 85px;
+      top: 83px;
       left: 0;
       right: 0; }
     .advantages__table table.a-table-fixed {
       display: none;
       background-color: #fff;
-      z-index: 9; }
+      z-index: 9;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
       .advantages__table table.a-table-fixed tbody td {
         padding: 0 !important; }
     .advantages__table table thead th {
@@ -7462,7 +7461,7 @@ img {
       -webkit-transition: background-color .2s ease;
       transition: background-color .2s ease; }
       .advantages__table table tbody tr:first-child td {
-        padding-top: 15px; }
+        padding-top: 13px; }
       .advantages__table table tbody tr:hover {
         background-color: #f2f2f2; }
       .advantages__table table tbody tr td {
