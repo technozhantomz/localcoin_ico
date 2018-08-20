@@ -58,35 +58,9 @@ html(lang='en')
 								a.gradient-text(href='#airDrop') AirDrop
 					#preSale.main__tab.active
 						.pre-sale
-							h3.wow.fadeInUp The 1st fully decentralised blockchain based OTC trading platform
-							.pre-sale__form.wow.fadeInUp
-								form.ps-form(action="#")
-									.ps-form__input.ps-form__input_num.input-coin
-										input(type="number" name="btc" value="0" min="0")
-										.ps-form__select.select.select-coin
-											input.select_hidden(type='hidden', value='1')
-											.select_in.select-coin_in
-												span.select_title.select-coin_title BTC
-												i.select_arrow.select-coin_arrow
-											ul.select_list.select-coin_list
-												li.is-active(data-value='1') BTC
-												li(data-value='2') CTC
-												li(data-value='3') DTC
-												li(data-value='4') ETC
-												li(data-value='5') FTC
-												li(data-value='6') GTC
-										.prev-coin
-										.next-coin
-									.ps-form__arr
-									.ps-form__input.ps-form__input_num.input-llc
-										input(type="number" name="llc" value="0" min="0")
-									.ps-form__input.ps-form__input_text
-										input(type="text" placeholder="Your LocalCoin Account name")
-										span.ps-form__reg
-											| Not a member yet? 
-											a(href="#") Register now
-									input(type="submit" value="Buy LLC coin").ps-form__btn.btn-yellow
 							.ps-circuit
+								.ps-coin-hover
+									a(href="#").btn-yellow#coin_hover_btn Buy LLC
 								.pre-sale__slider-wrap
 									.pre-sale__slider
 										.pre-sale__slide
@@ -98,6 +72,10 @@ html(lang='en')
 													br
 													| Bank
 												.item-desc
+													h4
+														| Decentralised 
+														br
+														| Bank
 													p
 														| No one can block your wallet or request your ID, Fully anonymous banking facility.
 										.pre-sale__slide
@@ -109,6 +87,10 @@ html(lang='en')
 													br
 													| chat
 												.item-desc
+													h4
+														| Decentralised 
+														br
+														| chat
 													p Blockchain based fully encrypted decentralised personal and group chats.
 										.pre-sale__slide
 											a.ps-circuit__item.ps-circuit__item_03.item-hover(href='#')
@@ -119,6 +101,10 @@ html(lang='en')
 													br
 													| Trading
 												.item-desc
+													h4
+														| OTC
+														br
+														| Trading
 													p
 														| Over-the-counter (OTC) or off-exchange trading is done directly between two parties, without the supervision of an exchange. 
 														span.md-lg-hidden
@@ -132,6 +118,10 @@ html(lang='en')
 													br
 													| Accelerator
 												.item-desc
+													h4
+														| ICO
+														br
+														| Accelerator
 													p
 														| Start your own ICO. You can issue your own token and list it for trading in just 5 min.
 										.pre-sale__slide
@@ -143,6 +133,10 @@ html(lang='en')
 													br
 													| Transactions
 												.item-desc
+													h4
+														| Untraceable
+														br
+														| Transactions
 													p
 														| Fully private accounts with no tracing. Your personal chain is encrypted and no-one can see your transactions.
 										.pre-sale__slide
@@ -151,6 +145,7 @@ html(lang='en')
 													img(src='img/icons/pre-sale_ico6.png', srcset='img/icons/pre-sale_ico6-2x.png 2x', alt='icon6')
 												h4 Mining
 												.item-desc
+													h4 Mining
 													p Everyone can mine LLC by running a full node to support the network.
 										.pre-sale__slide
 											a.ps-circuit__item.ps-circuit__item_07.item-hover(href='#')
@@ -161,6 +156,10 @@ html(lang='en')
 													br
 													| Network
 												.item-desc
+													h4
+														| Social
+														br
+														| Network
 													p
 														| Blockchain based and fully encrypted decentralised Social network. 
 														span.md-lg-hidden
@@ -174,6 +173,10 @@ html(lang='en')
 													br
 													| trading
 												.item-desc
+													h4
+														| Decentralised
+														br
+														| trading
 													p
 														| From day one You can trade with others without limits. 100k Transaction per second. Block generated every 3 seconds.
 					#airDrop.main__tab
@@ -831,51 +834,51 @@ html(lang='en')
 													| 6. For further development and expansion of the platform. This will enhance scalability and the number of features which will be offered on initial launch.
 										
 						.col-md-10.offset-md-1.col-lg-2.offset-lg-0
-							.tokeninfo__details.wow.fadeInUp(data-wow-duration='2s')
-								h4 Details
+							.tokeninfo__details
+								h4.wow.fadeInUp Details
 								.row
 									.col-sm-4.col-lg-12
 										ul.details-col-1
-											li
+											li.wow.fadeInUp
 												span Name
 												| LocalCoin
-											li
+											li.wow.fadeInUp
 												span Symbol
 												| LLC
-											li
+											li.wow.fadeInUp
 												span Timestamping scheme
 												| Delegated Proof of Stake and Proof-of-node
 									.col-sm-4.col-lg-12
 										ul.details-col-2
-											li
+											li.wow.fadeInUp
 												span Transparency
 												| Open source
-											li
+											li.wow.fadeInUp
 												span Block time
 												| 3 seconds
-											li
+											li.wow.fadeInUp
 												span Witness Block reward
 												| 1 LLC
 									.col-sm-4.col-lg-12
 										ul.details-col-3
-											li
+											li.wow.fadeInUp
 												span Masternode Block reward
 												| 0.1 LLC
-											li
+											li.wow.fadeInUp
 												span LLC maximum total supply
 												| 3 600 000 000 LLC
-											li
+											li.wow.fadeInUp
 												span Initial total issue
 												| 1 110 000 000 LLC
 									.col-sm-4.col-lg-12
 										ul.details-col-4
-											li
+											li.wow.fadeInUp
 												span Circulating supply
 												| 1 110 000 000 LLC
-											li
+											li.wow.fadeInUp
 												span Initial 1 LLC ICO price
 												| $ 0.5 US Dollar (USD)
-											li
+											li.wow.fadeInUp
 												span Available through pre-ICO
 												| 90 000 000 LLC
 
@@ -883,114 +886,250 @@ html(lang='en')
 			section#roadmap.roadmap
 				.container
 					h2.wow.fadeInUp Road map
-					.row
+
+					.roadmap__desk
+						.rocket
+						.r-item.r-item_01
+							span.r-item__year 2018
+							span.r-item__month January
+							.r-item__desc Founded
+						.r-item.r-item_02
+							span.r-item__year 2018
+							span.r-item__month February
+							.r-item__desc Initial team members 
+								br
+								| established
+						.r-item.r-item_03
+							span.r-item__year 2018
+							span.r-item__month March
+							.r-item__desc Concept development
+						.r-item.r-item_04
+							span.r-item__year 2018
+							span.r-item__month August
+							.r-item__desc Official Blockchain Launch
+						.r-item.r-item_05
+							span.r-item__month August
+							span.r-item__year 2018
+							.r-item__desc Gateway for
+								br
+								| cryptocurrencies release
+						.r-item.r-item_06
+							span.r-item__month September
+							span.r-item__year 2018
+							.r-item__desc AirDrop
+						.r-item.r-item_07
+							span.r-item__month September
+							span.r-item__year 2018
+							.r-item__desc Web GUI and
+								br
+								| Proof-of-node release
+						.r-item.r-item_08
+							span.r-item__month September
+							span.r-item__year 2018
+							.r-item__desc Official whitepaper
+								br
+								| launch
+						.r-item.r-item_09
+							span.r-item__year 2018
+							span.r-item__month October
+							.r-item__desc Localcoin ICO and
+								br
+								| coin presale
+						.r-item.r-item_10
+							span.r-item__year 2018
+							span.r-item__month October
+							.r-item__desc Launch date for
+								br
+								| exchange
+						.r-item.r-item_11
+							span.r-item__year 2018
+							span.r-item__month November
+							.r-item__desc Gateway for additional
+								br
+								| cryptocurrencies release
+						.r-item.r-item_12
+							span.r-item__year 2019
+							span.r-item__month January
+							.r-item__desc Localcoin OTC relealse
+						.r-item.r-item_13
+							span.r-item__month February
+							span.r-item__year 2019
+							.r-item__desc GUI blind transactions
+								br
+								| release
+						.r-item.r-item_14
+							span.r-item__month Q2
+							span.r-item__year 2019
+							.r-item__desc Trading chat release
+								br
+								| Proof-of-node release
+						.r-item.r-item_15
+							span.r-item__month Q3
+							span.r-item__year 2019
+							.r-item__desc Blockchain Dice
+								br
+								| release
+
+
+					.row.roadmap__mob
 						.col-md-11.offset-md-1.col-lg-12.offset-lg-0
 							ul.row
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item.r-item_complete
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month January
-										.r-item__body
-											span.r-item__desc Founded
+									.r-item-mob.r-item-mob_complete
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month January
+										.r-item-mob__body
+											span.r-item-mob__desc Founded
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item.r-item_complete
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month February
-										.r-item__body
-											span.r-item__desc Initial team members established
+									.r-item-mob.r-item-mob_complete
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month February
+										.r-item-mob__body
+											span.r-item-mob__desc Initial team members established
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item.r-item_complete
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month March
-										.r-item__body
-											span.r-item__desc Concept development
+									.r-item-mob.r-item-mob_complete
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month March
+										.r-item-mob__body
+											span.r-item-mob__desc Concept development
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item.r-item_complete
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month August
-										.r-item__body
-											span.r-item__desc Official Blockchain Launch
+									.r-item-mob.r-item-mob_complete
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month August
+										.r-item-mob__body
+											span.r-item-mob__desc Official Blockchain Launch
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month August
-										.r-item__body
-											span.r-item__desc Gateway for cryptocurrencies release
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month August
+										.r-item-mob__body
+											span.r-item-mob__desc Gateway for cryptocurrencies release
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month September
-										.r-item__body
-											span.r-item__desc AirDrop
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month September
+										.r-item-mob__body
+											span.r-item-mob__desc AirDrop
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month September
-										.r-item__body
-											span.r-item__desc Web GUI and Proof-of-node release
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month September
+										.r-item-mob__body
+											span.r-item-mob__desc Web GUI and Proof-of-node release
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month September
-										.r-item__body
-											span.r-item__desc Official whitepaper launch
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month September
+										.r-item-mob__body
+											span.r-item-mob__desc Official whitepaper launch
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month October
-										.r-item__body
-											span.r-item__desc Localcoin ICO and coin presale
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month October
+										.r-item-mob__body
+											span.r-item-mob__desc Localcoin ICO and coin presale
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month October
-										.r-item__body
-											span.r-item__desc Launch date for exchange
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month October
+										.r-item-mob__body
+											span.r-item-mob__desc Launch date for exchange
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2018
-											span.r-item__month November
-										.r-item__body
-											span.r-item__desc Gateway for additional cryptocurrencies release
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2018
+											span.r-item-mob__month November
+										.r-item-mob__body
+											span.r-item-mob__desc Gateway for additional cryptocurrencies release
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2019
-											span.r-item__month January
-										.r-item__body
-											span.r-item__desc Localcoin OTC relealse
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2019
+											span.r-item-mob__month January
+										.r-item-mob__body
+											span.r-item-mob__desc Localcoin OTC relealse
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2019
-											span.r-item__month February
-										.r-item__body
-											span.r-item__desc GUI blind transactions release
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2019
+											span.r-item-mob__month February
+										.r-item-mob__body
+											span.r-item-mob__desc GUI blind transactions release
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2019
-											span.r-item__month Q2
-										.r-item__body
-											span.r-item__desc Trading chat release
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2019
+											span.r-item-mob__month Q2
+										.r-item-mob__body
+											span.r-item-mob__desc Trading chat release
 								li.col-sm-4.col-lg-3.wow.fadeInUp
-									.roadmap__item.r-item
-										.r-item__header
-											span.r-item__year 2019
-											span.r-item__month Q3
-										.r-item__body
-											span.r-item__desc Blockchain Dice release
+									.r-item-mob
+										.r-item-mob__header
+											span.r-item-mob__year 2019
+											span.r-item-mob__month Q3
+										.r-item-mob__body
+											span.r-item-mob__desc Blockchain Dice release
+
+
+			section#download.download
+				.container
+					h2 Download
+					.row
+						.col-md-4
+							a(href="#").download__item.wow.flipInY
+								h4 Web-version
+								.download__icon
+									img(src="img/svg/d-1.svg", alt="icon")
+								.download__text
+									span Web based CryptoBridge Exchange and Wallet
+						.col-md-4
+							a(href="#" data-wow-delay=".2s").download__item.wow.flipInY
+								h4 Windows
+								.download__icon
+									img(src="img/svg/d-2.svg", alt="icon")
+								.download__text
+									span SHA-256 checksum: 2dfe8465f168c29d98556ea40ce2c789
+										br
+										| dfa574ee806bc0503a691285584ff2c1
+						.col-md-4
+							a(href="#" data-wow-delay=".4s").download__item.wow.flipInY
+								h4 Mac OS X
+								.download__icon
+									img(src="img/svg/d-3.svg", alt="icon")
+								.download__text
+									span SHA-256 checksum: c689e1f31a738f896dd06acd592bd5ae
+										br
+										| ffdcc1c5e8db8e48b4662f4a2b988b66
+						.col-md-4
+							a(href="#" data-wow-delay=".6s").download__item.wow.flipInY
+								h4 Linux (Debian)
+								.download__icon
+									img(src="img/svg/d-4.svg", alt="icon")
+								.download__text
+									span SHA-256 checksum: 6772600955f8f8376b8cd2a01b7c024f
+										br
+										| 680439d10fb5559942cd48ba8a414090
+						.col-md-4
+							a(href="#" data-wow-delay=".8s").download__item.wow.flipInY
+								h4 GitHub source
+								.download__icon
+									img(src="img/svg/d-5.svg", alt="icon")
+								.download__text
+									span Decentralized Exchange client source
+						.col-md-4
+							.download__item.download__item_empty.wow.flipInY(data-wow-delay="1s")
+								.download__icon.download__icon_empty
+									img(src="img/svg/d-6.svg", alt="icon")
 
 
 			section#getfree.getfree
@@ -1017,9 +1156,23 @@ html(lang='en')
 						li
 							a.f-social__item.f-social__item_tm(href='#')
 						li
+							a.f-social__item.f-social__item_04(href='#')
+						li
+							a.f-social__item.f-social__item_05(href='#')
+						li
+							a.f-social__item.f-social__item_06(href='#')
+						li
+							a.f-social__item.f-social__item_07(href='#')
+						li
+							a.f-social__item.f-social__item_08(href='#')
+						li
+							a.f-social__item.f-social__item_bt(href='#')
+						li
 							a.f-social__item.f-social__item_tw(href='#')
 						li
 							a.f-social__item.f-social__item_yt(href='#')
+						li
+							a.f-social__item.f-social__item_in(href='#')
 					ul.footer__links
 						li
 							a.footer__wp(href='#') White Paper
@@ -1040,6 +1193,36 @@ html(lang='en')
 						| LocalCoin is THE true democracy decentralised ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.
 
 
+			.popup-modal
+				.p-modal
+					.p-modal__close
+					.p-modal__form
+						form.ps-form(action="#")
+							.ps-form__input.ps-form__input_num.input-coin
+								input(type="number" name="btc" value="0" min="0")
+								.ps-form__select.select.select-coin
+									input.select_hidden(type='hidden', value='1')
+									.select_in.select-coin_in
+										span.select_title.select-coin_title BTC
+										i.select_arrow.select-coin_arrow
+									ul.select_list.select-coin_list
+										li.is-active(data-value='1') BTC
+										li(data-value='2') CTC
+										li(data-value='3') DTC
+										li(data-value='4') ETC
+										li(data-value='5') FTC
+										li(data-value='6') GTC
+								.prev-coin
+								.next-coin
+							.ps-form__arr
+							.ps-form__input.ps-form__input_num.input-llc
+								input(type="number" name="llc" value="0" min="0")
+							.ps-form__input.ps-form__input_text
+								input(type="text" placeholder="Your LocalCoin Account name")
+								span.ps-form__reg
+									| Not a member yet? 
+									a(href="#") Register now
+							input(type="submit" value="Buy LLC coin").ps-form__btn.btn-yellow
 
 
 		// jQuery

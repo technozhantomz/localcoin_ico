@@ -61,7 +61,8 @@ html, body
 	-webkit-font-smoothing: antialiased
 	-webkit-overflow-scrolling: touch
 	min-width: 320px
-	
+
+
 h1
 	font-family: $robotob
 	font-size: 48px
@@ -143,6 +144,10 @@ img
 .md-lg-hidden
 	@media (min-width: 1000px)
 		display: none
+
+.xs-sm-hidden
+	@media (max-width: 999px)
+		display: none
 	
 .xs-hidden
 	@media (max-width: 767px)
@@ -153,6 +158,7 @@ img
 		display: none
 
 .wrapper
+	position: relative
 	overflow: hidden
 	width: 100%
 	max-width: 100%
@@ -297,10 +303,10 @@ img
 
 ///////////////// HEADER ///////////////////
 .header
-	width: 100%
 	position: absolute
 	top: 0
 	left: 0
+	right: 0
 	z-index: 999
 	&.header-fixed
 		position: fixed
@@ -465,7 +471,7 @@ img
 		bottom: 0
 		z-index: 0
 		overflow: hidden
-		@media (max-width: 767px)
+		@media (max-width: 999px)
 			display: none
 		&::before
 			content: ""
@@ -483,21 +489,18 @@ img
 			top: 0
 			left: 0
 			width: 100%
-			height: 1500px
+			height: 1100px
 			min-width: 100%
 			min-height: 100% 
 			object-fit: cover
-			@media (max-width: 999px)
-				height: 1600px
-			@media (max-width: 767px)
-				height: 1350px
+
 	.container
 		position: relative
 		z-index: 1
 
 	&__tab-links
 		text-align: center
-		margin-bottom: 25px
+		margin-bottom: 30px
 		ul
 			li
 				a
@@ -521,242 +524,7 @@ img
 
 	.pre-sale
 		text-align: center
-		h3
-			margin-bottom: 17px
-			@media (max-width: 1219px)
-				max-width: 80%
-				margin: 0 auto 17px
-			@media (max-width: 999px)
-				max-width: 100%
-			@media (max-width: 767px)
-				line-height: 29px
-		&__form
-			position: relative
-			font-size: 0
-			z-index: 1
-			margin-bottom: 25px
-			@media (max-width: 1219px)
-				margin-bottom: 40px
 
-		.ps-form
-			&__input
-				display: inline-block
-				width: 290px
-				height: 48px
-				font-size: 24px
-				vertical-align: top
-				margin-right: 20px
-				@media (max-width: 999px)
-					margin: 0 0 10px
-				input
-					display: inline-block
-					width: 100%
-					height: 100%
-					font-family: $osnovam
-					font-size: 16px
-					line-height: 1
-					border: none
-					outline: none
-					padding: 0 20px
-				input[type=number]
-					width: 96px
-					height: auto
-					float: left
-					padding: 0
-					font-size: 24px
-					line-height: 1
-					position: absolute
-					top: 50%
-					left: 5px
-					transform: translateY(-50%)
-					//text-align: center
-					-moz-appearance: textfield
-					@media (max-width: 767px)
-						width: 190px
-				input[type=number]::-webkit-input-placeholder
-					line-height: 1
-					color: #000
-				input[type=number]::-webkit-outer-spin-button,
-				input[type=number]::-webkit-inner-spin-button
-					-webkit-appearance: none
-					margin: 0
-					opacity: 0
-				input[type=text]
-					height: 48px
-					border-radius: 4px
-				input[type=text]::-webkit-input-placeholder
-					line-height: 1
-					color: #a2adc7
-				&_num
-					position: relative
-					width: 175px
-					background-color: #fff
-					padding-left: 5px
-					border-radius: 0 4px 4px 0
-					@media (max-width: 767px)
-						display: block
-						width: 280px
-					&.input-coin
-						margin-right: 0
-						border-radius: 4px 0 0 4px
-						@media (max-width: 767px)
-							border-radius: 4px 4px 0 0
-							margin: 0 auto
-					&.input-llc
-						width: 155px
-						@media (max-width: 767px)
-							width: 280px
-							border-radius: 0 0 4px 4px
-							margin: 0 auto 10px
-						&::before
-							content: "LLC"
-							display: block
-							font-size: 24px
-							line-height: 1
-							color: #a2adc7
-							text-transform: uppercase
-							position: absolute
-							top: 50%
-							right: 10px
-							transform: translateY(-45%)
-							@media (max-width: 767px)
-								right: 28px
-
-					.prev-coin
-						width: 15px
-						height: 15px
-						position: absolute
-						top: 9px
-						right: 7px
-						&:hover
-							background-color: #dedede
-							cursor: pointer
-						&::before
-							content: ""
-							display: block
-							width: 6px
-							height: 6px
-							border-top: 2px solid #000
-							border-right: 2px solid #000
-							position: absolute
-							top: 50%
-							left: 50%
-							transform: translate(-50%, -25%) rotate(-45deg)
-					.next-coin
-						width: 15px
-						height: 15px
-						position: absolute
-						right: 7px
-						bottom: 9px
-						&:hover
-							background-color: #e4e7ef
-							cursor: pointer
-						&::before
-							content: ""
-							display: block
-							width: 6px
-							height: 6px
-							border-top: 2px solid #000
-							border-right: 2px solid #000
-							position: absolute
-							top: 50%
-							left: 50%
-							transform: translate(-50%, -75%) rotate(135deg)
-
-				&_text
-					height: auto
-					text-align: right
-					@media (max-width: 999px)
-						display: block
-						text-align: center
-						width: 360px
-						margin: 0 auto 10px
-					@media (max-width: 767px)
-						max-width: 280px
-
-			.select-coin
-				width: 50px
-				position: absolute
-				top: 50%
-				right: 25px
-				transform: translateY(-50%)
-				z-index: 99
-				&.is-opened
-					.select_arrow 
-						transform: translateY(-50%) rotate(180deg) 
-				&_in
-					position: relative
-					width: 100%
-					height: 100%
-					color: #a2adc7
-					cursor: pointer
-				&_arrow
-					display: none
-				&_title
-					display: block
-					white-space: nowrap
-					text-overflow: ellipsis
-					overflow: hidden
-				&_list
-					position: absolute
-					top: 110%
-					left: -5px
-					right: -5px
-					display: none
-					height: auto
-					background-color: #fff
-					border-radius: 4px
-					//width: 100%
-					list-style: none
-					z-index: 1000
-					margin-left: 0
-					li
-						line-height: 1
-						color: #a2adc7
-						cursor: pointer
-						padding-right: 2px
-						margin-bottom: 5px
-						&.is-active
-							display: none
-
-			&__reg
-				font-size: 16px
-				color: #fff
-				a
-					color: $green
-					&:hover
-						color: $yellow
-
-			&__arr
-				position: relative
-				display: inline-block
-				width: 30px
-				height: 48px
-				vertical-align: top
-				background-color: #e4e7ef
-				@media (max-width: 767px)
-					width: 280px
-					height: 20px
-				&::before
-					content: ""
-					display: block
-					width: 15px
-					height: 14px
-					background: url(../img/svg/arr-right.svg) center no-repeat
-					position: absolute
-					top: 50%
-					left: 50%
-					transform: translate(-50%, -50%)
-					@media (max-width: 767px)
-						transform: translate(-50%, -50%) rotate(90deg)
-
-			&__btn
-				display: inline-block
-				font-family: $osnovam
-				border: none
-				vertical-align: top
-				cursor: pointer
-	
 		.ps-circuit
 			position: relative
 			width: 740px
@@ -770,6 +538,31 @@ img
 				width: 100%
 				height: auto
 				background: none
+
+			.ps-coin-hover
+				width: 300px
+				height: 300px
+				border-radius: 100%
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -57%)
+				&:hover
+					.btn-yellow
+						opacity: 1
+						transform: scale3d(1, 1, 1)
+				@media (max-width: 999px)
+					display: none
+				.btn-yellow
+					width: 194px
+					position: absolute
+					top: 126px
+					left: 53px
+					opacity: 0
+					transform: scale3d(0, 0, 0)
+					transition: transform 1s ease-in-out, opacity .7s ease-in-out
+
+
 			&__item
 				display: inline-block
 				text-align: center
@@ -824,42 +617,114 @@ img
 						height: auto
 						visibility: visible
 						opacity: 1
+					h4
+						margin-bottom: 25px
+						@media (max-width: 1399px)
+							display: none
 					p
 						display: none
 						max-width: 250px
-						font-size: 18px
-						color: #000
+						font-size: 16px
+						color: #fff
 						margin: 0 auto
+						@media (max-width: 1399px)
+							color: #000
 						@media (max-width: 999px)
 							display: inline-block
 							color: #fff
-							font-size: 16px
 				&_01
 					top: 0
 					left: 50%
 					transform: translateX(-50%)
+					&.item-hover
+						&:hover
+							.item-desc
+								left: 50%
+								bottom: 35%
+								&::before
+									background: url('../img/speech-balloon_1.png') center no-repeat
+									background-size: contain
 				&_02
 					top: 81px
 					right: 60px
+					&.item-hover
+						&:hover
+							.item-desc
+								left: 60%
+								bottom: 40%
+								&::before
+									background: url('../img/speech-balloon_1.png') center no-repeat
+									background-size: contain
 				&_03
 					top: 268px
 					right: 2px
+					&.item-hover
+						&:hover
+							.item-desc
+								top: 60%
+								left: 45%
+								&::before
+									background: url('../img/speech-balloon_2.png') center no-repeat
+									background-size: contain
 				&_04
+					top: 518px
 					right: 71px
-					bottom: 118px
+					&.item-hover
+						&:hover
+							.item-desc
+								top: 50%
+								left: 60%
+								&::before
+									background: url('../img/speech-balloon_2.png') center no-repeat
+									background-size: contain
 				&_05
+					top: 628px
 					left: 50%
-					bottom: 10px
 					transform: translateX(-50%)
+					&.item-hover
+						&:hover
+							.item-desc
+								top: 30%
+								left: 80%
+								&::before
+									background: url('../img/speech-balloon_2.png') center no-repeat
+									background-size: contain
 				&_06
+					top: 532px
 					left: 117px
-					bottom: 146px
+					&.item-hover
+						&:hover
+							.item-desc
+								top: 40%
+								right: 60%
+								&::before
+									background: url('../img/speech-balloon_1.png') center no-repeat
+									background-size: contain
+									transform: rotate(180deg)
 				&_07
 					top: 290px
 					left: 2px
+					&.item-hover
+						&:hover
+							.item-desc
+								top: 50%
+								right: 50%
+								&::before
+									background: url('../img/speech-balloon_1.png') center no-repeat
+									background-size: contain
+									transform: rotate(180deg)
 				&_08
 					top: 81px
 					left: 80px
+					&.item-hover
+						&:hover
+							.item-desc
+								right: 55%
+								bottom: 40%
+								&::before
+									background: url('../img/speech-balloon_2.png') center no-repeat
+									background-size: contain
+									transform: rotate(180deg)
 				&.item-hover
 					&:hover
 						z-index: 100
@@ -867,23 +732,44 @@ img
 						.item-img
 							z-index: 100
 						h4
-							color: #000
 							z-index: 100
+							@media (max-width: 1399px)
+								color: #000
 						.item-desc
+							display: flex
+							flex-direction: column
+							justify-content: center
+							align-items: center
 							visibility: visible
-							background-color: #fff
-							width: 394px
-							height: 394px
-							padding-top: 235px
-							box-shadow: 0 0 20px #271c55
-							border: 3px solid $violet
-							border-radius: 100%
+							width: 402px
+							height: 277px
 							position: absolute
-							top: 50%
-							left: 50%
-							transform: translate(-50%, -35%)
 							opacity: 1
 							z-index: 99
+							&::before
+								content: ""
+								display: block
+								position: absolute
+								top: 0
+								left: 0
+								right: 0
+								bottom: 0
+								z-index: -1
+							@media (max-width: 1399px)
+								display: block
+								background-color: #fff
+								width: 380px
+								height: 380px
+								padding-top: 225px
+								box-shadow: 0 0 20px #271c55
+								border: 3px solid $violet
+								border-radius: 100%
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translate(-50%, -35%)
+								&::before
+									display: none
 							p
 								display: inline-block
 
@@ -1284,6 +1170,7 @@ img
 ///////////////// TOKENINFO ///////////////////
 .tokeninfo
 	position: relative
+	overflow: hidden
 	padding: 53px 0 76px
 	background-color: #030a26
 	@media (max-width: 1219px)
@@ -1335,7 +1222,6 @@ img
 				a
 					@media (max-width: 767px)
 						font-size: 18px
-				
 
 	&__tab
 		display: none
@@ -1370,10 +1256,15 @@ img
 			position: absolute
 			top: 50%
 			left: 50%
-			transform: translate(-45%, -60%)
+			transform: translate(-45%, -65%)
 			@media (max-width: 999px)
 				width: 138px
+				height: 50px
 				font-size: 50px
+			@media (max-width: 399px)
+				width: 110px
+				height: 40px
+				font-size: 40px
 
 	.chart-legend
 		display: inline-block
@@ -1448,6 +1339,7 @@ img
 				span
 					color: #fff
 		&__desc
+			cursor: default
 			&::before
 				background-color: #5a6cff
 			a
@@ -1499,22 +1391,26 @@ img
 ///////////////// ROADMAP ///////////////////
 .roadmap
 	position: relative
-	background-color: #030927
-	padding: 85px 0 55px
+	background: url('../img/roadmap_bg.png') 0 center no-repeat
+	background-size: cover 
+	padding: 45px 0 95px
+	@media (max-width: 999px)
+		background-color: #030927
+		padding: 45px 0 25px
 	@media (max-width: 767px)
-		padding: 26px 0 41px
-	&::before
-		content: ""
-		display: block
-		width: 620px
-		height: 1120px
-		background: url(../img/logo_big.png) center no-repeat
-		background-size: contain
-		position: absolute
-		top: 0
-		right: 0
-		opacity: .1
-		z-index: 1
+		padding: 25px 0 40px
+	// &::before
+	// 	content: ""
+	// 	display: block
+	// 	width: 620px
+	// 	height: 1120px
+	// 	background: url(../img/logo_big.png) center no-repeat
+	// 	background-size: contain
+	// 	position: absolute
+	// 	top: 0
+	// 	right: 0
+	// 	opacity: .1
+	// 	z-index: 1
 		@media (max-width: 767px)
 			display: none
 	.container
@@ -1523,9 +1419,221 @@ img
 
 	h2
 		text-align: center
-		margin-bottom: 90px
+		margin-bottom: 45px
 		@media (max-width: 767px)
-			margin-bottom: 46px
+			margin-bottom: 25px
+
+	&__desk
+		position: relative
+		min-height: 875px
+		@media (max-width: 1219px)
+			min-height: 732px
+		@media (max-width: 999px)
+			display: none
+		&::before
+			content: ""
+			display: block
+			width: 1152px
+			height: 775px
+			background: url('../img/rounded-road-2x.png') center no-repeat
+			background-size: contain
+			position: absolute
+			top: 100px
+			left: 50%
+			transform: translateX(-50%)
+			z-index: 0
+			@media (max-width: 1219px)
+				width: 940px
+				height: 632px
+
+		.rocket
+			width: 176px
+			height: 106px
+			background: url('../img/svg/rocket.svg') center no-repeat
+			background-size: contain
+			position: absolute
+			top: 53px
+			left: -50px
+			z-index: 2
+			&.fly
+				animation: rocketFly 3s ease
+				animation-fill-mode: forwards
+			@keyframes rocketFly
+				from
+					left: -50px
+				to
+					left: 72%
+
+		.r-item
+			height: 140px
+			padding-bottom: 70px
+			z-index: 1
+			position: absolute
+			&_01
+				top: 0
+				left: 0
+			&_02
+				top: 0
+				left: 24%
+			&_03
+				top: 0
+				left: 51%
+			&_04
+				top: 0
+				left: 77%
+			&_05
+				top: 23%
+				left: 79%
+				text-align: right
+				@media (max-width: 1219px)
+					top: 23%
+					left: 75%
+				.r-item__year
+					margin-right: 0
+				.r-item__month
+					margin-right: 7px
+				&::before
+					left: auto!important
+					right: -53px
+			&_06
+				top: 28.2%
+				left: 60%
+				text-align: right
+				@media (max-width: 1219px)
+					top: 27.4%
+					left: 59%
+				.r-item__year
+					margin-right: 0
+				.r-item__month
+					margin-right: 7px
+				&::before
+					left: auto!important
+					right: 0
+			&_07
+				top: 28.2%
+				left: 33%
+				text-align: right
+				@media (max-width: 1219px)
+					top: 27.4%
+					left: 31%
+				.r-item__year
+					margin-right: 0
+				.r-item__month
+					margin-right: 7px
+				&::before
+					left: auto!important
+					right: 0
+			&_08
+				top: 28.2%
+				left: 7%
+				text-align: right
+				@media (max-width: 1219px)
+					top: 27.4%
+					left: 6%
+				.r-item__year
+					margin-right: 0
+				.r-item__month
+					margin-right: 7px
+				&::before
+					left: auto!important
+					right: 0
+			&_09
+				top: 56%
+				left: 13%
+				@media (max-width: 1219px)
+					top: 54%
+					left: 14%
+				&::before
+					left: -68px!important
+			&_10
+				top: 59.2%
+				left: 34%
+				@media (max-width: 1219px)
+					top: 57.5%
+					left: 33%
+			&_11
+				top: 59.2%
+				left: 60%
+				@media (max-width: 1219px)
+					top: 57.5%
+					left: 59.5%
+			&_12
+				top: 59.2%
+				left: 87%
+				@media (max-width: 1219px)
+					top: 57.5%
+					left: 86%
+			&_13
+				top: 87.2%
+				left: 78%
+				text-align: right
+				@media (max-width: 1219px)
+					top: 85%
+					left: 76%
+				.r-item__year
+					margin-right: 0
+				.r-item__month
+					margin-right: 7px
+				&::before
+					left: auto!important
+					right: 0
+			&_14
+				top: 87.2%
+				left: 52%
+				text-align: right
+				@media (max-width: 1219px)
+					top: 85%
+					left: 50%
+				.r-item__year
+					margin-right: 0
+				.r-item__month
+					margin-right: 7px
+				&::before
+					left: auto!important
+					right: 0
+			&_15
+				top: 87.2%
+				left: 30%
+				text-align: right
+				@media (max-width: 1219px)
+					top: 85%
+					left: 28%
+				.r-item__year
+					margin-right: 0
+				.r-item__month
+					margin-right: 7px
+				&::before
+					left: auto!important
+					right: 0
+			&::before
+				content: ""
+				display: block
+				width: 68px
+				height: 68px
+				border-radius: 100%
+				border: 8px solid #040929
+				background-color: #5765ff
+				background-image: linear-gradient(45deg, rgba(136, 56, 255, 0.49) 0%, rgba(41, 187, 255, 0.49) 100%)
+				position: absolute
+				left: 0
+				bottom: 0
+				z-index: 1
+			&__year
+				font-size: 24px
+				line-height: 1
+				color: #fff
+				margin-right: 7px
+			&__month
+				font-size: 16px
+				color: #4a468e
+			&__desc
+				font-size: 16px
+				color: #fff
+
+
+	&__mob
+		@media (min-width: 1000px)
+			display: none
 
 	.col-sm-4
 		&:nth-of-type(3n+1)
@@ -1544,7 +1652,7 @@ img
 					&::before
 						right: -1000px
 
-	.r-item
+	.r-item-mob
 		position: relative
 		padding-left: 34px
 		margin-bottom: 67px
@@ -1581,10 +1689,6 @@ img
 				background-color: #5765ff
 				background-image: linear-gradient(45deg, rgba(136, 56, 255, 0.5) 0%, rgba(41, 187, 255, 0.5) 100%)
 
-
-		
-
-
 		&__header
 			position: relative
 			padding-bottom: 17px
@@ -1613,6 +1717,89 @@ img
 		&__desc
 			font-size: 16px
 			color: #fff
+
+
+
+
+
+///////////////// DOWLOAD ///////////////////
+.download
+	position: relative
+	padding: 50px 0 100px
+	@media (max-width: 999px)
+		padding: 50px 0
+	@media (max-width: 767px)
+		padding: 30px 0
+
+	h2
+		color: $text
+		text-align: center
+		margin-bottom: 50px
+		@media (max-width: 767px)
+			margin-bottom: 30px
+
+	&__item
+		display: block
+		min-height: 285px
+		background-color: #e8e7ef
+		text-align: center
+		padding: 25px 40px 28px
+		margin-bottom: 30px
+		h4
+			color: #606fff
+			font-size: 24px
+			margin-bottom: 15px
+		&:hover
+			.download__icon
+				img
+					transform: translate(-50%, -50%) scale(1.1)
+		&_empty
+			&:hover
+				.download__icon
+					img
+						transform: translate(-50%, -50%)
+		
+
+	&__icon
+		position: relative
+		width: 103px
+		height: 103px
+		margin: 0 auto 23px
+		@media (max-width: 1219px)
+			margin: 0 auto 29px
+		@media (max-width: 999px)
+			margin: 0 auto 23px
+		@media (max-width: 767px)
+			margin: 0 auto 29px
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			transition: transform .3s ease
+		&_empty
+			width: 138px
+			height: 211px
+			margin: 10px auto
+
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		min-height: 60px
+		@media (max-width: 1219px)
+			font-size: 14px
+			min-height: 54px
+		@media (max-width: 999px)
+			font-size: 16px
+			min-height: 60px
+		@media (max-width: 767px)
+			font-size: 14px
+			min-height: 54px
+		span
+			color: #828999
+
 
 
 
@@ -1683,16 +1870,16 @@ img
 		font-size: 0
 		margin-bottom: 87px
 		@media (max-width: 767px)
-			max-width: 242px
+			max-width: 250px
 			margin: 0 auto 71px
 		li
 			display: inline-block
-			margin-right: 48px
+			margin-right: 13px
 			&:last-child
 				margin-right: 0
-			&:nth-child(3)
+			&:nth-child(4n)
 				@media (max-width: 767px)
-					margin: 0 0 15px
+					margin: 0 0 13px
 
 		&__item
 			display: inline-block
@@ -1713,12 +1900,33 @@ img
 			&_tm
 				background: url(../img/svg/tm.svg) center no-repeat
 				background-size: 23px 20px
+			&_04
+				background: url(../img/svg/s-584.svg) center no-repeat
+				background-size: 20px 23px
+			&_05
+				background: url(../img/svg/m-1.svg) center no-repeat
+				background-size: 22px 22px
+			&_06
+				background: url(../img/svg/s-574.svg) center no-repeat
+				background-size: 22px 23px
+			&_07
+				background: url(../img/svg/redd.svg) center no-repeat
+				background-size: 27px 25px
+			&_08
+				background: url(../img/svg/s-576.svg) center no-repeat
+				background-size: 25px 25px
+			&_bt
+				background: url(../img/svg/btc.svg) center no-repeat
+				background-size: 19px 26px
 			&_tw
 				background: url(../img/svg/tw.svg) center no-repeat
 				background-size: 19px 16px
 			&_yt
 				background: url(../img/svg/yt.svg) center no-repeat
 				background-size: 24px 16px
+			&_in
+				background: url(../img/svg/insta.svg) center no-repeat
+				background-size: 25px 25px
 
 	&__links
 		margin-bottom: 99px
@@ -1799,3 +2007,304 @@ img
 			padding: 0 10px
 
 
+
+
+
+
+
+
+
+
+
+///////////////// POPUP ///////////////////
+.popup-modal
+	display: none
+	width: 100%
+	min-width: 100%
+	min-height: 100%
+	background-color: rgba(0, 0, 0, .8)
+	overflow: auto
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 9999
+
+	.p-modal
+		position: relative
+		width: 100%
+		max-width: 500px
+		border-radius: 10px
+		background-color: #35225c
+		background-image: linear-gradient(45deg, rgba(136, 56, 255, 0.49) 0%, rgba(41, 187, 255, 0.49) 100%)
+		padding: 65px 0 55px
+		text-align: center
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		@media (min-width: 768px) and (max-height: 380px)
+			top: 20px
+			transform: translate(-50%, 0)
+			margin-bottom: 20px
+		@media (max-width: 767px)
+			max-width: 340px
+			padding: 75px 0 55px
+		@media (max-width: 767px) and (max-height: 458px)
+			top: 20px
+			transform: translate(-50%, 0)
+			margin-bottom: 20px
+		&__close
+			display: inline-block
+			width: 38px
+			height: 35px
+			text-align: left
+			position: absolute
+			top: 20px
+			right: 20px
+			opacity: .9
+			transition: opacity .2s ease
+			z-index: 999
+			&::before
+				content: ""
+				position: absolute
+				top: 15px
+				width: 40px
+				height: 4px
+				border-radius: 4px
+				background-color: #fff
+				transform: rotate(-45deg)
+			&::after
+				content: ""
+				position: absolute
+				top: 15px
+				width: 40px
+				height: 4px
+				border-radius: 4px
+				background-color: #fff
+				transform: rotate(45deg)
+			&:hover
+				cursor: pointer
+				opacity: 1
+
+		&__form
+			position: relative
+			font-size: 0
+			z-index: 1
+			margin: 0 auto
+
+		.ps-form
+			&__input
+				display: inline-block
+				width: 290px
+				height: 48px
+				font-size: 24px
+				vertical-align: top
+				input
+					display: inline-block
+					width: 100%
+					height: 100%
+					font-family: $osnovam
+					font-size: 16px
+					line-height: 1
+					border: none
+					outline: none
+					padding: 0 20px
+					@media (max-width: 767px)
+						padding: 0 13px
+				input[type=number]
+					width: 96px
+					height: auto
+					float: left
+					padding: 0
+					font-size: 24px
+					line-height: 1
+					position: absolute
+					top: 50%
+					left: 5px
+					transform: translateY(-50%)
+					//text-align: center
+					-moz-appearance: textfield
+					@media (max-width: 767px)
+						width: 170px
+				input[type=number]::-webkit-input-placeholder
+					line-height: 1
+					color: #000
+				input[type=number]::-webkit-outer-spin-button,
+				input[type=number]::-webkit-inner-spin-button
+					-webkit-appearance: none
+					margin: 0
+					opacity: 0
+				input[type=text]
+					height: 48px
+					border-radius: 4px
+				input[type=text]::-webkit-input-placeholder
+					line-height: 1.5
+					color: #a2adc7
+				&_num
+					position: relative
+					width: 175px
+					background-color: #fff
+					padding-left: 5px
+					border-radius: 0 4px 4px 0
+					@media (max-width: 767px)
+						display: block
+						width: 250px
+					&.input-coin
+						margin-right: 0
+						border-radius: 4px 0 0 4px
+						@media (max-width: 767px)
+							border-radius: 4px 4px 0 0
+							margin: 0 auto
+					&.input-llc
+						width: 155px
+						@media (max-width: 767px)
+							width: 250px
+							border-radius: 0 0 4px 4px
+							margin: 0 auto 10px
+						&::before
+							content: "LLC"
+							display: block
+							font-size: 24px
+							line-height: 1
+							color: #a2adc7
+							text-transform: uppercase
+							position: absolute
+							top: 50%
+							right: 10px
+							transform: translateY(-45%)
+							@media (max-width: 767px)
+								right: 30px
+
+					.prev-coin
+						width: 15px
+						height: 15px
+						position: absolute
+						top: 9px
+						right: 7px
+						&:hover
+							background-color: #dedede
+							cursor: pointer
+						&::before
+							content: ""
+							display: block
+							width: 6px
+							height: 6px
+							border-top: 2px solid #000
+							border-right: 2px solid #000
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -25%) rotate(-45deg)
+					.next-coin
+						width: 15px
+						height: 15px
+						position: absolute
+						right: 7px
+						bottom: 9px
+						&:hover
+							background-color: #e4e7ef
+							cursor: pointer
+						&::before
+							content: ""
+							display: block
+							width: 6px
+							height: 6px
+							border-top: 2px solid #000
+							border-right: 2px solid #000
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -75%) rotate(135deg)
+
+				&_text
+					display: block
+					width: 360px
+					height: auto
+					text-align: center
+					margin: 20px auto 25px
+					@media (max-width: 767px)
+						width: 250px
+
+
+			.select-coin
+				width: 50px
+				position: absolute
+				top: 50%
+				right: 25px
+				transform: translateY(-50%)
+				z-index: 99
+				&.is-opened
+					.select_arrow 
+						transform: translateY(-50%) rotate(180deg) 
+				&_in
+					position: relative
+					width: 100%
+					height: 100%
+					color: #a2adc7
+					cursor: pointer
+				&_arrow
+					display: none
+				&_title
+					display: block
+					white-space: nowrap
+					text-overflow: ellipsis
+					overflow: hidden
+				&_list
+					position: absolute
+					top: 110%
+					left: -5px
+					right: -5px
+					display: none
+					height: auto
+					background-color: #fff
+					border-radius: 4px
+					//width: 100%
+					list-style: none
+					z-index: 1000
+					margin-left: 0
+					li
+						line-height: 1
+						color: #a2adc7
+						cursor: pointer
+						padding-right: 2px
+						margin-bottom: 5px
+						&.is-active
+							display: none
+
+			&__reg
+				font-size: 16px
+				color: #fff
+				a
+					color: $green
+					&:hover
+						color: $yellow
+
+			&__arr
+				position: relative
+				display: inline-block
+				width: 30px
+				height: 48px
+				vertical-align: top
+				background-color: #e4e7ef
+				@media (max-width: 767px)
+					width: 250px
+					height: 20px
+				&::before
+					content: ""
+					display: block
+					width: 15px
+					height: 14px
+					background: url(../img/svg/arr-right.svg) center no-repeat
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					@media (max-width: 767px)
+						transform: translate(-50%, -50%) rotate(90deg)
+
+			&__btn
+				display: inline-block
+				font-family: $osnovam
+				border: none
+				vertical-align: top
+				cursor: pointer
