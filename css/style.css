@@ -6395,6 +6395,10 @@ img {
     background: #5765ff; }
   .btn-blue:active {
     background: #5738e1; }
+  .btn-blue.sign-in {
+    background: #3347a9; }
+    .btn-blue.sign-in:hover {
+      background: #2e4098; }
 
 .btn-yellow {
   display: inline-block;
@@ -6535,17 +6539,22 @@ img {
     vertical-align: middle;
     width: 200px;
     height: 51px;
-    margin-right: 172px; }
+    margin-right: 60px; }
     @media (max-width: 1219px) {
       .header__logo {
-        margin-right: 42px; } }
+        width: 170px;
+        height: 44px;
+        margin-right: 29px; } }
     @media (max-width: 999px) {
       .header__logo {
+        width: 200px;
+        height: 51px;
         margin-right: 0; } }
     @media (max-width: 767px) {
       .header__logo {
         display: block;
         width: 170px;
+        height: 44px;
         position: absolute;
         top: 14px;
         left: 75px;
@@ -6571,13 +6580,13 @@ img {
   .header__nav {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 124px; }
+    margin-right: 60px; }
     @media (min-width: 1000px) {
       .header__nav {
         display: inline-block !important; } }
     @media (max-width: 1219px) {
       .header__nav {
-        margin-right: 42px; } }
+        margin-right: 29px; } }
     @media (max-width: 999px) {
       .header__nav {
         display: none;
@@ -6597,6 +6606,9 @@ img {
       padding-right: 30px; }
       .header__nav ul li:last-child {
         padding-right: 0; }
+      @media (max-width: 1219px) {
+        .header__nav ul li {
+          padding-right: 19px; } }
       @media (max-width: 999px) {
         .header__nav ul li {
           display: block;
@@ -6604,8 +6616,12 @@ img {
           margin-bottom: 20px; } }
       .header__nav ul li a {
         font-size: 16px; }
+        @media (max-width: 1219px) {
+          .header__nav ul li a {
+            font-size: 14px; } }
         @media (max-width: 999px) {
           .header__nav ul li a {
+            font-size: 16px;
             color: #5262df; } }
         .header__nav ul li a:hover {
           color: #ffde25; }
@@ -6624,22 +6640,30 @@ img {
         margin: 0; } }
     .header__right-menu ul li {
       display: inline-block;
-      padding-right: 26px;
+      padding-right: 20px;
       vertical-align: middle; }
       @media (max-width: 767px) {
         .header__right-menu ul li {
-          padding-right: 0; } }
-      @media (max-width: 767px) {
-        .header__right-menu ul li:first-child {
-          padding-right: 25px; } }
+          padding-right: 10px; } }
+      .header__right-menu ul li:first-child {
+        padding-right: 10px; }
       .header__right-menu ul li:last-child {
         padding-right: 0; }
       .header__right-menu ul li a {
         display: inline-block;
         font-size: 16px; }
+        @media (max-width: 1219px) {
+          .header__right-menu ul li a {
+            font-size: 14px; } }
+        @media (max-width: 999px) {
+          .header__right-menu ul li a {
+            font-size: 16px; } }
         .header__right-menu ul li a.whitepaper {
           position: relative;
           padding-left: 30px; }
+          @media (max-width: 379px) {
+            .header__right-menu ul li a.whitepaper {
+              margin-top: 20px; } }
           .header__right-menu ul li a.whitepaper::before {
             content: "";
             display: block;
@@ -6671,6 +6695,9 @@ img {
   @media (max-width: 767px) {
     .main {
       padding: 130px 0 40px; } }
+  @media (max-width: 379px) {
+    .main {
+      padding: 170px 0 40px; } }
   .main__bg {
     position: absolute;
     top: 0;
@@ -7404,6 +7431,83 @@ img {
             top: 6px;
             left: 0; }
 
+.trading {
+  position: relative;
+  background-color: #051239;
+  overflow: hidden;
+  padding: 50px 0; }
+  @media (max-width: 767px) {
+    .trading {
+      padding: 30px 0 40px; } }
+  .trading::before {
+    content: "";
+    display: block;
+    width: 1438px;
+    height: 881px;
+    background: url("../img/trading-bg.png") center -40px no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-57%);
+    transform: translateX(-57%); }
+  .trading h2 {
+    text-align: center;
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .trading h2 {
+        margin-bottom: 30px; } }
+  .trading__item {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 35px; }
+    .trading__item:last-child {
+      margin-bottom: 0; }
+    @media (max-width: 499px) {
+      .trading__item {
+        padding-left: 90px; } }
+    .trading__item h5 {
+      color: #8f69ff;
+      margin-bottom: 10px; }
+    .trading__item p {
+      line-height: 24px;
+      color: #fff; }
+      @media (max-width: 499px) {
+        .trading__item p {
+          font-size: 14px; } }
+    .trading__item::before {
+      content: "";
+      display: block;
+      position: absolute; }
+    .trading__item_01::before {
+      width: 75px;
+      height: 40px;
+      background: url("../img/icons/trading-ico1.png") center no-repeat;
+      background-size: contain;
+      top: 5px;
+      left: 0; }
+    .trading__item_02::before {
+      width: 75px;
+      height: 75px;
+      background: url("../img/icons/trading-ico2.png") center no-repeat;
+      background-size: contain;
+      top: -15px;
+      left: 0; }
+    .trading__item_03::before {
+      width: 54px;
+      height: 77px;
+      background: url("../img/icons/trading-ico3.png") center no-repeat;
+      background-size: contain;
+      top: -15px;
+      left: 10px; }
+    .trading__item_04::before {
+      width: 60px;
+      height: 73px;
+      background: url("../img/icons/trading-ico4.png") center no-repeat;
+      background-size: contain;
+      top: -15px;
+      left: 10px; }
+
 .tokeninfo {
   position: relative;
   overflow: hidden;
@@ -7676,7 +7780,7 @@ img {
     .roadmap__desk .rocket {
       width: 176px;
       height: 106px;
-      background: url("../img/svg/rocket.svg") center no-repeat;
+      background: url("../img/rocket.gif") center no-repeat;
       background-size: contain;
       position: absolute;
       top: 53px;

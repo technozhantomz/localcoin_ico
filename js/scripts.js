@@ -1,19 +1,24 @@
-/* Trigger when page is ready */
+//--------------------------
+// Ready                   |
+//--------------------------
+
 $(document).ready(function() {
 
 	$(document).on('click', 'a[href="#"]', function(e){ e.preventDefault(); });
 
+
 	// WOW Animate
 	new WOW().init();
 
+
 	//Fixed elements
 	$(document).scroll(function () {
-		var bodyScroll   = $(this).scrollTop(),
-				advPos       = $('#advantages').offset().top,
-				tablePos     = $('.a-table').offset().top,
-				tokenInfoPos = $('#tokeninfo').offset().top,
-				tokenInfoPosOffset = tokenInfoPos - 157,
-				roadmapPos   = $('#roadmap').offset().top;
+		var bodyScroll       = $(this).scrollTop(),
+				advPos           = $('#advantages').offset().top,
+				tablePos         = $('.a-table').offset().top,
+				tradingPos       = $('#trading').offset().top,
+				tradingPosOffset = tradingPos - 157,
+				roadmapPos       = $('#roadmap').offset().top;
 
 		if (bodyScroll > 0) {
 			$('#header').addClass('header-fixed');
@@ -23,21 +28,21 @@ $(document).ready(function() {
 
 		if ($(window).width() > 999) {
 
-			if (bodyScroll >= advPos && bodyScroll < tokenInfoPos) {
+			if (bodyScroll >= advPos && bodyScroll < tradingPos) {
 				$('#header').hide();
 			} else $('#header').show();
 	
-			if (bodyScroll >= tablePos && bodyScroll < tokenInfoPos) {
+			if (bodyScroll >= tablePos && bodyScroll < tradingPos) {
 				$('.a-table-fixed').show();
 			} else $('.a-table-fixed').hide();
 
 		} else {
 
-			if (bodyScroll >= advPos && bodyScroll < tokenInfoPosOffset) {
+			if (bodyScroll >= advPos && bodyScroll < tradingPosOffset) {
 				$('#header').hide();
 			} else $('#header').show();
 	
-			if (bodyScroll >= tablePos && bodyScroll < tokenInfoPosOffset) {
+			if (bodyScroll >= tablePos && bodyScroll < tradingPosOffset) {
 				$('.a-table-fixed').show();
 			} else $('.a-table-fixed').hide();
 
@@ -95,9 +100,6 @@ $(document).ready(function() {
 				$('.header-fixed').css('right', 0);
 			}
 		});
-
-
-		
 
 
 
@@ -162,6 +164,7 @@ $(document).ready(function() {
 	});
 
 
+
 	// Hamburger
 	$('.hamburger').on('click', function() {
 		$(this).toggleClass('is-active');
@@ -179,12 +182,14 @@ $(document).ready(function() {
 	});
 
 
+
 	// Smooth scrolling
 	$('.header__nav ul li a').on('click', function (e) {
 		e.preventDefault();
 
 		var _id  = $(this).attr('href'),
-				top = $(_id).offset().top;
+				headerHeight = $('.header').outerHeight(),
+				top = $(_id).offset().top - headerHeight;
 
 		$('html, body').animate({scrollTop: top}, 1000);
 
@@ -211,6 +216,19 @@ $(document).ready(function() {
 		} else $('html, body').animate({scrollTop: top}, 1000);
 
 	});
+
+
+	//Random Video
+	var urlArr = [
+				'https://www.youtube.com/watch?v=j90Sgieta7s?autoplay=1',
+				'https://www.youtube.com/watch?v=SZSVxuFQy78?autoplay=1',
+				'https://www.youtube.com/watch?v=hS7oCmVmIdk?autoplay=1'
+			],
+			rand = Math.round(Math.random() * urlArr.length);
+
+	if(rand == urlArr.length) rand -= 1;
+
+	$('.advantages__video').attr('href', urlArr[rand]);
 
 
 
@@ -268,19 +286,11 @@ $(document).ready(function() {
 
 
 
+//--------------------------
+// Resize trigger          |
+//--------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-// Resize trigger
 $(window).resize(function() {
 
 	var slider = $('.pre-sale__slider');
@@ -333,12 +343,9 @@ $(window).resize(function() {
 
 
 
-
-
-
-
-
-
+//--------------------------
+// Functions               |
+//--------------------------
 
 
 // Coin Change

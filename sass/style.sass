@@ -187,6 +187,10 @@ img
 		background: #5765ff
 	&:active
 		background: #5738e1
+	&.sign-in
+		background: #3347a9
+		&:hover
+			background: #3347a9*.9
 
 .btn-yellow
 	display: inline-block
@@ -327,14 +331,19 @@ img
 		vertical-align: middle
 		width: 200px
 		height: 51px
-		margin-right: 172px
+		margin-right: 60px
 		@media (max-width: 1219px)
-			margin-right: 42px
+			width: 170px
+			height: 44px
+			margin-right: 29px
 		@media (max-width: 999px)
+			width: 200px
+			height: 51px
 			margin-right: 0
 		@media (max-width: 767px)
 			display: block
 			width: 170px
+			height: 44px
 			position: absolute
 			top: 14px
 			left: 75px
@@ -363,11 +372,11 @@ img
 	&__nav
 		display: inline-block
 		vertical-align: middle
-		margin-right: 124px
+		margin-right: 60px
 		@media (min-width: 1000px)
 			display: inline-block !important
 		@media (max-width: 1219px)
-			margin-right: 42px
+			margin-right: 29px
 		@media (max-width: 999px)
 			display: none
 			width: 100%
@@ -386,13 +395,18 @@ img
 				padding-right: 30px
 				&:last-child
 					padding-right: 0
+				@media (max-width: 1219px)
+					padding-right: 19px
 				@media (max-width: 999px)
 					display: block
 					padding: 0
 					margin-bottom: 20px
 				a
 					font-size: 16px
+					@media (max-width: 1219px)
+						font-size: 14px
 					@media (max-width: 999px)
+						font-size: 16px
 						color: $violet
 					&:hover
 						color: $yellow
@@ -411,21 +425,26 @@ img
 		ul
 			li
 				display: inline-block
-				padding-right: 26px
+				padding-right: 20px
 				vertical-align: middle
 				@media (max-width: 767px)
-					padding-right: 0
+					padding-right: 10px
 				&:first-child
-					@media (max-width: 767px)
-						padding-right: 25px
+					padding-right: 10px
 				&:last-child
 					padding-right: 0
 				a
 					display: inline-block
 					font-size: 16px
+					@media (max-width: 1219px)
+						font-size: 14px
+					@media (max-width: 999px)
+						font-size: 16px
 					&.whitepaper
 						position: relative
 						padding-left: 30px
+						@media (max-width: 379px)
+							margin-top: 20px
 						&::before
 							content: ""
 							display: block
@@ -462,6 +481,8 @@ img
 		padding: 91px 0 64px
 	@media (max-width: 767px)
 		padding: 130px 0 40px
+	@media (max-width: 379px)
+		padding: 170px 0 40px
 
 	&__bg
 		position: absolute
@@ -1167,6 +1188,90 @@ img
 
 
 
+///////////////// TRADING ///////////////////
+.trading
+	position: relative
+	background-color: #051239
+	overflow: hidden
+	padding: 50px 0
+	@media (max-width: 767px)
+		padding: 30px 0 40px
+	&::before
+		content: ""
+		display: block
+		width: 1438px
+		height: 881px
+		background: url('../img/trading-bg.png') center -40px no-repeat
+		background-size: contain
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-57%)
+
+	h2
+		text-align: center
+		margin-bottom: 50px
+		@media (max-width: 767px)
+			margin-bottom: 30px
+
+	&__item
+		position: relative
+		padding-left: 100px
+		margin-bottom: 35px
+		&:last-child
+			margin-bottom: 0
+		@media (max-width: 499px)
+			padding-left: 90px
+		h5
+			color: #8f69ff
+			margin-bottom: 10px
+		p
+			line-height: 24px
+			color: #fff
+			@media (max-width: 499px)
+				font-size: 14px
+
+		&::before
+			content: ""
+			display: block
+			position: absolute
+
+		&_01
+			&::before
+				width: 75px
+				height: 40px
+				background: url('../img/icons/trading-ico1.png') center no-repeat
+				background-size: contain
+				top: 5px
+				left: 0
+		&_02
+			&::before
+				width: 75px
+				height: 75px
+				background: url('../img/icons/trading-ico2.png') center no-repeat
+				background-size: contain
+				top: -15px
+				left: 0
+		&_03
+			&::before
+				width: 54px
+				height: 77px
+				background: url('../img/icons/trading-ico3.png') center no-repeat
+				background-size: contain
+				top: -15px
+				left: 10px
+		&_04
+			&::before
+				width: 60px
+				height: 73px
+				background: url('../img/icons/trading-ico4.png') center no-repeat
+				background-size: contain
+				top: -15px
+				left: 10px
+
+
+
+
 ///////////////// TOKENINFO ///////////////////
 .tokeninfo
 	position: relative
@@ -1449,7 +1554,7 @@ img
 		.rocket
 			width: 176px
 			height: 106px
-			background: url('../img/svg/rocket.svg') center no-repeat
+			background: url('../img/rocket.gif') center no-repeat
 			background-size: contain
 			position: absolute
 			top: 53px
