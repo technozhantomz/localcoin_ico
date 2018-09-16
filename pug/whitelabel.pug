@@ -1,0 +1,261 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='description', content='')
+		title Localcoin - White Label
+		// CSS
+		link(href='css/style.css', rel='stylesheet', media='screen')
+	body
+		.wrapper
+			header#header.header.header_inner
+				.container
+					.hamburger.hamburger--squeeze
+						.hamburger-box
+							.hamburger-inner
+					a.header__logo(href='#')
+						img(src='img/logo.png', srcset='img/logo-2x.png 2x', alt='Localcoin')
+					.header__nav(style='display:none')
+						ul
+							li
+								a(href='index.html#advantages') Why
+							li
+								a(href='index.html#trading') Trading
+							li
+								a(href='index.html#tokeninfo') Token info
+							li
+								a(href='index.html#roadmap') Road map
+							li
+								a(href='index.html#download') Download
+					.header__right-menu
+						ul
+							li
+								a.btn-blue.btn-blue_small#buy_coin_header(href='#') Buy LLC
+							li
+								a.btn-blue.btn-blue_small.sign-in#signIn(href='#') Sign In
+							li
+								a.whitepaper(href='#') WP
+							li
+								a.whitelabel(href='#') WL
+							li
+								.header__lang.select.select-lang
+									input.select_hidden(type='hidden', value='1')
+									.select_in.select-lang_in
+										span.select_title.select-lang_title
+											img(src='img/eng.png', srcset='img/eng-2x.png 2x', alt='eng')
+										i.select_arrow.select-lang_arrow
+									ul.select_list.select-lang_list
+										li.is-active(data-value='1')
+											img(src='img/eng.png', srcset='img/eng-2x.png 2x', alt='eng')
+										li(data-value='2')
+											img(src='img/svg/rus.svg', alt='rus')
+
+
+
+			section#whitelabel.white-label
+				.container
+					ul.breadcrumbs.white-label__breadcrumbs
+						li
+							a Home
+						li
+							a White Label
+
+					.row
+						.col-sm-6.col-md-8
+							h1.white-label__title
+								span White label 
+								|  exchange solution for crypto businesses
+
+							span.white-label__subtitle Launching your own cryptocurrency exchange? Tap our readymade decentralized platform with no hassle setup.
+						.col-sm-6.col-md-4
+							form(action="#").white-label__form.wl-form
+								h4.wl-form__title Contact us to
+									br
+									| learn more about
+									br
+									| our white label offering
+								.wl-form__input
+									label(for="input_name") Name*
+									input#input_name(type="text" name="name" required)
+								.wl-form__input
+									label(for="input_email") Email*
+									input#input_email(type="text" name="email" required)
+								.wl-form__input
+									label(for="message") Your message:
+									textarea#message(name="message")
+								.wl-form__input
+									label.checkbox
+										input(type="checkbox" name="checkbox").checkbox__default
+										span.checkbox__custom
+										span.checkbox__label I agree with OpenLedger's 
+											a Privacy Policy
+								input.wl-form__submit(type="submit" value="Get in touch")
+
+				.white-label__advantages.wl-advantages
+					.container
+						.row
+							.col-sm-6.col-md-4
+								.wl-advantages__item.wl-advantages__item_01
+									h5 High performance
+									p A liquidity-ready trading platform to help you start a cryptocurrency exchange business in only 2 weeks. Over 50 coins, fiat gateways, unmatched security and localizations — all included, without investing heavily in development and infrastructure.
+							.col-md-4
+								.wl-advantages__item.wl-advantages__item_02
+									h5 Top-notch technology
+									p We made the best of what BitShares had to offer and built a new, even better-designed platform. Powered by Graphene, it can process more transactions every second than Bitcoin or Ethereum.
+						.row
+							.col-sm-6.col-md-4
+								.wl-advantages__item.wl-advantages__item_03
+									h5 Ready-made, customizable UI
+									p Go with the original BitShares layouts or tap into our own, improved design. All tailored to your brand identity and regularly updated by our team. You can also provide deeper customization if needed.
+							.col-sm-6.col-md-4
+								.wl-advantages__item.wl-advantages__item_04
+									h5 Scalability
+									p Increase your revenues by implementing new crypto and fiat gateways as well as fees. You can do it in house or let OpenLedger do all the heavy lifting on a one-time payment or revenue-sharing basis.
+						.row
+							.col-sm-6.col-md-4
+								.wl-advantages__item.wl-advantages__item_05
+									h5 Professional product team
+									p A team of 40+ blockchain and cryptocurrency experts is working every day to improve the platform. We are constantly rolling out new gateways to let users trade world’s most wanted coins. Rest assured we’ll have you covered from the moment your exchange goes live.
+							.col-sm-6.col-md-4
+								.wl-advantages__item.wl-advantages__item_06
+									h5 Flexible engagement models
+									p We’ve come up with 3 transparent engagement models, each with a different level of control and risk. You can start small and then switch to a more high-profit model as your business grows.
+
+				.container
+					.row
+						.col-md-8
+							.white-label__fees
+								h3 Fees
+								p OpenLedger DEX relies on BitShares’ fee structure. It means that you will retain 80% of the fee a registered user pays for any transaction with the system. See this document to learn more about BitShares’ fees.
+							.white-label__tech-req.tech-req
+								h3 Technical requirements
+								p Our platform requires no heavy infrastructure investments. All you need to get your exchange up and running is:
+								ul.tech-req__list
+									li.tech-req__list-item.tech-req__list-item_01 Registered domain name
+									li.tech-req__list-item.tech-req__list-item_02 SSL certificate
+									li.tech-req__list-item.tech-req__list-item_03 2 servers with the following minimum configuration:
+								.tech-req__table
+									table
+										tr
+											td.t-title Processor
+											td Intel® Xeon® E5-1650 v3 Hexa-Core
+										tr
+											td.t-title RAM
+											td 256GB DDR4 ECC
+										tr
+											td.t-title Data Storage
+											td 2×4TB SATA 6Gb/s Enterprise HDD; 7200 rpm
+										tr
+											td.t-title Ethernet
+											td 1 Gbit/s bandwidth
+
+
+
+
+			section#getfree.getfree
+				.container
+					.getfree__logo
+						img(src='img/d-logo.png', srcset='img/d-logo-2x.png 2x', alt='logo')
+					h2.wow.fadeInUp
+						| Create your account for 
+						span free 
+						| and start trading now.
+					p.wow.fadeInUp
+						| The first 100 000 users receive 100 LLC coins after registration on the exchange's website
+					a.getfree__btn.btn-yellow(href='#') Join and start trading now
+
+
+			footer#footer.footer
+				.container
+					ul.footer__social.f-social
+						li
+							a.f-social__item.f-social__item_vk(href='#')
+						li
+							a.f-social__item.f-social__item_fb(href='#')
+						li
+							a.f-social__item.f-social__item_tm(href='#')
+						li
+							a.f-social__item.f-social__item_04(href='#')
+						li
+							a.f-social__item.f-social__item_05(href='#')
+						li
+							a.f-social__item.f-social__item_06(href='#')
+						li
+							a.f-social__item.f-social__item_07(href='#')
+						li
+							a.f-social__item.f-social__item_08(href='#')
+						li
+							a.f-social__item.f-social__item_bt(href='#')
+						li
+							a.f-social__item.f-social__item_tw(href='#')
+						li
+							a.f-social__item.f-social__item_yt(href='#')
+						li
+							a.f-social__item.f-social__item_in(href='#')
+					ul.footer__links
+						li
+							a.footer__wl(href='#') White Label
+						li
+							a.footer__wp(href='#') White Paper
+						li
+							a.btn-blue#buy_coin_footer(href='#') Buy LLC coin
+					ul.footer__nav.wow.fadeInUp
+						li
+							a(href='index.html#main') Home
+						li
+							a(href='index.html#advantages') Why
+						li
+							a(href='index.html#trading') Trading
+						li
+							a(href='index.html#tokeninfo') Token info
+						li
+							a(href='index.html#roadmap') Road map
+						li
+							a(href='index.html#download') Download
+						li
+							a(href='index.html#airDrop') AirDrop
+					.footer__desc.wow.fadeInUp
+						| LocalCoin is THE true democracy decentralised ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.
+
+
+			.popup-modal
+				.p-modal
+					.p-modal__close
+					.p-modal__form
+						form.ps-form(action="#")
+							.ps-form__input.ps-form__input_num.input-coin
+								input(type="number" name="btc" value="0" min="0")
+								.ps-form__select.select.select-coin
+									input.select_hidden(type='hidden', value='1')
+									.select_in.select-coin_in
+										span.select_title.select-coin_title BTC
+										i.select_arrow.select-coin_arrow
+									ul.select_list.select-coin_list
+										li.is-active(data-value='1') BTC
+										li(data-value='2') CTC
+										li(data-value='3') DTC
+										li(data-value='4') ETC
+										li(data-value='5') FTC
+										li(data-value='6') GTC
+								.prev-coin
+								.next-coin
+							.ps-form__arr
+							.ps-form__input.ps-form__input_num.input-llc
+								input(type="number" name="llc" value="0" min="0")
+							.ps-form__input.ps-form__input_text
+								input(type="text" placeholder="Your LocalCoin Account name")
+								span.ps-form__reg
+									| Not a member yet? 
+									a(href="#") Register now
+							input(type="submit" value="Buy LLC coin").ps-form__btn.btn-yellow
+
+
+		// jQuery
+		script(src='js/jquery-3.3.1.min.js')
+
+		// Plugins
+		script(src='js/wow.min.js')
+
+		// JavaScripts
+		script(src='js/scripts.js')

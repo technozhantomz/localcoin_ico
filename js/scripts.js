@@ -12,13 +12,11 @@ $(document).ready(function() {
 
 
 	//Fixed elements
+	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+	
 	$(document).scroll(function () {
-		var bodyScroll       = $(this).scrollTop(),
-				advPos           = $('#advantages').offset().top,
-				tablePos         = $('.a-table').offset().top,
-				tradingPos       = $('#trading').offset().top,
-				tradingPosOffset = tradingPos - 157,
-				roadmapPos       = $('#roadmap').offset().top;
+
+		var bodyScroll = $(this).scrollTop();
 
 		if (bodyScroll > 0) {
 			$('#header').addClass('header-fixed');
@@ -26,80 +24,94 @@ $(document).ready(function() {
 			$('#header').removeClass('header-fixed');
 		}
 
-		if ($(window).width() > 999) {
+		if (urlLastSegment == 'index.html' || urlLastSegment == '') {
 
-			if (bodyScroll >= advPos && bodyScroll < tradingPos) {
-				$('#header').hide();
-			} else $('#header').show();
-	
-			if (bodyScroll >= tablePos && bodyScroll < tradingPos) {
-				$('.a-table-fixed').show();
-			} else $('.a-table-fixed').hide();
+			var	advPos           = $('#advantages').offset().top,
+					tablePos         = $('.a-table').offset().top,
+					tradingPos       = $('#trading').offset().top,
+					tradingPosOffset = tradingPos - 137,
+					roadmapPos       = $('#roadmap').offset().top;
 
-		} else {
+			if ($(window).width() > 999) {
 
-			if (bodyScroll >= advPos && bodyScroll < tradingPosOffset) {
-				$('#header').hide();
-			} else $('#header').show();
-	
-			if (bodyScroll >= tablePos && bodyScroll < tradingPosOffset) {
-				$('.a-table-fixed').show();
-			} else $('.a-table-fixed').hide();
+				if (bodyScroll >= advPos && bodyScroll < tradingPos) {
+					$('#header').hide();
+				} else $('#header').show();
+		
+				if (bodyScroll >= tablePos && bodyScroll < tradingPos) {
+					$('.a-table-fixed').show();
+				} else $('.a-table-fixed').hide();
 
-		}
+			} else {
 
-		// Rocket Fly
-		if (bodyScroll >= roadmapPos - $(window).height() / 2) {
-			$('.rocket').addClass('fly');
+				if (bodyScroll >= advPos && bodyScroll < tradingPosOffset) {
+					$('#header').hide();
+				} else $('#header').show();
+		
+				if (bodyScroll >= tablePos && bodyScroll < tradingPosOffset) {
+					$('.a-table-fixed').show();
+				} else $('.a-table-fixed').hide();
+
+			}
+
+			// Rocket Fly
+			if (bodyScroll >= roadmapPos - $(window).height() / 2) {
+				$('.rocket').addClass('fly');
+			}
+
 		}
 
 	});
 
-	$('.a-table-fixed').stick_in_parent({
-		parent: '.advantages__table-inner'
-	});
+	if (typeof $().stick_in_parent !== "undefined") {
 
-
-
-		// Popup-modal
-		var scrollWidth = window.innerWidth - document.body.clientWidth;
-
-		$('#buy_coin_header, #buy_coin_footer, #coin_hover_btn').on('click', function(e) {
-			e.preventDefault();
-	
-			$('.popup-modal').fadeIn('fast');
-
-			$('body').css({
-				'overflow' : 'hidden',
-				'margin-right' : scrollWidth + 'px'
-			});
-			$('.header-fixed').css('right', scrollWidth + 'px');
-	
-			return false;
+		$('.a-table-fixed').stick_in_parent({
+			parent: '.advantages__table-inner'
 		});
-	
-		$('.p-modal__close').on('click', function() {
+
+	}
+
+
+
+	// Popup-modal
+	var scrollWidth = window.innerWidth - document.body.clientWidth;
+
+	$('#buy_coin_header, #buy_coin_footer, #coin_hover_btn').on('click', function(e) {
+		e.preventDefault();
+
+		$('.popup-modal').fadeIn('fast');
+
+		$('body').css({
+			'overflow' : 'hidden',
+			'margin-right' : scrollWidth + 'px'
+		});
+		$('.header-fixed').css('right', scrollWidth + 'px');
+
+		return false;
+	});
+
+	$('.p-modal__close').on('click', function() {
+		$('.popup-modal').hide();
+		$('body').attr('style', '');
+		$('.header-fixed').css('right', 0);
+	});
+
+	$(document).on('click touchstart', function(e) {
+		var container = $('.p-modal');
+		if (container.length && !$(e.target).closest(container).length) {
 			$('.popup-modal').hide();
 			$('body').attr('style', '');
 			$('.header-fixed').css('right', 0);
-		});
-	
-		$(document).on('click touchstart', function(e) {
-			var container = $('.p-modal');
-			if (container.length && !$(e.target).closest(container).length) {
-				$('.popup-modal').hide();
-				$('body').attr('style', '');
-				$('.header-fixed').css('right', 0);
-			}
-		});
-	
-		$(document).keyup(function(e) {
-			if (e.keyCode == 27) {
-				$('.popup-modal').hide();
-				$('body').attr('style', '');
-				$('.header-fixed').css('right', 0);
-			}
-		});
+		}
+	});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			$('.popup-modal').hide();
+			$('body').attr('style', '');
+			$('.header-fixed').css('right', 0);
+		}
+	});
 
 
 
@@ -184,38 +196,42 @@ $(document).ready(function() {
 
 
 	// Smooth scrolling
-	$('.header__nav ul li a').on('click', function (e) {
-		e.preventDefault();
+	if (urlLastSegment == 'index.html' || urlLastSegment == '') {
 
-		var _id  = $(this).attr('href'),
-				headerHeight = $('.header').outerHeight(),
-				top = $(_id).offset().top - headerHeight;
+		$('.header__nav ul li a').on('click', function (e) {
+			e.preventDefault();
 
-		$('html, body').animate({scrollTop: top}, 1000);
+			var _id  = $(this).attr('href'),
+					headerHeight = $('.header').outerHeight(),
+					top = $(_id).offset().top - headerHeight;
 
-		$('.header__nav').slideUp();
-		$('.hamburger').removeClass('is-active');
-	});
-
-	$('.footer__nav li a').on('click', function(e) {
-		e.preventDefault();
-
-		var _id  = $(this).attr('href'),
-				top = $(_id).offset().top;
-
-		if (_id == '#airDrop') {
 			$('html, body').animate({scrollTop: top}, 1000);
-			
-			$('.main__tab-links ul li a').removeClass('active');
-			$('.main__tab').removeClass('active');
 
-			$('.main__tab-links ul li a[href="#airDrop"]').addClass('active');
-			$(_id).addClass('active');
-			mainChartInit();
-			
-		} else $('html, body').animate({scrollTop: top}, 1000);
+			$('.header__nav').slideUp();
+			$('.hamburger').removeClass('is-active');
+		});
 
-	});
+		$('.footer__nav li a').on('click', function(e) {
+			e.preventDefault();
+
+			var _id  = $(this).attr('href'),
+					top = $(_id).offset().top;
+
+			if (_id == '#airDrop') {
+				$('html, body').animate({scrollTop: top}, 1000);
+				
+				$('.main__tab-links ul li a').removeClass('active');
+				$('.main__tab').removeClass('active');
+
+				$('.main__tab-links ul li a[href="#airDrop"]').addClass('active');
+				$(_id).addClass('active');
+				mainChartInit();
+				
+			} else $('html, body').animate({scrollTop: top}, 1000);
+
+		});
+
+	}
 
 
 	//Random Video
@@ -232,49 +248,53 @@ $(document).ready(function() {
 
 
 
-	// Pre-sale form
-	coinChange({
-		arrPrev: '.prev-coin',
-		arrNext: '.next-coin',
-		input: '.input-coin'
-	});
+
+	
+	if (urlLastSegment == 'index.html' || urlLastSegment == '') {
+
+		// Pre-sale form
+		coinChange({
+			arrPrev: '.prev-coin',
+			arrNext: '.next-coin',
+			input: '.input-coin'
+		});
 
 
-	// Main Tabs
-	tabThis({
-		tabsLinks: '.main__tab-links ul li a',
-		tabsConts: '.main__tab'
-	});
+		// Main Tabs
+		tabThis({
+			tabsLinks: '.main__tab-links ul li a',
+			tabsConts: '.main__tab'
+		});
 
-	// Token info Tabs
-	tabThis({
-		tabsLinks: '.tokeninfo__tab-links ul li a',
-		tabsConts: '.tokeninfo__tab'
-	});
-
-
-	// Token info charts
-	// Allocation of shares
-	tokenInfoChart({
-		chartId: 'sharesChart',
-		chartIdSelector: '#sharesChart',
-		legendId: 'sharesChartLegend',
-		legendItems: '#sharesChartLegend ul li',
-		data: [10, 10, 80],
-		bgColor: ['#46a6ff', '#57c2ff', '#5447eb']
-	});
-
-	// Use of funds
-	tokenInfoChart({
-		chartId: 'useOfFundsChart',
-		chartIdSelector: '#useOfFundsChart',
-		legendId: 'useOfFundsChartLegend',
-		legendItems: '#useOfFundsChartLegend ul li',
-		data: [90, 10],
-		bgColor: ['#46a6ff', '#57c2ff']
-	});
+		// Token info Tabs
+		tabThis({
+			tabsLinks: '.tokeninfo__tab-links ul li a',
+			tabsConts: '.tokeninfo__tab'
+		});
 
 
+		// Token info charts
+		// Allocation of shares
+		tokenInfoChart({
+			chartId: 'sharesChart',
+			chartIdSelector: '#sharesChart',
+			legendId: 'sharesChartLegend',
+			legendItems: '#sharesChartLegend ul li',
+			data: [10, 10, 80],
+			bgColor: ['#46a6ff', '#57c2ff', '#5447eb']
+		});
+
+		// Use of funds
+		tokenInfoChart({
+			chartId: 'useOfFundsChart',
+			chartIdSelector: '#useOfFundsChart',
+			legendId: 'useOfFundsChartLegend',
+			legendItems: '#useOfFundsChartLegend ul li',
+			data: [90, 10],
+			bgColor: ['#46a6ff', '#57c2ff']
+		});
+
+	}
 
 }); // End Ready
 
@@ -293,43 +313,49 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 
-	var slider = $('.pre-sale__slider');
+	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 
-	if($(this).width() < 1000) {
+	if (urlLastSegment == 'index.html' || urlLastSegment == '') {
 
-		$('.advantages__table').mCustomScrollbar({
-			axis: "x",
-			autoDraggerLength: false,
-			mouseWheel:{ enable: false },
-			advanced:{ autoExpandHorizontalScroll:true },
-			callbacks: {
-				whileScrolling:function() {
-					var l = this.mcs.left + 20;
-					$('.a-table-fixed').css({ left: l });
+		var slider = $('.pre-sale__slider');
+
+		if($(this).width() < 1000) {
+
+			$('.advantages__table').mCustomScrollbar({
+				axis: "x",
+				autoDraggerLength: false,
+				mouseWheel:{ enable: false },
+				advanced:{ autoExpandHorizontalScroll:true },
+				callbacks: {
+					whileScrolling:function() {
+						var l = this.mcs.left + 20;
+						$('.a-table-fixed').css({ left: l });
+					}
 				}
-			}
-		});
-
-		$('.ps-circuit__item').removeClass('item-hover');
-
-		if(!slider.hasClass('slick-initialized'))
-			slider.slick({
-				dots: true,
-				adaptiveHeight: true
 			});
 
-		$('.download__item').removeClass('wow flipInY');
+			$('.ps-circuit__item').removeClass('item-hover');
 
-	} else {
-		$('.advantages__table').mCustomScrollbar("destroy");
-		$('.a-table-fixed').css({ left: 'auto' });
+			if(!slider.hasClass('slick-initialized'))
+				slider.slick({
+					dots: true,
+					adaptiveHeight: true
+				});
 
-		$('.ps-circuit__item').addClass('item-hover');
+			$('.download__item').removeClass('wow flipInY');
 
-		if(slider.hasClass('slick-initialized'))
-			slider.slick('unslick');
+		} else {
+			$('.advantages__table').mCustomScrollbar("destroy");
+			$('.a-table-fixed').css({ left: 'auto' });
 
-			$('.download__item').addClass('wow flipInY');
+			$('.ps-circuit__item').addClass('item-hover');
+
+			if(slider.hasClass('slick-initialized'))
+				slider.slick('unslick');
+
+				$('.download__item').addClass('wow flipInY');
+		}
+
 	}
 
 }).trigger("resize");
