@@ -234,17 +234,13 @@ $(document).ready(function() {
 	}
 
 
-	//Random Video
-	var urlArr = [
-				'https://www.youtube.com/watch?v=j90Sgieta7s?autoplay=1',
-				'https://www.youtube.com/watch?v=SZSVxuFQy78?autoplay=1',
-				'https://www.youtube.com/watch?v=hS7oCmVmIdk?autoplay=1'
-			],
-			rand = Math.round(Math.random() * urlArr.length);
+	//Random Background
+	var bgArr = $('.main__bg video').toArray(),
+			rand  = Math.round(Math.random() * bgArr.length);
 
-	if(rand == urlArr.length) rand -= 1;
+			if(rand == bgArr.length) rand -= 1;
 
-	$('.advantages__video').attr('href', urlArr[rand]);
+	$(bgArr[rand]).addClass('visible');	
 
 
 
