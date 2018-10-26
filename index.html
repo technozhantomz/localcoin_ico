@@ -1204,20 +1204,17 @@
       <div class="popup-modal">
         <div class="p-modal">
           <div class="p-modal__close"></div>
-          <div class="p-modal__form">
-            <form class="ps-form" action="#">
+          <div class="p-modal__form" id="bridgeFormInput">
+            <form class="ps-form" action="#" id="bridgeForm">
               <div class="ps-form__input ps-form__input_num input-coin">
-                <input type="number" name="btc" value="0" min="0">
+                <input type="number" min="0.0001" step="0.0001" name="btc" value="0" id="bridgeAmountFrom">
                 <div class="ps-form__select select select-coin">
-                  <input class="select_hidden" type="hidden" value="1">
-                  <div class="select_in select-coin_in"><span class="select_title select-coin_title">BTC</span><i class="select_arrow select-coin_arrow"></i></div>
-                  <ul class="select_list select-coin_list">
-                    <li class="is-active" data-value="1">BTC</li>
-                    <li data-value="2">CTC</li>
-                    <li data-value="3">DTC</li>
-                    <li data-value="4">ETC</li>
-                    <li data-value="5">FTC</li>
-                    <li data-value="6">GTC</li>
+                  <input class="select_hidden" type="hidden" value="BTC" id="bridgeCurrency">
+                  <div class="select_in select-coin_in">
+                    <span class="select_title select-coin_title" id="bridgeCurrenciesLabel">BTC</span>
+                    <i class="select_arrow select-coin_arrow"></i>
+                  </div>
+                  <ul class="select_list select-coin_list" id="bridgeCurrenciesList">                    
                   </ul>
                 </div>
                 <div class="prev-coin"></div>
@@ -1225,17 +1222,34 @@
               </div>
               <div class="ps-form__arr"></div>
               <div class="ps-form__input ps-form__input_num input-llc">
-                <input type="number" name="llc" value="0" min="0">
+                <input type="number" name="llc" value="0" id="bridgeAmountTo" style="background-color: #fff;" disabled>
               </div>
               <div class="ps-form__input ps-form__input_text">
-                <input type="text" placeholder="Your LocalCoin Account name"><span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/">Register now</a></span>
+                <input type="text" id="grapheneUsername" placeholder="Your LocalCoin Account name">
+                <span id="loginError" class="ps-form__reg" style="color: #faa; display: inherit; margin-top: 10px;"></span>
+                <span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/">Register now</a></span>
               </div>
-              <input class="ps-form__btn btn-yellow" type="submit" value="Buy LLC coin">
+              <input class="ps-form__btn btn-yellow" type="submit" value="Buy LLC coin" id="bridgeSubmit">
             </form>
+          </div>
+          <div class="p-modal__form" id="bridgeFormAddress" style="display: none;">
+            <span id="bridgeFormInputAsset" class="ps-form__reg" style="display: inherit; margin-top: 10px; font-size: 50px;"></span>                        
+            <span class="ps-form__reg" style="display: inherit; margin-top: 20px;">Deposit to account: <a id="accountName" target="_blank" href=""></a></span>
+            <span class="ps-form__reg" style="display: inherit; margin-top: 20px;">Address for deposit: </span>
+            <span id="bridgeFormInputAddress" class="ps-form__reg" style="display: inherit; font-size: 20px;"></span>
+            <span id="bridgeFormInputMinimalAmount" class="ps-form__reg" style="display: inherit; margin-top: 10px;">Minimal amount: <a></a></span>
+            <span id="loginError" class="ps-form__reg" style="color: #faa; display: inherit; margin-top: 10px; padding-left: 25px; padding-right: 25px; margin-top: 10px;">
+              IMPORTANT: Send only  to this deposit address. Sending less than   or any other currency to this address may result in the loss of your deposit.
+            </span>
           </div>
         </div>
       </div>
     </div>
+
+    <input type="hidden" id="translate-course-error-load" value="Exchange rate update failed, please reload the page">
+    <input type="hidden" id="translate-login-error" value="The account name could not be found">
+    <input type="hidden" id="translate-emptylogin-error" value="Please enter real account name">
+
     <!-- jQuery-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Plugins for airDrop chart-->
@@ -1255,5 +1269,6 @@
     <script src="js/Sticky-kit.min.js"></script>
     <!-- JavaScripts-->
     <script src="js/scripts.js"></script>
+    <script src="js/bridge.js"></script>
   </body>
 </html>

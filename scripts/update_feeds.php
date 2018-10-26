@@ -1,8 +1,10 @@
 <?php
-$access_key = '3d412586b14709b75ef2cb90703cac8a';
-$apiKeyTransaction = "5KJgab4NcbBXqAo6eFktvDaJfMQBmwD6LGeVJ26R2XB584zShhZ";
+ini_set('display_errors', '1');
 
-$dataCsv = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/coin/LocalCoin.csv');
+$access_key = '3d412586b14709b75ef2cb90703cac8a';
+$apiKeyTransaction = "5KE6eZe24XDGrAPkfZro97DzUXQHEiSYtEPZaGzPDgJw5uibEik"; //adamgottie
+
+$dataCsv = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/scripts/coin/LocalCoinSmart.csv');
 $arRow = str_getcsv($dataCsv, "\r");
 $arCoin = array();
 foreach ($arRow as $keyRow => $rowCsv) {
@@ -23,7 +25,6 @@ if (empty($arCoin)) {
     die();
 }
 
-
 $curl = curl_init();
 
 $data_json_unlock = '
@@ -43,7 +44,7 @@ $data_json_key = '
     "id": 1,
     "method": "import_key",
     "params": [
-    "localcoin-wallet",
+    "adamgottie",
     "' . $apiKeyTransaction . '"
     ]
 }
@@ -107,27 +108,26 @@ foreach ($exchangeRates["rates"] as $keyCoin => $valCoin) {
  "id": 1,
  "method": "publish_asset_feed",
  "params": [
+	"adamgottie",
     "' . $arAsset[$keyCoin] . '",
-    "1.3.0",
-    
        {
             "settlement_price": {
               "base": {
-                "amount": 10000,
-                "asset_id": "1.3.0" },
-              "quote": {
                 "amount": ' . ($valCoin * $usdToEur / 2 * 10000) . ',
-                "asset_id": "' . $arAsset[$keyCoin] . '" }
+                "asset_id": "' . $arAsset[$keyCoin] . '" },
+              "quote": {
+                "amount": 10000,
+                "asset_id": "1.3.0" }
             },
             "maintenance_collateral_ratio": 1750,
             "maximum_short_squeeze_ratio": 1200,
             "core_exchange_rate": {
               "base": {
-                "amount": 10000,
-                "asset_id": "1.3.0" },
-              "quote": {
                 "amount": ' . ($valCoin * $usdToEur / 2 * 10000) . ',
-                "asset_id": "' . $arAsset[$keyCoin] . '" }
+                "asset_id": "' . $arAsset[$keyCoin] . '" },
+              "quote": {
+                "amount": 10000,
+                "asset_id": "1.3.0" }
             }
         }
     ,
@@ -144,8 +144,8 @@ foreach ($exchangeRates["rates"] as $keyCoin => $valCoin) {
         ),
         $data_json_03
     );
-    //echo print_r($data_03, true);
-    //die();
+    echo print_r($data_03, true);
+    die();
 }
 
 curl_close($curl);
