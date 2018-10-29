@@ -898,7 +898,7 @@
               </div>
               <div class="trading__item trading__item_04 wow fadeInUp">
                 <h5>Maximum security</h5>
-                <p>We don't have access to your account, simply because it is only You who hold secret key to it. There no way centralized trading platforms can compete with decentralization, full encryption, total anonymity, cold storage, rigorous access management.</p>
+                <p>We don't have access to your account, simply because it is only You who hold secret key to it. There no way centralised trading platforms can compete with decentralization, full encryption, total anonymity, cold storage, rigorous access management.</p>
               </div>
             </div>
           </div>
@@ -1232,12 +1232,17 @@
               <input class="ps-form__btn btn-yellow" type="submit" value="Buy LLC coin" id="bridgeSubmit">
             </form>
           </div>
-          <div class="p-modal__form" id="bridgeFormAddress" style="display: none;">
-            <span id="bridgeFormInputAsset" class="ps-form__reg" style="display: inherit; margin-top: 10px; font-size: 50px;"></span>                        
+          <div class="p-modal__form" id="bridgeFormAddress" style="display: none;">            
             <span class="ps-form__reg" style="display: inherit; margin-top: 20px;">Deposit to account: <a id="accountName" target="_blank" href=""></a></span>
-            <span class="ps-form__reg" style="display: inherit; margin-top: 20px;">Address for deposit: </span>
-            <span id="bridgeFormInputAddress" class="ps-form__reg" style="display: inherit; font-size: 20px;"></span>
+            <span class="ps-form__reg" style="display: inherit; margin-top: 20px;">Address for deposit <a id="bridgeFormInputAsset" target="_blank" href=""></a>: </span>            
+            <span class="ps-form__reg" style="display: inherit; font-size: 20px;">
+              <input type="text" id="bridgeFormInputAddress" style="width: 450px; border: 0; background: none; color: #fff; text-align: center; font-size: 19px;" />
+            </span>
+            <span class="ps-form__reg">
+              <a data-copy="#bridgeFormInputAddress" style="font-size: 25px; cursor: pointer;">copy address</a>
+            </span>
             <span id="bridgeFormInputMinimalAmount" class="ps-form__reg" style="display: inherit; margin-top: 10px;">Minimal amount: <a></a></span>
+            <span id="bridgeFormInputCountConfirmations" class="ps-form__reg" style="display: inherit; margin-top: 10px;"></span>
             <span id="loginError" class="ps-form__reg" style="color: #faa; display: inherit; margin-top: 10px; padding-left: 25px; padding-right: 25px; margin-top: 10px;">
               IMPORTANT: Send only  to this deposit address. Sending less than   or any other currency to this address may result in the loss of your deposit.
             </span>
@@ -1246,9 +1251,10 @@
       </div>
     </div>
 
-    <input type="hidden" id="translate-course-error-load" value="Exchange rate update failed, please reload the page">
-    <input type="hidden" id="translate-login-error" value="The account name could not be found">
-    <input type="hidden" id="translate-emptylogin-error" value="Please enter real account name">
+    <input type="hidden" id="translate-count-confirmations" value="Wait for {x} confirmations for balance funding"      />
+    <input type="hidden" id="translate-course-error-load"   value="Exchange rate update failed, please reload the page" />
+    <input type="hidden" id="translate-login-error"         value="The account name could not be found"                 />
+    <input type="hidden" id="translate-emptylogin-error"    value="Please enter real account name"                      />
 
     <!-- jQuery-->
     <script src="js/jquery-3.3.1.min.js"></script>

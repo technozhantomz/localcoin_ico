@@ -207,6 +207,20 @@ var Modal = (function(jq, d) {
                 return false;
             });
             //******
+
+            jq(d).on("click", "[data-copy]", function() {
+                var target = jq(this).attr("data-copy");
+                var fieldForCopy = jq(target);
+                fieldForCopy.focus();
+                fieldForCopy.select();
+                
+                try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'successful' : 'unsuccessful';                    
+                } catch (err) { }
+                
+                return false;
+            });
         };
 
         this.hideAddress = function() {
@@ -219,8 +233,12 @@ var Modal = (function(jq, d) {
             jq("#bridgeFormAddress").show();
 
             jq("#bridgeFormInputAsset").html(asset);
-            jq("#bridgeFormInputAddress").html(address);
+            jq("#bridgeFormInputAsset").attr("href", "https://wallet.localcoin.is/asset/"+asset+"/");
+            jq("#bridgeFormInputAddress").val(address);
             jq("#bridgeFormInputMinimalAmount a").html(minimalAmount);            
+
+            var countConfirmations = this.getCountConfirmationByAsset(asset);
+            this.updateCountConfirmations(countConfirmations);
         };
 
         this.usernameNotFound = function() {
@@ -287,6 +305,24 @@ var Modal = (function(jq, d) {
             jq('.select_title.select-coin_title').html(value);
             jq("#bridgeCurrency").val(key);
         };
+
+        this.updateCountConfirmations = function(count) {
+            var message = jq("#translate-count-confirmations").val();
+            jq("#bridgeFormInputCountConfirmations").html(message.replace("{x}", count));
+        }
+
+        this.getCountConfirmationByAsset = function(asset) {
+            switch(asset.toLocaleUpperCase()) {
+                case "BTC"  : return 2;
+                case "LTC"  : return 6;
+                case "DASH" : return 6;
+                case "USDT" : return 2;
+                case "ETH"  : return 6;
+                case "XMR"  : return 10;
+            };
+
+            return 6;
+        };
     };    
 })($, document);
 
@@ -294,7 +330,7 @@ $(document).ready(function() {
     var modal = new Modal();
     modal.init();
 
-    $(document).on("mousedown", "#buy_coin_header", function() {
+    $(document).on("mousedown", "#buy_coin_header, #coin_hover_btn, #buy_coin_footer", function() {
         modal.reset();
     });
 });
