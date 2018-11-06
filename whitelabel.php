@@ -73,7 +73,7 @@
                 </div>
                 <div class="wl-form__input">
                   <label class="checkbox">
-                    <input class="checkbox__default" type="checkbox" name="checkbox"><span class="checkbox__custom"></span><span class="checkbox__label">I agree with OpenLedger's <a>Privacy Policy</a></span>
+                    <input class="checkbox__default" type="checkbox" name="checkbox"><span class="checkbox__custom"></span><span class="checkbox__label">I agree with LocalCoin's <a>Privacy Policy</a></span>
                   </label>
                 </div>
                 <input class="wl-form__submit" type="submit" value="Get in touch">
@@ -107,7 +107,7 @@
               <div class="col-sm-6 col-md-4">
                 <div class="wl-advantages__item wl-advantages__item_04">
                   <h5>Scalability</h5>
-                  <p>Increase your revenues by implementing new crypto and fiat gateways as well as fees. You can do it in house or let OpenLedger do all the heavy lifting on a one-time payment or revenue-sharing basis.</p>
+                  <p>Increase your revenues by implementing new crypto and fiat gateways as well as fees. You can do it in house or let LocalCoin do all the heavy lifting on a one-time payment or revenue-sharing basis.</p>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@
             <div class="col-md-8">
               <div class="white-label__fees">
                 <h3>Fees</h3>
-                <p>OpenLedger DEX relies on BitShares’ fee structure. It means that you will retain 80% of the fee a registered user pays for any transaction with the system. See this document to learn more about BitShares’ fees.</p>
+                <p>LocalCoin DEX relies on BitShares’ fee structure. It means that you will retain 80% of the fee a registered user pays for any transaction with the system. See this document to learn more about BitShares’ fees.</p>
               </div>
               <div class="white-label__tech-req tech-req">
                 <h3>Technical requirements</h3>
