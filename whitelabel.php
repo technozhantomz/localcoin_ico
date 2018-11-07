@@ -49,8 +49,8 @@
       <section class="white-label" id="whitelabel">
         <div class="container">
           <ul class="breadcrumbs white-label__breadcrumbs">
-            <li><a>Home</a></li>
-            <li><a>White Label</a></li>
+            <li><a href="/">Home</a></li>
+            <li>White Label</li>
           </ul>
           <div class="row">
             <div class="col-sm-6 col-md-8">
@@ -71,12 +71,7 @@
                   <label for="message">Your message:</label>
                   <textarea id="message" name="message"></textarea>
                 </div>
-                <div class="wl-form__input">
-                  <label class="checkbox">
-                    <input class="checkbox__default" type="checkbox" name="checkbox"><span class="checkbox__custom"></span><span class="checkbox__label">I agree with LocalCoin's <a>Privacy Policy</a></span>
-                  </label>
-                </div>
-                <input class="wl-form__submit" type="submit" value="Get in touch">
+                <input class="wl-form__submit" type="submit" value="Submit">
               </form>
             </div>
           </div>
@@ -191,7 +186,7 @@
             <li><a class="f-social__item f-social__item_in" href="#"></a></li>
           </ul>
           <ul class="footer__links">
-            <li><a class="footer__wl" href="whitelabel.html">White Label</a></li>
+            <li><a class="footer__wl" href="whitelabel.php">White Label</a></li>
             <li><a class="footer__wp" href="https://docs.localcoin.is">White Paper</a></li>
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>

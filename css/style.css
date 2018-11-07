@@ -8914,6 +8914,14 @@ img {
         padding: 10px; }
         .white-label .wl-form__input textarea.error {
           border: 1px solid red; }
+    .white-label a {
+		color: #4d84fe;
+		/*border-bottom: 1px solid #4d84fe;*/
+	}
+    .white-label a:hover {
+		opacity: .5;
+		border-bottom: none;
+	}	
     .white-label .wl-form .checkbox {
       position: relative;
       display: block;
