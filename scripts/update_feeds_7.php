@@ -1,12 +1,13 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 //echo 'Curl: ', function_exists('curl_version') ? 'Enabled' : 'Disabled';
 
 $access_key = '3d412586b14709b75ef2cb90703cac8a';
-$apiKeyTransaction = "5KE6eZe24XDGrAPkfZro97DzUXQHEiSYtEPZaGzPDgJw5uibEik";
+$witnessAcc = "ratamahatta";
+$apiKeyTransaction = "5J1RfESiSGKpLYfSZG7oaVHGS4wtPAH3U2J9L6jqQJH5dVZTjA9";
 
 $dataCsv = file_get_contents('/var/www/localcoin.is/public_html/scripts/LocalCoinSmart.csv');
 $arRow = str_getcsv($dataCsv, "\r");
@@ -48,7 +49,7 @@ $data_json_key = '
     "id": 1,
     "method": "import_key",
     "params": [
-    "adamgottie",
+    "' . $witnessAcc . '",
     "' . $apiKeyTransaction . '"
     ]
 }
@@ -128,7 +129,7 @@ $data_json_03= '{"jsonrpc": "2.0",
 "id": 1,
 "method": "publish_asset_feed",
 "params": [
-   "adamgottie",
+   "' . $witnessAcc . '",
    "'.$idSmart->result->id.'",
    
       {
