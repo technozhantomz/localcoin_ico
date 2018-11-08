@@ -187,9 +187,12 @@
           </ul>
           <ul class="footer__links">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <li><a class="footer__wl" href="whitelabel.html">White Label</a></li>
             <li><a class="footer__wp" href="https://how.localcoin.is">White Paper</a></li>
 =======
+=======
+>>>>>>> 0da6c865003e5808815138ab20301538b46fbff8
             <li><a class="footer__wl" href="whitelabel.php">White Label</a></li>
             <li><a class="footer__wp" href="https://docs.localcoin.is">White Paper</a></li>
 >>>>>>> 0da6c865003e5808815138ab20301538b46fbff8
