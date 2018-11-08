@@ -19,11 +19,11 @@
           </div><a class="header__logo" href="/"><img src="img/logo.png" srcset="img/logo-2x.png 2x" alt="Localcoin"></a>
           <div class="header__nav" style="display:none">
             <ul>
-              <li><a href="#advantages">Why</a></li>
-              <li><a href="#trading">Trading</a></li>
-              <li><a href="#tokeninfo">Token info</a></li>
-              <li><a href="#roadmap">Road map</a></li>
-              <li><a href="#download">Download</a></li>
+              <li><a href="https://localcoin.is/#advantages">Why</a></li>
+              <li><a href="https://localcoin.is/#trading">Trading</a></li>
+              <li><a href="https://localcoin.is/#tokeninfo">Token info</a></li>
+              <li><a href="https://localcoin.is/#roadmap">Road map</a></li>
+              <li><a href="https://localcoin.is/#download">Download</a></li>
             </ul>
           </div>
           <div class="header__right-menu">
@@ -191,15 +191,15 @@
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
           <ul class="footer__nav wow fadeInUp">
-            <li><a href="#main">Home</a></li>
-            <li><a href="#advantages">Why</a></li>
-            <li><a href="#trading">Trading</a></li>
-            <li><a href="#tokeninfo">Token info</a></li>
-            <li><a href="#roadmap">Road map</a></li>
-            <li><a href="#download">Download</a></li>
+            <li><a href="https://localcoin.is/#main">Home</a></li>
+            <li><a href="https://localcoin.is/#advantages">Why</a></li>
+            <li><a href="https://localcoin.is/#trading">Trading</a></li>
+            <li><a href="https://localcoin.is/#tokeninfo">Token info</a></li>
+            <li><a href="https://localcoin.is/#roadmap">Road map</a></li>
+            <li><a href="https://localcoin.is/#download">Download</a></li>
             <li><a href="https://dev.localcoin.is" target="_blank">Documentation</a></li>
             <li><a href="https://how.localcoin.is" target="_blank">User guide</a></li>
-            <li><a href="#airDrop">AirDrop</a></li>
+            <li><a href="https://localcoin.is/#airDrop">AirDrop</a></li>
           </ul>
           <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
         </div>
