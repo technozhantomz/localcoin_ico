@@ -186,7 +186,7 @@
             <li><a class="f-social__item f-social__item_in" href="#"></a></li>
           </ul>
           <ul class="footer__links">
-            <li><a class="footer__wl" href="whitelabel.html">White Label</a></li>
+            <li><a class="footer__wl" href="whitelabel.php">White Label</a></li>
             <li><a class="footer__wp" href="https://how.localcoin.is">White Paper</a></li>
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
