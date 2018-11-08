@@ -198,7 +198,7 @@
             <li><a href="index.html#roadmap">Road map</a></li>
             <li><a href="index.html#download">Download</a></li>
             <li><a href="https://dev.localcoin.is" target="_blank">Documentation</a></li>
-            <li><a href="https://how.localcoin.is" target="_blank">How?</a></li>
+            <li><a href="https://how.localcoin.is" target="_blank">User guide</a></li>
             <li><a href="index.html#airDrop">AirDrop</a></li>
           </ul>
           <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
