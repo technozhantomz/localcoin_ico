@@ -30,9 +30,9 @@
             <ul>
               <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
               <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://wallet.localcoin.is/">Sign In</a></li>
-              <li><a class="whitepaper" href="https://docs.localcoin.is/">WP</a></li>
+              <li><a class="whitepaper" href="https://how.localcoin.is/">WP</a></li>
               <li><a class="whitelabel" href="/">WL</a></li>
-              <!-- <li> 
+              <!-- <li>
                 <div class="header__lang select select-lang">
                   <input class="select_hidden" type="hidden" value="1">
                   <div class="select_in select-lang_in"><span class="select_title select-lang_title"><img src="img/eng.png" srcset="img/eng-2x.png 2x" alt="eng"></span><i class="select_arrow select-lang_arrow"></i></div>
@@ -49,16 +49,16 @@
       <section class="white-label" id="whitelabel">
         <div class="container">
           <ul class="breadcrumbs white-label__breadcrumbs">
-            <li><a>Home</a></li>
-            <li><a>White Label</a></li>
+            <li><a href="/">Home</a></li>
+            <li>White Label</li>
           </ul>
           <div class="row">
             <div class="col-sm-6 col-md-8">
-              <h1 class="white-label__title"><span>White label </span> exchange solution for crypto businesses</h1><span class="white-label__subtitle">Launching your own cryptocurrency exchange? Tap our readymade decentralized platform with no hassle setup.</span>
+				<h1 class="white-label__title"><span>White label </span> Decentralized autonomous organization</h1><span class="white-label__subtitle">Running your own cryptocurrency exchange website based upon the blockchain decentralized platform(The DAO) with a few clicks of a button.</span>
             </div>
             <div class="col-sm-6 col-md-4">
               <form class="white-label__form wl-form" action="#">
-                <h4 class="wl-form__title">Contact us to<br>learn more about<br>our white label offering</h4>
+                <h4 class="wl-form__title">Order now!</h4>
                 <div class="wl-form__input">
                   <label for="input_name">Name*</label>
                   <input id="input_name" type="text" name="name" required>
@@ -71,29 +71,24 @@
                   <label for="message">Your message:</label>
                   <textarea id="message" name="message"></textarea>
                 </div>
-                <div class="wl-form__input">
-                  <label class="checkbox">
-                    <input class="checkbox__default" type="checkbox" name="checkbox"><span class="checkbox__custom"></span><span class="checkbox__label">I agree with LocalCoin's <a>Privacy Policy</a></span>
-                  </label>
-                </div>
-                <input class="wl-form__submit" type="submit" value="Get in touch">
+                <input class="wl-form__submit" type="submit" value="Submit">
               </form>
             </div>
           </div>
         </div>
-        <div class="white-label__advantages wl-advantages">
+       <div class="white-label__advantages wl-advantages">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="wl-advantages__item wl-advantages__item_01">
                   <h5>High performance</h5>
-                  <p>A liquidity-ready trading platform to help you start a cryptocurrency exchange business in only 2 weeks. Over 50 coins, fiat gateways, unmatched security and localizations — all included, without investing heavily in development and infrastructure.</p>
+                  <p>A liquidity-ready trading platform to help you launch a cryptocurrency exchange business within 2 weeks. Over 1500 coins, fiat gateways, stable coins and unmatched security and localisations — all included, without investing heavily in development and infrastructure. LocalCoin is one of the <a href="https://localcoin.is/#trading" target="_blank">fastest blockchain</a> existed on the market*</p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="wl-advantages__item wl-advantages__item_02">
                   <h5>Top-notch technology</h5>
-                  <p>We made the best of what BitShares had to offer and built a new, even better-designed platform. Powered by Graphene, it can process more transactions every second than Bitcoin or Ethereum.</p>
+                  <p>We made the best of what BitShares had to offer and built <a href="https://localcoin.is/#advantages" target="_blank">better-designed platform</a>. Powered by Graphene, it can process more that 100k transactions every second which is much more than Bitcoin or Ethereum.</p>
                 </div>
               </div>
             </div>
@@ -101,7 +96,7 @@
               <div class="col-sm-6 col-md-4">
                 <div class="wl-advantages__item wl-advantages__item_03">
                   <h5>Ready-made, customizable UI</h5>
-                  <p>Go with the original BitShares layouts or tap into our own, improved design. All tailored to your brand identity and regularly updated by our team. You can also provide deeper customization if needed.</p>
+                  <p>Go with the original LocalCoin layouts with improved design. All tailored to your brand identity and regularly updated by our team. You can also provide deeper customization if needed.</p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
@@ -115,7 +110,7 @@
               <div class="col-sm-6 col-md-4">
                 <div class="wl-advantages__item wl-advantages__item_05">
                   <h5>Professional product team</h5>
-                  <p>A team of 40+ blockchain and cryptocurrency experts is working every day to improve the platform. We are constantly rolling out new gateways to let users trade world’s most wanted coins. Rest assured we’ll have you covered from the moment your exchange goes live.</p>
+                  <p>A team of 50+ blockchain and cryptocurrency experts is working every day to improve the platform. We are constantly rolling out new gateways to let users trade world’s most wanted coins. Rest assured we’ll have you covered from the moment your exchange goes live.</p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
@@ -132,7 +127,7 @@
             <div class="col-md-8">
               <div class="white-label__fees">
                 <h3>Fees</h3>
-                <p>LocalCoin DEX relies on BitShares’ fee structure. It means that you will retain 80% of the fee a registered user pays for any transaction with the system. See this document to learn more about BitShares’ fees.</p>
+                <p>LocalCoin DEX relies on no trading fees structure, there are only fixed fees to cover blockchain transaction which is the lowest on the market. It means that you will retain 80% of the fee a registered user pays for any transaction with the system. See this document to learn more about <a href="https://wallet.localcoin.is/explorer/fees" target="_blank">LocalCoin's fees.</a></p>
               </div>
               <div class="white-label__tech-req tech-req">
                 <h3>Technical requirements</h3>
@@ -150,11 +145,11 @@
                     </tr>
                     <tr>
                       <td class="t-title">RAM</td>
-                      <td>256GB DDR4 ECC</td>
+                      <td>32GB DDR4 ECC</td>
                     </tr>
                     <tr>
                       <td class="t-title">Data Storage</td>
-                      <td>2×4TB SATA 6Gb/s Enterprise HDD; 7200 rpm</td>
+                      <td>2×500GB SATA 6Gb/s Enterprise HDD; 7200 rpm (or 2×500GB SSD)</td>
                     </tr>
                     <tr>
                       <td class="t-title">Ethernet</td>
@@ -191,8 +186,13 @@
             <li><a class="f-social__item f-social__item_in" href="#"></a></li>
           </ul>
           <ul class="footer__links">
+<<<<<<< HEAD
             <li><a class="footer__wl" href="whitelabel.html">White Label</a></li>
+            <li><a class="footer__wp" href="https://how.localcoin.is">White Paper</a></li>
+=======
+            <li><a class="footer__wl" href="whitelabel.php">White Label</a></li>
             <li><a class="footer__wp" href="https://docs.localcoin.is">White Paper</a></li>
+>>>>>>> 0da6c865003e5808815138ab20301538b46fbff8
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
           <ul class="footer__nav wow fadeInUp">
@@ -202,6 +202,8 @@
             <li><a href="index.html#tokeninfo">Token info</a></li>
             <li><a href="index.html#roadmap">Road map</a></li>
             <li><a href="index.html#download">Download</a></li>
+            <li><a href="https://dev.localcoin.is" target="_blank">Documentation</a></li>
+            <li><a href="https://how.localcoin.is" target="_blank">How?</a></li>
             <li><a href="index.html#airDrop">AirDrop</a></li>
           </ul>
           <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
