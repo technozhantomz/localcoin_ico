@@ -30,7 +30,7 @@
             <ul>
               <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
               <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://wallet.localcoin.is/">Sign In</a></li>
-              <li><a class="whitepaper" href="https://how.localcoin.is/">WP</a></li>
+              <li><a class="whitepaper" href="https://how.localcoin.is/" target="_blank">WP</a></li>
               <li><a class="whitelabel" href="/">WL</a></li>
               <!-- <li>
                 <div class="header__lang select select-lang">
@@ -187,7 +187,7 @@
           </ul>
           <ul class="footer__links">
             <li><a class="footer__wl" href="whitelabel.php">White Label</a></li>
-            <li><a class="footer__wp" href="https://how.localcoin.is">White Paper</a></li>
+            <li><a class="footer__wp" href="https://how.localcoin.is" target="_blank">White Paper</a></li>
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
           <ul class="footer__nav wow fadeInUp">
