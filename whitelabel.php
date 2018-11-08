@@ -174,7 +174,7 @@
           <ul class="footer__social f-social">
             <li><a class="f-social__item f-social__item_vk" href="#"></a></li>
             <li><a class="f-social__item f-social__item_fb" href="#"></a></li>
-            <li><a class="f-social__item f-social__item_tm" href="#"></a></li>
+            <li><a class="f-social__item f-social__item_tm" href="https://t.me/LocalCoinIS"></a></li>
             <li><a class="f-social__item f-social__item_04" href="#"></a></li>
             <li><a class="f-social__item f-social__item_05" href="#"></a></li>
             <li><a class="f-social__item f-social__item_06" href="#"></a></li>
@@ -186,16 +186,8 @@
             <li><a class="f-social__item f-social__item_in" href="#"></a></li>
           </ul>
           <ul class="footer__links">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <li><a class="footer__wl" href="whitelabel.html">White Label</a></li>
             <li><a class="footer__wp" href="https://how.localcoin.is">White Paper</a></li>
-=======
-=======
->>>>>>> 0da6c865003e5808815138ab20301538b46fbff8
-            <li><a class="footer__wl" href="whitelabel.php">White Label</a></li>
-            <li><a class="footer__wp" href="https://docs.localcoin.is">White Paper</a></li>
->>>>>>> 0da6c865003e5808815138ab20301538b46fbff8
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
           <ul class="footer__nav wow fadeInUp">
