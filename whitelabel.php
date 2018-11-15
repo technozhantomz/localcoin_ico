@@ -57,15 +57,17 @@
 				<h1 class="white-label__title"><span>White label </span> Decentralized autonomous organization</h1><span class="white-label__subtitle">Running your own cryptocurrency exchange website based upon the blockchain decentralized platform(The DAO) with a few clicks of a button.</span>
             </div>
             <div class="col-sm-6 col-md-4">
-              <form class="white-label__form wl-form" action="#">
+              <form class="white-label__form wl-form" method = "POST" action="#">
+                <input type="hidden" name = "emailFrom" value ="">
                 <h4 class="wl-form__title">Order now!</h4>
+                <p class = "messege"></p>
                 <div class="wl-form__input">
                   <label for="input_name">Name*</label>
                   <input id="input_name" type="text" name="name" required>
                 </div>
                 <div class="wl-form__input">
                   <label for="input_email">Email*</label>
-                  <input id="input_email" type="text" name="email" required>
+                  <input id="input_email" type="email" name="email" required>
                 </div>
                 <div class="wl-form__input">
                   <label for="message">Your message:</label>
