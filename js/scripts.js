@@ -325,7 +325,6 @@ $(document).ready(function() {
 	// 	return false;
 	// });
 
-
 }); // End Ready
 
 

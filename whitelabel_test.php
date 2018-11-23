@@ -73,6 +73,7 @@
                   <label for="message">Your message:</label>
                   <textarea id="message" name="message"></textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LdX_XoUAAAAANzmXQd6CUx0Blgpx-ztSrSVtoTk"></div>
                 <input class="wl-form__submit" type="submit" value="Submit">
               </form>
             </div>
@@ -177,7 +178,7 @@
             <li><a class="f-social__item f-social__item_vk" href="#"></a></li>
             <li><a class="f-social__item f-social__item_fb" href="#"></a></li>
             <li><a class="f-social__item f-social__item_tm" href="https://t.me/LocalCoinIS"></a></li>
-            <li><a class="f-social__item f-social__item_04" href="https://discord.gg/vkVzbfj"></a></li>
+            <li><a class="f-social__item f-social__item_04" href="#"></a></li>
             <li><a class="f-social__item f-social__item_05" href="#"></a></li>
             <li><a class="f-social__item f-social__item_06" href="#"></a></li>
             <li><a class="f-social__item f-social__item_07" href="#"></a></li>
@@ -203,7 +204,7 @@
             <li><a href="https://how.localcoin.is" target="_blank">User guide</a></li>
             <li><a href="https://localcoin.is/#airDrop">AirDrop</a></li>
           </ul>
-          <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
+          <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
         </div>
       </footer>
       <div class="popup-modal">
@@ -243,9 +244,11 @@
     </div>
     <!-- jQuery-->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- Plugins-->
     <script src="js/wow.min.js"></script>
     <!-- JavaScripts-->
     <script src="js/scripts.js"></script>
+
   </body>
 </html>
