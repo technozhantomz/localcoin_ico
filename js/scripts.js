@@ -292,38 +292,45 @@ $(document).ready(function() {
 
 	}
 
-	// $('form.white-label__form.wl-form').on('submit', function(){
-	// 	var form = $(this);
-	// 	form.find('input').each(function(){
-	// 		if($(this).prop('required') && $(this).val().trim() == ''){
-	// 			$(this).parent().addClass('error');				
-	// 		}else if($(this).prop('required') && $(this).val().trim() != '') {
-	// 			$(this).parent().removeClass('error');	
-	// 		}
-	// 	});
-	// 	var data = $(this).serialize();
-	// 	$.ajax({
-	// 		type: 'POST',
-	// 		url: '/scripts/ajax.php',
-	// 		data: data,
-	// 		dataType: 'json',
-	// 		success: function(json) {
-	// 			console.log(json);				
-	// 			if(json.status == 'success'){
-	// 				form[0].reset();
-	// 				form.find('p.messege').text('Your email has been sent.');
-	// 			}else {
-	// 				form.find('p.messege').text('An error has occurred.');
-	// 			}
+	$('form.white-label__form.wl-form').on('submit', function(){
+		var form = $(this);
+		var error = false;
+		form.find('input').each(function(){
+			if($(this).prop('required') && $(this).val().trim() == ''){
+				$(this).parent().addClass('error');				
+				error = true;
+			}else if($(this).prop('required') && $(this).val().trim() != '') {
+				$(this).parent().removeClass('error');	
+			}
+		});
+		if(error == true){
+			return false;
+		}
+		var data = $(this).serializeArray();
+		data.push({name: "url", value: location.href});
+		data.push({name: "AJAX", value: "Y"});
+		$.ajax({
+			type: 'POST',
+			url: '/scripts/ajax.php',
+			data: $.param(data),
+			dataType: 'json',
+			success: function(json) {			
+				if(json.status == 'success'){
+					form[0].reset();
+					grecaptcha.reset();
+					form.find('p.messege').text('Your email has been sent.');
+				}else {
+					form.find('p.messege').text(json.messege);
+				}
 				
-	// 		},
-	// 		error:  function(xhr, str){
-	// 			form.find('p.messege').text('An error has occurred.');
-	// 			console.log('An error has occurred: ' + xhr.responseCode);
-	// 		}
-    //     });
-	// 	return false;
-	// });
+			},
+			error:  function(xhr, str){
+				form.find('p.messege').text('An error has occurred.');
+				console.log('An error has occurred: ' + xhr.responseCode);
+			}
+        });
+		return false;
+	});
 
 }); // End Ready
 
