@@ -7113,7 +7113,8 @@ img {
           .main .air-drop__chart-label span {
             font-size: 16px; } }
     .main .air-drop__chart {
-      max-width: 88%; }
+      max-width: 88%;
+     padding-top: 5%;	 }
       @media (max-width: 999px) {
         .main .air-drop__chart {
           max-width: 100%; } }
@@ -7121,7 +7122,7 @@ img {
         position: relative;
         width: 100%;
         max-width: 100%;
-        padding-bottom: 75%; }
+        padding-bottom: 15%; }
       .main .air-drop__chart svg {
         position: absolute;
         width: 100%;

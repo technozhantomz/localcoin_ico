@@ -142,37 +142,11 @@
                     <div class="air-drop__chart-label wow fadeInUp"><span>46 100 322 </span>LLC AirDroped</div>
                     <div class="air-drop__chart">
                       <div class="air-drop__chart-inner">
-                        <svg class="mainSVG" viewbox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid meet">
-                          <g id="graphTextGroup" opacity="0.5">
-                            <text transform="translate(48.33 473.71)" font-size="18" fill="#fff" font-family="Roboto" font-weight="700">0</text>
-                            <text transform="translate(48.33 301.71)" font-size="18" fill="#fff" font-family="Roboto">200</text>
-                            <text transform="translate(48.33 101.71)" font-size="18" fill="#fff" font-family="Roboto">400</text>
-                          </g>
-                          <g id="horizontalLinesGroup" fill="none" opacity="1" stroke="#FFF" stroke-miterlimit="10">
-                            <line x1="780" y1="481.7" opacity="0.3" x2="30" y2="481.7"></line>
-                            <line x1="780" y1="381.7" opacity="0.3" x2="30" y2="381.7"></line>
-                            <line x1="780" y1="281.7" opacity="0.3" x2="30" y2="281.7"></line>
-                            <line x1="780" y1="181.7" opacity="0.3" x2="30" y2="181.7"></line>
-                            <line x1="780" y1="81.7" opacity="0.3" x2="30" y2="81.7"></line>
-                          </g>
-                          <g id="uiGroup">
-                            <path id="graphLine" fill="none" stroke-linecap="round" stroke="#F79819" stroke-width="4" stroke-miterlimit="1.0" d="M94.6,405.1														c62.9-95,109.2-111.7,142.4-103.8c44.6,10.6,74.8,67.9,143.4,63.8c35-2.1,32.7-17.4,73.9-21.7c77.7-8.2,105.9,44,136.3,13.6														c30.6-30.5,10.8-91.7,44.9-127.5c29.1-30.6,56.7,0,94.1-33.9c20.6-18.6,32.6-46.2,39.6-66.5"></path>
-                            <g id="connectorGroup">
-                              <line id="connector" x1="92" x2="92" y1="2" y2="2" stroke="#FFF"></line>
-                            </g>
-                            <g class="box">
-                              <rect x="0" width="80" height="40" rx="20" ry="20" fill="#FFF"></rect>
-                              <text id="boxLabel" x="40" y="28"></text>
-                            </g>
-                          </g>
-                          <circle id="nullDot" fill="red" cx="0" cy="0" r="0"></circle>
-                          <circle id="graphDot" fill="#FFF" cx="0" cy="0" r="10"></circle>
-                          <circle id="dragger" fill="rgba(240,240,240,0.1)" cx="0" cy="0" r="15" stroke="rgba(240,240,240,0.05)" stroke-width="10"></circle>
-                          <lineargradient id="boxGrad" gradientunits="userSpaceOnUse" x1="65.7809" y1="25.7808" x2="14.2194" y2="25.7808" gradienttransform="matrix(-5.857245e-007 -1 1 -5.872379e-007 14.2192 65.7809)">
-                            <stop offset="0.3858" style="stop-color:#E4386D"></stop>
-                            <stop offset="0.7513" style="stop-color:#CF2156"></stop>
-                          </lineargradient>
-                        </svg>
+<div class="line-chart">
+  <div class="aspect-ratio">
+    <canvas id="chart"></canvas>
+  </div>
+</div>
                       </div>
                     </div>
                     <div class="air-drop__progress"><span class="s-left">56 100 322 LLC AirDropped</span>
@@ -1278,5 +1252,6 @@
     <!-- JavaScripts-->
     <script src="js/scripts.js"></script>
     <script src="js/bridge.js"></script>
+	<script type="text/javascript" src="js/airdrop.json"></script>
   </body>
 </html>
