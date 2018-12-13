@@ -57,15 +57,17 @@
 				<h1 class="white-label__title"><span>White label </span> Decentralized autonomous organization</h1><span class="white-label__subtitle">Running your own cryptocurrency exchange website based upon the blockchain decentralized platform(The DAO) with a few clicks of a button.</span>
             </div>
             <div class="col-sm-6 col-md-4">
-              <form class="white-label__form wl-form" action="#">
+              <form class="white-label__form wl-form" method = "POST" action="#">
+                <input type="hidden" name = "emailTo" value ="emailTo@mail.com">
                 <h4 class="wl-form__title">Order now!</h4>
+                <p class = "messege"></p>
                 <div class="wl-form__input">
                   <label for="input_name">Name*</label>
                   <input id="input_name" type="text" name="name" required>
                 </div>
                 <div class="wl-form__input">
                   <label for="input_email">Email*</label>
-                  <input id="input_email" type="text" name="email" required>
+                  <input id="input_email" type="email" name="email" required>
                 </div>
                 <div class="wl-form__input">
                   <label for="message">Your message:</label>
@@ -175,7 +177,7 @@
             <li><a class="f-social__item f-social__item_vk" href="#"></a></li>
             <li><a class="f-social__item f-social__item_fb" href="#"></a></li>
             <li><a class="f-social__item f-social__item_tm" href="https://t.me/LocalCoinIS"></a></li>
-            <li><a class="f-social__item f-social__item_04" href="#"></a></li>
+            <li><a class="f-social__item f-social__item_04" href="https://discord.gg/vkVzbfj"></a></li>
             <li><a class="f-social__item f-social__item_05" href="#"></a></li>
             <li><a class="f-social__item f-social__item_06" href="#"></a></li>
             <li><a class="f-social__item f-social__item_07" href="#"></a></li>
@@ -201,7 +203,7 @@
             <li><a href="https://how.localcoin.is" target="_blank">User guide</a></li>
             <li><a href="https://localcoin.is/#airDrop">AirDrop</a></li>
           </ul>
-          <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and to say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
+          <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
         </div>
       </footer>
       <div class="popup-modal">

@@ -323,6 +323,39 @@ $(document).ready(function() {
 
 	});
 
+	// $('form.white-label__form.wl-form').on('submit', function(){
+	// 	var form = $(this);
+	// 	form.find('input').each(function(){
+	// 		if($(this).prop('required') && $(this).val().trim() == ''){
+	// 			$(this).parent().addClass('error');				
+	// 		}else if($(this).prop('required') && $(this).val().trim() != '') {
+	// 			$(this).parent().removeClass('error');	
+	// 		}
+	// 	});
+	// 	var data = $(this).serialize();
+	// 	$.ajax({
+	// 		type: 'POST',
+	// 		url: '/scripts/ajax.php',
+	// 		data: data,
+	// 		dataType: 'json',
+	// 		success: function(json) {
+	// 			console.log(json);				
+	// 			if(json.status == 'success'){
+	// 				form[0].reset();
+	// 				form.find('p.messege').text('Your email has been sent.');
+	// 			}else {
+	// 				form.find('p.messege').text('An error has occurred.');
+	// 			}
+				
+	// 		},
+	// 		error:  function(xhr, str){
+	// 			form.find('p.messege').text('An error has occurred.');
+	// 			console.log('An error has occurred: ' + xhr.responseCode);
+	// 		}
+    //     });
+	// 	return false;
+	// });
+
 }); // End Ready
 
 
