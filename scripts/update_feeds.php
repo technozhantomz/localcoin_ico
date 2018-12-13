@@ -14,8 +14,8 @@ $privateKeyData = array(
 	"5HyvyovXMEzFdbM5BXeXLQm9zdDum8q5MfA4NPUAuVatnUkxFay",
 	"5K1s4ru4TEoAePvhYFYGeE51LpagkFPXdVroMZqwM5Ae6695uQR",
 	"5JLjdsHfRzuKYciUMbLMTrSFtPPWKUU8LRMQ1bza4BHdMAbWp6h",
-	"5KbJaXtLv91beTBbJqjrXw3jsGyR8TutLJ9hQHqAurS9FcsjpTh",
-	"5JkJ7rzP2EgoS2u3pvM9mQP69kxfbyLMmj448caHVZgDgPx77vv"
+	"5KbJaXtLv91beTBbJqjrXw3jsGyR8TutLJ9hQHqAurS9FcsjpTh"
+//	"5JkJ7rzP2EgoS2u3pvM9mQP69kxfbyLMmj448caHVZgDgPx77vv"
 );
 $userNameData = array(
     "adamgottie",
@@ -26,8 +26,8 @@ $userNameData = array(
 	"obrien",
 	"winstonsmith",
 	"sentriusfounders",
-	"stoneman",
-	"testnet-acc"
+	"stoneman"
+//	"testnet-acc"
 );
 
 $access_key = '3d412586b14709b75ef2cb90703cac8a';
@@ -123,11 +123,11 @@ foreach ($privateKeyData as $privateKey => $privateValue) {
         ),
         $data_json_key
     );
-    //echo "<pre>"; print_r($data_02); echo "</pre>";    die();
+    echo "<pre>"; print_r($data_02); echo "</pre>";    die();
     if (isset($_GET["debug"])) {
         $debug = json_decode($data_02, true);
         if (!empty($debug["error"])) {
-            //echo "<br>method - import_key. Error: ".$debug["error"]["message"]; die();
+            echo "<br>method - import_key. Error: ".$debug["error"]["message"]; die();
             echo "<pre>" . print_r($data_02, true) . "</pre>";
             die();
         }
@@ -200,7 +200,7 @@ foreach ($privateKeyData as $privateKey => $privateValue) {
 }';
 
 
-        //echo "<pre>"; print_r(json_decode($data_json_03)); echo "</pre>";
+        echo "<pre>"; print_r(json_decode($data_json_03)); echo "</pre>";
         $data_03 = getCurl(
             $curl,
             'http://194.63.142.61:8091/rpc',
