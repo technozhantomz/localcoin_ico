@@ -14,8 +14,8 @@ $privateKeyData = array(
 	"5HyvyovXMEzFdbM5BXeXLQm9zdDum8q5MfA4NPUAuVatnUkxFay",
 	"5K1s4ru4TEoAePvhYFYGeE51LpagkFPXdVroMZqwM5Ae6695uQR",
 	"5JLjdsHfRzuKYciUMbLMTrSFtPPWKUU8LRMQ1bza4BHdMAbWp6h",
-	"5KbJaXtLv91beTBbJqjrXw3jsGyR8TutLJ9hQHqAurS9FcsjpTh"
-//	"5JkJ7rzP2EgoS2u3pvM9mQP69kxfbyLMmj448caHVZgDgPx77vv"
+	"5KbJaXtLv91beTBbJqjrXw3jsGyR8TutLJ9hQHqAurS9FcsjpTh",
+	"5JkJ7rzP2EgoS2u3pvM9mQP69kxfbyLMmj448caHVZgDgPx77vv"
 );
 $userNameData = array(
     "adamgottie",
@@ -26,8 +26,8 @@ $userNameData = array(
 	"obrien",
 	"winstonsmith",
 	"sentriusfounders",
-	"stoneman"
-//	"testnet-acc"
+	"stoneman",
+	"testnet-acc"
 );
 
 $access_key = '3d412586b14709b75ef2cb90703cac8a';
@@ -35,6 +35,7 @@ $access_key = '3d412586b14709b75ef2cb90703cac8a';
 
 $dataCsv = file_get_contents('/var/www/localcoin.is/public_html/scripts/LocalCoinSmart.csv');
 $arRow = str_getcsv($dataCsv, "\r");
+
 $arCoin = array();
 foreach ($arRow as $keyRow => $rowCsv) {
     if ($keyRow <= 0) {
@@ -66,8 +67,6 @@ $data_json_unlock = '
     ]
 }
 ';
-
-
 $data_01 = getCurl(
     $curl,
     'http://194.63.142.61:8091/rpc',
@@ -100,6 +99,7 @@ curl_close($ch);
 $exchangeRates = json_decode($json, true);
 
 foreach ($privateKeyData as $privateKey => $privateValue) {
+
     if (empty($userNameData[$privateKey])) {
         continue;
     }
@@ -115,6 +115,7 @@ foreach ($privateKeyData as $privateKey => $privateValue) {
     ]
 }
 ';
+
     $data_02 = getCurl(
         $curl,
         'http://194.63.142.61:8091/rpc',
@@ -123,11 +124,11 @@ foreach ($privateKeyData as $privateKey => $privateValue) {
         ),
         $data_json_key
     );
-    echo "<pre>"; print_r($data_02); echo "</pre>";    die();
+
     if (isset($_GET["debug"])) {
         $debug = json_decode($data_02, true);
         if (!empty($debug["error"])) {
-            echo "<br>method - import_key. Error: ".$debug["error"]["message"]; die();
+            //echo "<br>method - import_key. Error: ".$debug["error"]["message"]; die();
             echo "<pre>" . print_r($data_02, true) . "</pre>";
             die();
         }
@@ -135,7 +136,7 @@ foreach ($privateKeyData as $privateKey => $privateValue) {
 
     $precisionLocal =  100000;
     foreach ($exchangeRates["rates"] as $keyCoin => $valCoin) {
-
+        //die();
 //if($keyCoin != "USD"){continue;}
         
         $json_getId = '{"jsonrpc": "2.0",
@@ -200,7 +201,7 @@ foreach ($privateKeyData as $privateKey => $privateValue) {
 }';
 
 
-        echo "<pre>"; print_r(json_decode($data_json_03)); echo "</pre>";
+        //echo "<pre>"; print_r(json_decode($data_json_03)); echo "</pre>";
         $data_03 = getCurl(
             $curl,
             'http://194.63.142.61:8091/rpc',
@@ -209,7 +210,17 @@ foreach ($privateKeyData as $privateKey => $privateValue) {
             ),
             $data_json_03
         );
-//  echo print_r($data_03, true);    die();
+  //echo print_r($data_03, true);    die();
+        $errorNode = json_decode($data_03)->error->message;
+        if(!empty($errorNode)){
+            echo "ERROR (".$idSmart->result->id.") : ". print_r(json_decode($data_03)->error->message, true). "<br>";//         die();
+            if(isset($_GET["debug"])){
+               die();
+            }
+        }
+    }
+    if($_GET["key"] == "one"){
+        die();
     }
 
 }
@@ -231,3 +242,4 @@ function getCurl($curl, $url, $hearder = array(), $post = array(), $postType = t
     $out = curl_exec($curl);
     return $out;
 }
+
