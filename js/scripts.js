@@ -522,7 +522,7 @@ $.getJSON('scripts/amount.json', function(data) {
 
 		var	_a = dataLast[i].amount,
 				_d = dataLast[i].timestamp,
-				_date = new Date(_d),
+				_date = new Date(_d*1000),
 				_monthlist = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
 				_monthIndex = _date.getMonth(),
 				_dateString = _date.getDate().toString() + ' ' + _monthlist[_monthIndex];
@@ -536,7 +536,6 @@ $.getJSON('scripts/amount.json', function(data) {
 var data  = {
     labels: dateArr,
     datasets: [{
-			label: 'Custom Label Name',
 			backgroundColor: gradient,
 			pointBackgroundColor: 'white',
 			borderWidth: 2,
@@ -580,9 +579,10 @@ var options = {
 	},
 	tooltips: {
 		display: false,
+		displayColors: false,
 		titleFontFamily: 'Open Sans',
 		backgroundColor: 'rgba(0,0,0,0.3)',
-		titleFontColor: 'red',
+		titleFontColor: '#ffde25',
 		caretSize: 5,
 		cornerRadius: 2,
 		xPadding: 10,
