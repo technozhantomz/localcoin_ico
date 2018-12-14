@@ -511,16 +511,37 @@ gradient.addColorStop(0, 'rgba(255, 222, 37, 1)');
 gradient.addColorStop(0.5, 'rgba(255, 222, 37, 1)');
 gradient.addColorStop(1, 'rgba(255, 222, 37, 0.5)');
 
+var amountArr = [],
+		dateArr = [];
+
+$.getJSON('scripts/amount.json', function(data) {
+
+	var dataLast = data.slice(-15);
+
+	for (var i=0; i<dataLast.length; i++) {
+
+		var	_a = dataLast[i].amount,
+				_d = dataLast[i].timestamp,
+				_date = new Date(_d),
+				_monthlist = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+				_monthIndex = _date.getMonth(),
+				_dateString = _date.getDate().toString() + ' ' + _monthlist[_monthIndex];
+				
+				amountArr.push(_a);
+				dateArr.push(_dateString);	
+	}
+
+});
 
 var data  = {
-    labels: [ '14 nov', '15 nov', '16 nov', '17 nov', '18 nov', '19 nov', '20 nov', '21 nov', '22 nov', '23 nov', '24 nov', '25 nov', '26 nov', '27 nov', '28 nov', '29 nov', '30 nov', '31 nov' ],
+    labels: dateArr,
     datasets: [{
 			label: 'Custom Label Name',
 			backgroundColor: gradient,
 			pointBackgroundColor: 'white',
 			borderWidth: 2,
 			borderColor: '#fff',
-			data: [10000000, 9000000, 8000000, 7000000, 6000000, 5000000, 4000000, 3000000, 2000000, 1000000, 900000, 800000, 700000, 600000, 500000, 400000, 300000, 200000]
+			data: amountArr
     }]
 };
 
