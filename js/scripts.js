@@ -308,7 +308,7 @@ $(document).ready(function() {
 		callback(xobj.responseText);
 
 		}
-		}
+		};
 		xobj.send(null);
 
 	}
@@ -319,7 +319,7 @@ $(document).ready(function() {
 	jsonresponse = JSON.parse(response);
 
 	// Assuming json data is wrapped in square brackets as Drew suggests
-	console.log(jsonresponse[0].name);
+	//console.log(jsonresponse[0].name);
 
 	});
 
@@ -359,9 +359,12 @@ $(document).ready(function() {
 				form.find('p.messege').text('An error has occurred.');
 				console.log('An error has occurred: ' + xhr.responseCode);
 			}
-        });
+				});
 		return false;
 	});
+
+	// AirDropped progress bar
+	airDropProgress();
 
 }); // End Ready
 
@@ -505,18 +508,25 @@ function tabThis(t){
 // ============================================
 
 var chart    = document.getElementById('chart').getContext('2d'),
-    gradient = chart.createLinearGradient(0, 0, 0, 250);
+		gradient = chart.createLinearGradient(0, 0, 0, 250);
 
 gradient.addColorStop(0, 'rgba(255, 222, 37, 1)');
 gradient.addColorStop(0.5, 'rgba(255, 222, 37, 1)');
 gradient.addColorStop(1, 'rgba(255, 222, 37, 0.5)');
 
+
 var amountArr = [],
-		dateArr = [];
+		dateArr = [],
+		dataLastAmount,
+		dataLastAmountStr;
 
 $.getJSON('scripts/amount.json', function(data) {
 
-	var dataLast = data.slice(-15);
+	var dataUnique = uniqBy(data, getKey),
+			dataLast = dataUnique.slice(-15);
+
+			dataLastAmount = dataLast[dataLast.length - 1].amount;
+			dataLastAmountStr = String(dataLastAmount).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
 
 	for (var i=0; i<dataLast.length; i++) {
 
@@ -525,76 +535,114 @@ $.getJSON('scripts/amount.json', function(data) {
 				_date = new Date(_d*1000),
 				_monthlist = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
 				_monthIndex = _date.getMonth(),
-				_dateString = _date.getDate().toString() + ' ' + _monthlist[_monthIndex];
+				_dateString = _date.getDate().toString() + ' ' + _monthlist[_monthIndex],
+				_amountString = String(_a).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
 				
 				amountArr.push(_a);
-				dateArr.push(_dateString);	
+				dateArr.push(_dateString);
 	}
 
 });
 
-var data  = {
-    labels: dateArr,
-    datasets: [{
-			backgroundColor: gradient,
-			pointBackgroundColor: 'white',
-			borderWidth: 2,
-			borderColor: '#fff',
-			data: amountArr
-    }]
-};
+function getKey(value) {
+	return value.amount;
+}
 
+function uniqBy(a, key) {
+		var seen = {};
+		return a.filter(function(item) {
+		var k = key(item);
+		return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+		});
+}
 
-var options = {
-	responsive: true,
-	maintainAspectRatio: true,
-	animation: {
-		easing: 'easeInOutQuad',
-		duration: 520
-	},
-	scales: {
-		xAxes: [{
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.05)',
-				lineWidth: 1
-			}
-		}],
-		yAxes: [{
-			gridLines: {
-				color: 'rgba(200, 200, 200, 0.08)',
-				lineWidth: 1
-			}
-		}]
-	},
-	elements: {
-		line: {
-			tension: 0.3
-		}
-	},
-	legend: {
-		display: false
-	},
-	point: {
-		backgroundColor: 'white'
-	},
-	tooltips: {
-		display: false,
-		displayColors: false,
-		titleFontFamily: 'Open Sans',
-		backgroundColor: 'rgba(0,0,0,0.3)',
-		titleFontColor: '#ffde25',
-		caretSize: 5,
-		cornerRadius: 2,
-		xPadding: 10,
-		yPadding: 10
-	}
-};
+// AirDropped progress bar
+function airDropProgress() {
+	var airDropped = 10000000 - dataLastAmount,
+			airDroppedStr = String(airDropped).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '),
+			progressBarWidth = airDropped / 10000000 * 100;
+
+	$('.air-drop__chart-label span').html(airDroppedStr + ' ');
+	$('.air-drop__progress .s-left, .air-drop__progress .s-black').html(airDroppedStr + ' LLC AirDropped');
+	$('.air-drop__progress .s-right').html(dataLastAmountStr + ' LLC left');
+	$('.air-drop__progress-bar').width(progressBarWidth + '%');
+
+}
 
 
 var chartInstance = new Chart(chart, {
-    type: 'line',
-    data: data,
-		options: options
+	type: 'line',
+	data: {
+		labels: dateArr,
+		datasets: [{
+			data: amountArr,
+			backgroundColor: gradient,
+			pointBackgroundColor: '#fff',
+			borderWidth: 2,
+			borderColor: '#fff'
+		}],
+	},
+	options: {
+		responsive: true,
+		maintainAspectRatio: true,
+		animation: {
+			easing: 'easeInOutQuad',
+			duration: 520
+		},
+		tooltips: {
+			displayColors: false,
+			titleFontFamily: 'Open Sans',
+			backgroundColor: 'rgba(0,0,0,0.3)',
+			titleFontColor: '#ffde25',
+			caretSize: 5,
+			cornerRadius: 2,
+			xPadding: 10,
+			yPadding: 10,
+			callbacks: {
+				label: function(tooltipItem, data) {
+					var value = data.datasets[0].data[tooltipItem.index];
+					value = value.toString();
+					value = value.split(/(?=(?:...)*$)/);
+					value = value.join(' ');
+					return value;
+				}
+			} // end callbacks:
+		}, //end tooltips
+		scales: {
+			yAxes: [{
+				ticks: {
+					userCallback: function(value, index, values) {
+						// Convert the number to a string and splite the string every 3 charaters from the end
+						value = value.toString();
+						value = value.split(/(?=(?:...)*$)/);
+						value = value.join(' ');
+						return value;
+					}
+				},
+				gridLines: {
+					color: 'rgba(200, 200, 200, 0.05)',
+					lineWidth: 1
+				}
+			}],
+			xAxes: [{
+				gridLines: {
+					color: 'rgba(200, 200, 200, 0.05)',
+					lineWidth: 1
+				}
+			}]
+		},
+		elements: {
+			line: {
+				tension: 0.3
+			}
+		},
+		point: {
+			backgroundColor: '#fff'
+		},
+		legend: {
+			display: false
+		}
+	}
 });
 
 
@@ -641,7 +689,7 @@ function tokenInfoChart(c) {
 										display:false,
 										drawTicks: false,
 										drawBorder:false
-                	}
+									}
 							}],
 							xAxes: [{
 								ticks: {
