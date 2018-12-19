@@ -363,8 +363,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// AirDropped progress bar
-	airDropProgress();
 
 }); // End Ready
 
@@ -541,6 +539,8 @@ $.getJSON('scripts/amount.json', function(data) {
 				amountArr.push(_a);
 				dateArr.push(_dateString);
 	}
+
+	airDropProgress();
 
 });
 
