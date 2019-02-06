@@ -58,6 +58,7 @@ $violet: #5262df
 
 html, body
 	font: normal normal 16px/1.3 $osnovam, sans-serif, Arial
+	background-color: #fff
 	-webkit-font-smoothing: antialiased
 	-webkit-overflow-scrolling: touch
 	min-width: 320px
@@ -889,13 +890,14 @@ img
 
 		&__chart
 			max-width: 88%
+			padding-top: 5%
 			@media (max-width: 999px)
 				max-width: 100%
 			&-inner
 				position: relative
 				width: 100%
 				max-width: 100%
-				padding-bottom: 75%
+				padding-bottom: 15%
 			svg
 				position: absolute
 				width: 100%
@@ -945,7 +947,6 @@ img
 				height: 25px
 				margin-top: -25px
 			&-bar
-				width: 24.5%
 				height: 25px
 				border-radius: 12px
 				background-color: #ffde25
@@ -1614,38 +1615,825 @@ img
 			top: 53px
 			left: -50px
 			z-index: 2
-			&.fly
-				animation: rocketFly 3s ease
-				animation-fill-mode: forwards
-			@keyframes rocketFly
+			&.to-point-01
+				animation: to-point-01 1s linear forwards
+			@keyframes to-point-01
+				from
+					left: -50px
+				to
+					left: 19%
+			&.to-point-02
+				animation: to-point-02 1s linear forwards
+			@keyframes to-point-02
+				from
+					left: -50px
+				to
+					left: 46%
+			&.to-point-03
+				animation: to-point-03 1.5s linear forwards
+			@keyframes to-point-03
 				from
 					left: -50px
 				to
 					left: 72%
+			&.to-point-04
+				animation: to-point-04 2s linear forwards
+			@keyframes to-point-04
+				0
+					left: -50px
+				80%
+					top: 53px
+					left: 85%
+					transform: none
+				90%
+					top: 140px
+					left: 90%
+				100%
+					top: 250px
+					left: 89%
+					transform: rotate(130deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-04
+					0
+						left: -50px
+					80%
+						top: 53px
+						left: 85%
+						transform: none
+					90%
+						top: 110px
+						left: 90%
+					100%
+						top: 220px
+						left: 87%
+						transform: rotate(130deg)
+			&.to-point-05
+				animation: to-point-05 2.5s linear forwards
+			@keyframes to-point-05
+				0
+					left: -50px
+				60%
+					top: 53px
+					left: 85%
+					transform: none
+				70%
+					top: 140px
+					left: 90%
+				80%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				85%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				100%
+					top: 300px
+					left: 61%
+					transform: rotate(180deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-05
+					0
+						left: -50px
+					60%
+						top: 53px
+						left: 85%
+						transform: none
+					70%
+						top: 110px
+						left: 90%
+					80%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					85%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					100%
+						top: 253px
+						left: 61%
+						transform: rotate(180deg)
+			&.to-point-06
+				animation: to-point-06 3s linear forwards
+			@keyframes to-point-06
+				0
+					left: -50px
+				50%
+					top: 53px
+					left: 85%
+					transform: none
+				57%
+					top: 140px
+					left: 90%
+				67%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				72%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				100%
+					top: 300px
+					left: 36%
+					transform: rotate(180deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-06
+					0
+						left: -50px
+					50%
+						top: 53px
+						left: 85%
+						transform: none
+					57%
+						top: 110px
+						left: 90%
+					67%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					72%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					100%
+						top: 253px
+						left: 35%
+						transform: rotate(180deg)
+			&.to-point-07
+				animation: to-point-07 3.5s linear forwards
+			@keyframes to-point-07
+				0
+					left: -50px
+				43%
+					top: 53px
+					left: 85%
+					transform: none
+				50%
+					top: 140px
+					left: 90%
+				57%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				60%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				100%
+					top: 300px
+					left: 9%
+					transform: rotate(180deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-07
+					0
+						left: -50px
+					43%
+						top: 53px
+						left: 85%
+						transform: none
+					50%
+						top: 110px
+						left: 90%
+					57%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					60%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					100%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+			&.to-point-08
+				animation: to-point-08 4s linear forwards
+			@keyframes to-point-08
+				0
+					left: -50px
+				40%
+					top: 53px
+					left: 85%
+					transform: none
+				45%
+					top: 140px
+					left: 90%
+				50%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				55%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				88%
+					top: 300px
+					left: 8%
+					transform: rotate(180deg)
+				95%
+					top: 420px
+					left: -3%
+					transform: rotate(100deg)
+				100%
+					top: 550px
+					left: 3%
+					transform: rotate(40deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-08
+					0
+						left: -50px
+					40%
+						top: 53px
+						left: 85%
+						transform: none
+					45%
+						top: 110px
+						left: 90%
+					50%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					55%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					88%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+					95%
+						top: 330px
+						left: -3%
+						transform: rotate(100deg)
+					100%
+						top: 448px
+						left: 1%
+						transform: rotate(40deg)
+			&.to-point-09
+				animation: to-point-09 4.5s linear forwards
+			@keyframes to-point-09
+				0
+					left: -50px
+				35%
+					top: 53px
+					left: 85%
+					transform: none
+				40%
+					top: 140px
+					left: 90%
+				44%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				47%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				78%
+					top: 300px
+					left: 8%
+					transform: rotate(180deg)
+				85%
+					top: 420px
+					left: -3%
+					transform: rotate(90deg)
+				89%
+					top: 550px
+					left: 3%
+					transform: rotate(40deg)
+				91%
+					top: 570px
+					left: 6%
+					transform: rotate(0deg)
+				100%
+					top: 570px
+					left: 30%
+					transform: none
+			@media (max-width: 1219px)
+				@keyframes to-point-09
+					0
+						left: -50px
+					35%
+						top: 53px
+						left: 85%
+						transform: none
+					40%
+						top: 110px
+						left: 90%
+					44%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					47%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					78%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+					85%
+						top: 330px
+						left: -3%
+						transform: rotate(90deg)
+					89%
+						top: 445px
+						left: 1%
+						transform: rotate(40deg)
+					91%
+						top: 475px
+						left: 4%
+						transform: rotate(0deg)
+					100%
+						top: 475px
+						left: 28%
+						transform: none
+			&.to-point-10
+				animation: to-point-10 5s linear forwards
+			@keyframes to-point-10
+				0
+					left: -50px
+				31%
+					top: 53px
+					left: 85%
+					transform: none
+				36%
+					top: 140px
+					left: 90%
+				40%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				43%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				70%
+					top: 300px
+					left: 8%
+					transform: rotate(180deg)
+				76%
+					top: 420px
+					left: -3%
+					transform: rotate(90deg)
+				80%
+					top: 550px
+					left: 3%
+					transform: rotate(40deg)
+				82%
+					top: 570px
+					left: 6%
+					transform: rotate(0deg)
+				100%
+					top: 570px
+					left: 56%
+					transform: none
+			@media (max-width: 1219px)
+				@keyframes to-point-10
+					0
+						left: -50px
+					31%
+						top: 53px
+						left: 85%
+						transform: none
+					36%
+						top: 110px
+						left: 90%
+					40%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					43%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					70%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+					76%
+						top: 330px
+						left: -3%
+						transform: rotate(90deg)
+					80%
+						top: 445px
+						left: 1%
+						transform: rotate(40deg)
+					82%
+						top: 475px
+						left: 4%
+						transform: rotate(0deg)
+					100%
+						top: 475px
+						left: 54%
+						transform: none
+			&.to-point-11
+				animation: to-point-11 5.5s linear forwards
+			@keyframes to-point-11
+				0
+					left: -50px
+				30%
+					top: 53px
+					left: 85%
+					transform: none
+				34%
+					top: 140px
+					left: 90%
+				39%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				42%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				63%
+					top: 300px
+					left: 8%
+					transform: rotate(180deg)
+				68%
+					top: 420px
+					left: -3%
+					transform: rotate(90deg)
+				72%
+					top: 550px
+					left: 3%
+					transform: rotate(40deg)
+				75%
+					top: 570px
+					left: 6%
+					transform: rotate(0deg)
+				100%
+					top: 570px
+					left: 82%
+					transform: none
+			@media (max-width: 1219px)
+				@keyframes to-point-11
+					0
+						left: -50px
+					30%
+						top: 53px
+						left: 85%
+						transform: none
+					34%
+						top: 110px
+						left: 90%
+					39%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					42%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					63%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+					68%
+						top: 330px
+						left: -3%
+						transform: rotate(90deg)
+					72%
+						top: 445px
+						left: 1%
+						transform: rotate(40deg)
+					75%
+						top: 475px
+						left: 4%
+						transform: rotate(0deg)
+					100%
+						top: 475px
+						left: 80%
+						transform: none
+			&.to-point-12
+				animation: to-point-12 6s linear forwards
+			@keyframes to-point-12
+				0
+					left: -50px
+				28%
+					top: 53px
+					left: 85%
+					transform: none
+				31%
+					top: 140px
+					left: 90%
+				34%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				38%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				58%
+					top: 300px
+					left: 8%
+					transform: rotate(180deg)
+				62%
+					top: 420px
+					left: -3%
+					transform: rotate(90deg)
+				67%
+					top: 550px
+					left: 3%
+					transform: rotate(40deg)
+				69%
+					top: 570px
+					left: 6%
+					transform: rotate(0deg)
+				92%
+					top: 570px
+					left: 84%
+					transform: none
+				96%
+					top: 700px
+					left: 92%
+					transform: rotate(90deg)
+				100%
+					top: 816px
+					left: 82%
+					transform: rotate(180deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-12
+					0
+						left: -50px
+					28%
+						top: 53px
+						left: 85%
+						transform: none
+					31%
+						top: 110px
+						left: 90%
+					34%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					38%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					58%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+					62%
+						top: 330px
+						left: -3%
+						transform: rotate(90deg)
+					67%
+						top: 445px
+						left: 1%
+						transform: rotate(40deg)
+					69%
+						top: 475px
+						left: 4%
+						transform: rotate(0deg)
+					92%
+						top: 475px
+						left: 81%
+						transform: none
+					96%
+						top: 575px
+						left: 90%
+						transform: rotate(90deg)
+					100%
+						top: 674px
+						left: 81%
+						transform: rotate(180deg)
+			&.to-point-13
+				animation: to-point-13 6.5s linear forwards
+			@keyframes to-point-13
+				0
+					left: -50px
+				27%
+					top: 53px
+					left: 85%
+					transform: none
+				29%
+					top: 140px
+					left: 90%
+				32%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				34%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				54%
+					top: 300px
+					left: 8%
+					transform: rotate(180deg)
+				59%
+					top: 420px
+					left: -3%
+					transform: rotate(90deg)
+				62%
+					top: 550px
+					left: 3%
+					transform: rotate(40deg)
+				64%
+					top: 570px
+					left: 6%
+					transform: rotate(0deg)
+				85%
+					top: 570px
+					left: 84%
+					transform: none
+				89%
+					top: 700px
+					left: 92%
+					transform: rotate(90deg)
+				93%
+					top: 816px
+					left: 82%
+					transform: rotate(180deg)
+				100%
+					top: 816px
+					left: 55%
+					transform: rotate(180deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-13
+					0
+						left: -50px
+					27%
+						top: 53px
+						left: 85%
+						transform: none
+					29%
+						top: 110px
+						left: 90%
+					32%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					34%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					54%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+					59%
+						top: 330px
+						left: -3%
+						transform: rotate(90deg)
+					62%
+						top: 445px
+						left: 1%
+						transform: rotate(40deg)
+					64%
+						top: 475px
+						left: 4%
+						transform: rotate(0deg)
+					85%
+						top: 475px
+						left: 82%
+						transform: none
+					89%
+						top: 575px
+						left: 90%
+						transform: rotate(90deg)
+					93%
+						top: 674px
+						left: 81%
+						transform: rotate(180deg)
+					100%
+						top: 674px
+						left: 54%
+						transform: rotate(180deg)
+			&.to-point-14
+				animation: to-point-14 7s linear forwards
+			@keyframes to-point-14
+				0
+					left: -50px
+				23%
+					top: 53px
+					left: 85%
+					transform: none
+				27%
+					top: 140px
+					left: 90%
+				29%
+					top: 240px
+					left: 89.7%
+					transform: rotate(130deg)
+				31%
+					top: 300px
+					left: 85%
+					transform: rotate(180deg)
+				50%
+					top: 300px
+					left: 8%
+					transform: rotate(180deg)
+				54%
+					top: 420px
+					left: -3%
+					transform: rotate(90deg)
+				57%
+					top: 550px
+					left: 3%
+					transform: rotate(40deg)
+				59%
+					top: 570px
+					left: 6%
+					transform: rotate(0deg)
+				80%
+					top: 570px
+					left: 84%
+					transform: none
+				84%
+					top: 700px
+					left: 92%
+					transform: rotate(90deg)
+				88%
+					top: 816px
+					left: 82%
+					transform: rotate(180deg)
+				100%
+					top: 816px
+					left: 29%
+					transform: rotate(180deg)
+			@media (max-width: 1219px)
+				@keyframes to-point-14
+					0
+						left: -50px
+					23%
+						top: 53px
+						left: 85%
+						transform: none
+					27%
+						top: 110px
+						left: 90%
+					29%
+						top: 220px
+						left: 88%
+						transform: rotate(130deg)
+					31%
+						top: 253px
+						left: 85%
+						transform: rotate(180deg)
+					50%
+						top: 253px
+						left: 8%
+						transform: rotate(180deg)
+					54%
+						top: 330px
+						left: -3%
+						transform: rotate(90deg)
+					57%
+						top: 445px
+						left: 1%
+						transform: rotate(40deg)
+					59%
+						top: 475px
+						left: 4%
+						transform: rotate(0deg)
+					80%
+						top: 475px
+						left: 82%
+						transform: none
+					84%
+						top: 575px
+						left: 90%
+						transform: rotate(90deg)
+					88%
+						top: 674px
+						left: 81%
+						transform: rotate(180deg)
+					100%
+						top: 674px
+						left: 27%
+						transform: rotate(180deg)
+
 
 		.r-item
-			height: 140px
-			padding-bottom: 70px
+			height: 150px
+			padding-bottom: 80px
 			z-index: 1
 			position: absolute
 			&_01
-				top: 0
+				top: -10px
 				left: 0
 			&_02
-				top: 0
+				top: -10px
 				left: 24%
 			&_03
-				top: 0
+				top: -10px
 				left: 51%
 			&_04
-				top: 0
+				top: -10px
 				left: 77%
 			&_05
-				top: 23%
+				top: 22%
 				left: 79%
 				text-align: right
 				@media (max-width: 1219px)
-					top: 23%
+					top: 21%
 					left: 75%
 				.r-item__year
 					margin-right: 0
@@ -1655,11 +2443,11 @@ img
 					left: auto!important
 					right: -53px
 			&_06
-				top: 28.2%
+				top: 27.2%
 				left: 60%
 				text-align: right
 				@media (max-width: 1219px)
-					top: 27.4%
+					top: 26%
 					left: 59%
 				.r-item__year
 					margin-right: 0
@@ -1669,11 +2457,11 @@ img
 					left: auto!important
 					right: 0
 			&_07
-				top: 28.2%
+				top: 27.2%
 				left: 33%
 				text-align: right
 				@media (max-width: 1219px)
-					top: 27.4%
+					top: 26%
 					left: 31%
 				.r-item__year
 					margin-right: 0
@@ -1683,11 +2471,11 @@ img
 					left: auto!important
 					right: 0
 			&_08
-				top: 28.2%
+				top: 27.2%
 				left: 7%
 				text-align: right
 				@media (max-width: 1219px)
-					top: 27.4%
+					top: 26%
 					left: 6%
 				.r-item__year
 					margin-right: 0
@@ -1697,37 +2485,37 @@ img
 					left: auto!important
 					right: 0
 			&_09
-				top: 56%
+				top: 55%
 				left: 13%
 				@media (max-width: 1219px)
-					top: 54%
+					top: 53%
 					left: 14%
 				&::before
 					left: -68px!important
 			&_10
-				top: 59.2%
+				top: 58%
 				left: 34%
 				@media (max-width: 1219px)
-					top: 57.5%
+					top: 56.2%
 					left: 33%
 			&_11
-				top: 59.2%
+				top: 58%
 				left: 60%
 				@media (max-width: 1219px)
-					top: 57.5%
+					top: 56.2%
 					left: 59.5%
 			&_12
-				top: 59.2%
+				top: 58%
 				left: 87%
 				@media (max-width: 1219px)
-					top: 57.5%
+					top: 56.2%
 					left: 86%
 			&_13
-				top: 87.2%
+				top: 86%
 				left: 78%
 				text-align: right
 				@media (max-width: 1219px)
-					top: 85%
+					top: 83.5%
 					left: 76%
 				.r-item__year
 					margin-right: 0
@@ -1737,11 +2525,11 @@ img
 					left: auto!important
 					right: 0
 			&_14
-				top: 87.2%
+				top: 86%
 				left: 52%
 				text-align: right
 				@media (max-width: 1219px)
-					top: 85%
+					top: 83.5%
 					left: 50%
 				.r-item__year
 					margin-right: 0
@@ -1751,11 +2539,11 @@ img
 					left: auto!important
 					right: 0
 			&_15
-				top: 87.2%
+				top: 86%
 				left: 30%
 				text-align: right
 				@media (max-width: 1219px)
-					top: 85%
+					top: 83.5%
 					left: 28%
 				.r-item__year
 					margin-right: 0
@@ -2900,5 +3688,3 @@ img
 							padding: 14px 0
 							@media (max-width: 767px)
 								width: 110px
-
-

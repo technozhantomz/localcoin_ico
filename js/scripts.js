@@ -6,10 +6,11 @@ $(document).ready(function() {
 
 	$(document).on('click', 'a[href="#"]', function(e){ e.preventDefault(); });
 
-
 	// WOW Animate
 	new WOW().init();
 
+	// Rocket Flight Point
+	var roadmapPoint = 'to-point-12'; // 01 - 14
 
 	//Fixed elements
 	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
@@ -24,7 +25,7 @@ $(document).ready(function() {
 			$('#header').removeClass('header-fixed');
 		}
 
-		if (urlLastSegment == 'index.html' || urlLastSegment == '') {
+		if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
 
 			var	advPos           = $('#advantages').offset().top,
 					tablePos         = $('.a-table').offset().top,
@@ -56,7 +57,7 @@ $(document).ready(function() {
 
 			// Rocket Fly
 			if (bodyScroll >= roadmapPos - $(window).height() / 2) {
-				$('.rocket').addClass('fly');
+				$('.rocket').addClass(roadmapPoint);
 			}
 
 		}
