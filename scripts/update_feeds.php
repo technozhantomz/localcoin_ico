@@ -1,33 +1,33 @@
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL & ~E_NOTICE);
 
 //echo 'Curl: ', function_exists('curl_version') ? 'Enabled' : 'Disabled';
 
 $privateKeyData = array(
-    "5KE6eZe24XDGrAPkfZro97DzUXQHEiSYtEPZaGzPDgJw5uibEik",
-    "5JmpFxQxdE7d4ApLxEaSwCSiBKoD1j7BqLpsAf6G7aPz5KTmKTf",
-	"5KVXhrvMKTcG1gu8T62RUXqi1umD3u83YvbYhmSmjYD6hv1f11E",
-	"5KJzH3RaUA9W9QBp5rjePMBPco83PoFdX3RaFtGUDnT5Cj7uZmj",
+	"5KE6eZe24XDGrAPkfZro97DzUXQHEiSYtEPZaGzPDgJw5uibEik",
+	"5K1s4ru4TEoAePvhYFYGeE51LpagkFPXdVroMZqwM5Ae6695uQR",
 	"5KC62eHhS6FVnuZJm6pF2TTFBbfP8d6qpgCHX9Ks1yyybi5sCKn",
 	"5HyvyovXMEzFdbM5BXeXLQm9zdDum8q5MfA4NPUAuVatnUkxFay",
-	"5K1s4ru4TEoAePvhYFYGeE51LpagkFPXdVroMZqwM5Ae6695uQR",
-	"5JLjdsHfRzuKYciUMbLMTrSFtPPWKUU8LRMQ1bza4BHdMAbWp6h",
-	"5KbJaXtLv91beTBbJqjrXw3jsGyR8TutLJ9hQHqAurS9FcsjpTh",
-	"5JkJ7rzP2EgoS2u3pvM9mQP69kxfbyLMmj448caHVZgDgPx77vv"
+	"5JmpFxQxdE7d4ApLxEaSwCSiBKoD1j7BqLpsAf6G7aPz5KTmKTf",
+	"5KVXhrvMKTcG1gu8T62RUXqi1umD3u83YvbYhmSmjYD6hv1f11E",
+	"5KJzH3RaUA9W9QBp5rjePMBPco83PoFdX3RaFtGUDnT5Cj7uZmj",
+	"5Ja9aEjbXKLSAV14n1hC8AcXZPkahWTJMCqvtX6pFweRe1bf7as",
+	"5KLfSNv1f7aNDUBvhV2WJjPhHR68Gu4xgpDEffMeX3nq6RZ35MZ",
+	"5JAL8PBDcu1g7HPBRrGGDSgT9XFvXn36po4zpSZCYw7NX4UgsxD"
 );
 $userNameData = array(
     "adamgottie",
-    "aaronson",
-	"ampleforth",
-	"charrington",
+	"winstonsmith",
 	"julia",
 	"obrien",
-	"winstonsmith",
-	"sentriusfounders",
-	"stoneman",
-	"testnet-acc"
+	"aaronson",
+	"ampleforth",
+	"charrington",
+	"katharinesmith",
+	"tomparsons",
+	"syme"
 );
 
 $access_key = '3d412586b14709b75ef2cb90703cac8a';
