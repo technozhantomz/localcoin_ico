@@ -1,6 +1,0 @@
-<?php
-$dir = '/home/wmbroker/opt/gateis_tapin';
-= "cd ".$dir." && nohup $processName ".$dir."/manage.py runserver --host=0.0.0.0 >/dev/null 2>&1 &";
-exec($cmd, $out);
-print_r($out);
-
