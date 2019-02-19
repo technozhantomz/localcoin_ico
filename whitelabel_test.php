@@ -184,7 +184,7 @@
             <li><a class="f-social__item f-social__item_07" href="#"></a></li>
             <li><a class="f-social__item f-social__item_08" href="#"></a></li>
             <li><a class="f-social__item f-social__item_bt" href="#"></a></li>
-            <li><a class="f-social__item f-social__item_tw" href="#"></a></li>
+            <li><a class="f-social__item f-social__item_tw" href="https://twitter.com/LocalCoinIS"></a></li>
             <li><a class="f-social__item f-social__item_yt" href="#"></a></li>
             <li><a class="f-social__item f-social__item_in" href="#"></a></li>
           </ul>
