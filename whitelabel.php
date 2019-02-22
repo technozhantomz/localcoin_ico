@@ -180,8 +180,8 @@
             <li><a class="f-social__item f-social__item_04" href="https://discord.gg/vzxSzYN"></a></li>
             <li><a class="f-social__item f-social__item_05" href="#"></a></li>
             <li><a class="f-social__item f-social__item_06" href="#"></a></li>
-            <li><a class="f-social__item f-social__item_07" href="#"></a></li>
-            <li><a class="f-social__item f-social__item_08" href="#"></a></li>
+            <li><a class="f-social__item f-social__item_07" href="https://reddit.com/user/LocalCoinIS"></a></li>
+            <li><a class="f-social__item f-social__item_08" href="https://steemit.com/@localcoin"></a></li>
             <li><a class="f-social__item f-social__item_bt" href="#"></a></li>
             <li><a class="f-social__item f-social__item_tw" href="https://twitter.com/LocalCoinIS"></a></li>
             <li><a class="f-social__item f-social__item_yt" href="#"></a></li>
