@@ -10,7 +10,7 @@ $(document).ready(function() {
 	new WOW().init();
 
 	// Rocket Flight Point
-	var roadmapPoint = 'to-point-09'; // 01 - 14
+	var roadmapPoint = 'to-point-12'; // 01 - 14
 
 	//Fixed elements
 	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
@@ -386,9 +386,7 @@ $(window).resize(function() {
 
 	if (urlLastSegment == 'index.html' || urlLastSegment == '') {
 
-		var slider = $('.pre-sale__slider');
-
-		if($(this).width() < 1000) {
+		if($(this).width() <= 999) {
 
 			$('.advantages__table').mCustomScrollbar({
 				axis: "x",
@@ -405,11 +403,19 @@ $(window).resize(function() {
 
 			$('.ps-circuit__item').removeClass('item-hover');
 
-			if(!slider.hasClass('slick-initialized'))
-				slider.slick({
+			if (typeof $().slick !== "undefined" && !$('.pre-sale__slider').hasClass('slick-initialized')) {
+				$('.pre-sale__slider').slick({
+					mobileFirst: true,
 					dots: true,
-					adaptiveHeight: true
+					adaptiveHeight: true,
+					responsive: [
+						{
+							breakpoint: 999,
+							settings: "unslick"
+						}
+					]
 				});
+			}
 
 			$('.download__item').removeClass('wow flipInY');
 
@@ -419,10 +425,7 @@ $(window).resize(function() {
 
 			$('.ps-circuit__item').addClass('item-hover');
 
-			if(slider.hasClass('slick-initialized'))
-				slider.slick('unslick');
-
-				$('.download__item').addClass('wow flipInY');
+			$('.download__item').addClass('wow flipInY');
 		}
 
 	}
