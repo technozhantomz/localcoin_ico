@@ -6861,10 +6861,10 @@ img {
           opacity: 0;
           -webkit-transform: scale3d(0, 0, 0);
           transform: scale3d(0, 0, 0);
-          -webkit-transition: opacity .7s ease-in-out, -webkit-transform 1s ease-in-out;
-          transition: opacity .7s ease-in-out, -webkit-transform 1s ease-in-out;
-          transition: transform 1s ease-in-out, opacity .7s ease-in-out;
-          transition: transform 1s ease-in-out, opacity .7s ease-in-out, -webkit-transform 1s ease-in-out; }
+          -webkit-transition: opacity .1s ease-in-out, -webkit-transform .1s ease-in-out;
+          transition: opacity .1s ease-in-out, -webkit-transform .1s ease-in-out;
+          transition: transform .1s ease-in-out, opacity .1s ease-in-out;
+          transition: transform .1s ease-in-out, opacity .1s ease-in-out, -webkit-transform .1s ease-in-out; }
       .main .pre-sale .ps-circuit__item {
         display: inline-block;
         text-align: center;
