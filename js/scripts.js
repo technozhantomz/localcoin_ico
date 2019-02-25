@@ -12,6 +12,15 @@ $(document).ready(function() {
 	// Rocket Flight Point
 	var roadmapPoint = 'to-point-10'; // 01 - 14
 
+	// Active tab if link with hash
+	if (window.location.hash == '#airDrop') {
+			$('.main__tab-links ul li a').removeClass('active');
+			$('.main__tab').removeClass('active');
+
+			$('.main__tab-links ul li a[href="#airDrop"]').addClass('active');
+			$('#airDrop').addClass('active');
+	}
+
 	//Fixed elements
 	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 	
@@ -197,7 +206,7 @@ $(document).ready(function() {
 
 
 	// Smooth scrolling
-	if (urlLastSegment == 'index.html' || urlLastSegment == '') {
+	if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
 
 		$('.header__nav ul li a').on('click', function (e) {
 			e.preventDefault();
@@ -247,7 +256,7 @@ $(document).ready(function() {
 
 
 	
-	if (urlLastSegment == 'index.html' || urlLastSegment == '') {
+	if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
 
 		// Pre-sale form
 		coinChange({
@@ -384,7 +393,7 @@ $(window).resize(function() {
 
 	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 
-	if (urlLastSegment == 'index.html' || urlLastSegment == '') {
+	if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
 
 		if($(this).width() <= 999) {
 
