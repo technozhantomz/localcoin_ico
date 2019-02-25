@@ -510,6 +510,8 @@ function tabThis(t){
 
 		$(this).addClass('active');
 		$(_id).addClass('active');
+
+		if(_id == '#preSale') $('.pre-sale__slider').slick('setPosition');
 	});
 }
 
