@@ -10,7 +10,7 @@ $(document).ready(function() {
 	new WOW().init();
 
 	// Rocket Flight Point
-	var roadmapPoint = 'to-point-12'; // 01 - 14
+	var roadmapPoint = 'to-point-10'; // 01 - 14
 
 	//Fixed elements
 	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
