@@ -4,6 +4,7 @@
 // #bridgeCurrenciesList
 // #bridgeAmountTo
 // #bridgeSubmit
+const MIN_LLC_VAL = 200;
 
 var Modal = (function(jq, d) {
     var GrapheneConnection = function() {
@@ -114,10 +115,50 @@ var Modal = (function(jq, d) {
             });
             //****************
 
+            //min amount llc checker
+            setInterval(function() {
+                var dis = function() {
+                    $("#bridgeAmountToError").show();
+                    $("#bridgeSubmit")
+                        .attr('disabled', 'disabled')
+                        .attr('style', 'opacity: 0.3;');
+                };
+
+                try {
+                    var val = parseInt(jq("#bridgeAmountTo").val());
+                    if(val >= MIN_LLC_VAL) {
+                        $("#bridgeAmountToError").hide();
+
+                        $("#bridgeSubmit")
+                            .removeAttr('disabled')
+                            .removeAttr('style');
+
+                        return;
+                    }
+                } catch(ex) {}
+
+                dis();
+            }, 200);
+            //**********************
+
+            //init amount
+            var initAmount = function(llcVal, currency) {
+                jq("#bridgeAmountTo").val(llcVal);
+                var converted = self.getConvertAmount("LLC", currency, llcVal, true);
+                jq("#bridgeAmountFrom").val(converted.toFixed(5));
+            };
+
+            jq(d).on("click",   "#bridgeCurrenciesList", function() {
+                setTimeout(function() { initAmount(MIN_LLC_VAL, self.getActive()) }, 100);
+            });
+            //***********
+
             //обновление курса
             var updateCourse = function() {
                 self.gateConnection.loadPairsCourse(function(pairs) {
-                    self.pairsCourse = pairs;                    
+                    self.pairsCourse = pairs;
+
+                    initAmount(MIN_LLC_VAL, self.getActive());
                 });
             };
             updateCourse(); //setInterval(updateCourse, 2000);//курс может изменяться каждые 2 минуты
@@ -138,9 +179,18 @@ var Modal = (function(jq, d) {
                 var converted = self.getConvertAmount("LLC", self.getActive(), value);
                 jq("#bridgeAmountTo").val(converted.toFixed(5));
             };
-            jq(d).on("mouseup", "#bridgeAmountFrom",               recalc);
-            jq(d).on("keyup",   "#bridgeAmountFrom",               recalc);
-            jq(d).on("click",   "#bridgeCurrenciesList", function() { setTimeout(recalc, 100); });
+            jq(d).on("mouseup", "#bridgeAmountFrom", recalc);
+            jq(d).on("keyup",   "#bridgeAmountFrom", recalc);            
+            //*********
+
+            //обратный конвертер
+            var recalcReverce = function() {
+                var value = jq("#bridgeAmountTo").val();
+                var converted = self.getConvertAmount("LLC", self.getActive(), value, true);
+                jq("#bridgeAmountFrom").val(converted.toFixed(5));
+            };
+            jq(d).on("mouseup", "#bridgeAmountTo", recalcReverce);
+            jq(d).on("keyup",   "#bridgeAmountTo", recalcReverce);
             //*********
 
             //валидатор логина в блокчейне
@@ -167,8 +217,6 @@ var Modal = (function(jq, d) {
                     if(typeof successCB === "function") successCB();
                 });
             };
-            // jq(d).on("mouseup", "#grapheneUsername", checkUsername);
-            // jq(d).on("keyup",   "#grapheneUsername", checkUsername);
             jq(d).on("mouseup", "#grapheneUsername", function() { jq("#loginError").html(""); });
             jq(d).on("keyup",   "#grapheneUsername", function() { jq("#loginError").html(""); });
             //****************************
@@ -235,7 +283,7 @@ var Modal = (function(jq, d) {
             jq("#bridgeFormInputAsset").html(asset);
             jq("#bridgeFormInputAsset").attr("href", "https://wallet.localcoin.is/asset/"+asset+"/");
             jq("#bridgeFormInputAddress").val(address);
-            jq("#bridgeFormInputMinimalAmount a").html(minimalAmount);            
+            jq("#bridgeFormInputMinimalAmount a").html(minimalAmount);
 
             var countConfirmations = this.getCountConfirmationByAsset(asset);
             this.updateCountConfirmations(countConfirmations);
@@ -249,7 +297,9 @@ var Modal = (function(jq, d) {
             jq("#loginError").html("");
         };
 
-        this.getConvertAmount = function(from, to, amount) {
+        this.getConvertAmount = function(from, to, amount, reverce) {
+            if(typeof reverce === "undefined") reverce = false;
+
             if(this.pairsCourse)
                 for(var i in this.pairsCourse) {
                     var item = this.pairsCourse[i];
@@ -257,7 +307,9 @@ var Modal = (function(jq, d) {
                     if(item.from != from) continue;
                     if(item.to   != to)   continue;
                     
-                    var numberAmount = parseFloat((amount + "").replace(",", "."));                    
+                    var numberAmount = parseFloat((amount + "").replace(",", "."));
+                    if(reverce) return numberAmount / item.coef;
+
                     return item.coef * numberAmount;
                 }
 

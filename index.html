@@ -1239,9 +1239,10 @@
               </div>
               <div class="ps-form__arr"></div>
               <div class="ps-form__input ps-form__input_num input-llc">
-                <input type="number" name="llc" value="0" id="bridgeAmountTo" style="background-color: #fff;" disabled>
+                <input type="number" name="llc" value="0" id="bridgeAmountTo" style="background-color: #fff;">
+                <label id="bridgeAmountToError" style="display: none; display: block; position: relative; float: left; top: 50px; color: #ffde25; font-size: 16px;">min to buy is 200 LLC</label>
               </div>
-              <div class="ps-form__input ps-form__input_text">
+              <div class="ps-form__input ps-form__input_text" style="margin-top: 30px;">
                 <input type="text" id="grapheneUsername" placeholder="Your LocalCoin Account name">
                 <span id="loginError" class="ps-form__reg" style="color: #faa; display: inherit; margin-top: 10px;"></span>
                 <span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/">Register now</a></span>
@@ -1258,7 +1259,6 @@
             <span class="ps-form__reg">
               <a data-copy="#bridgeFormInputAddress" style="font-size: 25px; cursor: pointer;">copy address</a>
             </span>
-            <span id="bridgeFormInputMinimalAmount" class="ps-form__reg" style="display: inherit; margin-top: 10px;">Minimal amount: <a></a></span>
             <span id="bridgeFormInputCountConfirmations" class="ps-form__reg" style="display: inherit; margin-top: 10px;"></span>
             <span id="loginError" class="ps-form__reg" style="color: #faa; display: inherit; margin-top: 10px; padding-left: 25px; padding-right: 25px; margin-top: 10px;">
               IMPORTANT: Send only  to this deposit address. Sending less than   or any other currency to this address may result in the loss of your deposit.
