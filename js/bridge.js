@@ -323,6 +323,7 @@ var Modal = (function(jq, d) {
 
         this.addItemInCurrenciesList = function(key, value) {
             var before = jq("#bridgeCurrenciesList").html();
+            if(value === 'TTRUSD') value = 'USDT';
             var li = '<li data-value="' + key + '">' + value + '</li>';
 
             jq("#bridgeCurrenciesList").html(before + li);
