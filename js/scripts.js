@@ -511,7 +511,8 @@ function tabThis(t){
 		$(this).addClass('active');
 		$(_id).addClass('active');
 
-		if(_id == '#preSale') $('.pre-sale__slider').slick('setPosition');
+		if(_id == '#preSale' && $(window).width() <= 999 && $('.pre-sale__slider').hasClass('slick-initialized'))
+			$('.pre-sale__slider').slick('setPosition');
 	});
 }
 
@@ -535,7 +536,7 @@ var amountArr = [],
 
 $.getJSON('scripts/amount.json', function(data) {
 
-	var dataUnique = uniqBy(data, getKey),
+	var dataUnique = mergeDuplicates(data, 'amount'),
 			dataLast = dataUnique.slice(-15);
 
 			dataLastAmount = dataLast[dataLast.length - 1].amount;
@@ -559,16 +560,21 @@ $.getJSON('scripts/amount.json', function(data) {
 
 });
 
-function getKey(value) {
-	return value.amount;
-}
+function mergeDuplicates(array, property) { 
+	if (!array || array.length === 0) {
+		return array;
+	}
 
-function uniqBy(a, key) {
-		var seen = {};
-		return a.filter(function(item) {
-		var k = key(item);
-		return seen.hasOwnProperty(k) ? false : (seen[k] = true);
-		});
+	return array.filter(function (item, index) {
+		var value = item[property];
+		var nextItem = array[index + 1];
+
+		if (nextItem && value === nextItem[property] ) {
+			return false;
+		}
+
+		return true;
+	});
 }
 
 // AirDropped progress bar
