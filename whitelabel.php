@@ -29,7 +29,7 @@
           <div class="header__right-menu">
             <ul>
               <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
-              <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://wallet.localcoin.is/">Sign In</a></li>
+              <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://wallet.localcoin.is/" target="_blank">Sign In</a></li>
               <li><a class="whitepaper" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">WP</a></li>
               <li><a class="whitelabel" href="/">WL</a></li>
               <!-- <li>
@@ -168,7 +168,7 @@
         <div class="container">
           <div class="getfree__logo"><img src="img/d-logo.png" srcset="img/d-logo-2x.png 2x" alt="logo"></div>
           <h2 class="wow fadeInUp">Create your account for <span>free </span>and start trading now.</h2>
-          <p class="wow fadeInUp">The first 100 000 users receive 100 LLC coins after registration on the exchange's website</p><a class="getfree__btn btn-yellow" href="https://wallet.localcoin.is/create-account/password">Join and start trading now</a>
+          <p class="wow fadeInUp">The first 100 000 users receive 100 LLC coins after registration on the exchange's website</p><a class="getfree__btn btn-yellow" href="https://wallet.localcoin.is/create-account/password" target="_blank">Join and start trading now</a>
         </div>
       </section>
       <footer class="footer" id="footer">
@@ -233,7 +233,7 @@
                 <input type="number" name="llc" value="0" min="0">
               </div>
               <div class="ps-form__input ps-form__input_text">
-                <input type="text" placeholder="Your LocalCoin Account name"><span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/">Register now</a></span>
+                <input type="text" placeholder="Your LocalCoin Account name"><span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/" target="_blank">Register now</a></span>
               </div>
               <input class="ps-form__btn btn-yellow" type="submit" value="Buy LLC coin">
             </form>
