@@ -1,51 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>Localcoin - White Label</title>
-    <!-- CSS-->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header header_inner" id="header">
-        <div class="container">
-          <div class="hamburger hamburger--squeeze">
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
-            </div>
-          </div><a class="header__logo" href="/"><img src="/img/logo.png" srcset="/img/logo-2x.png 2x" alt="Localcoin"></a>
-          <div class="header__nav" style="display:none">
-            <ul>
-              <li><a href="/#advantages">Why</a></li>
-              <li><a href="/#trading">Trading</a></li>
-              <li><a href="/#tokeninfo">Token info</a></li>
-              <li><a href="/#roadmap">Road map</a></li>
-              <li><a href="/#download">Download</a></li>
-            </ul>
-          </div>
-          <div class="header__right-menu">
-            <ul>
-              <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
-              <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://wallet.localcoin.is/" target="_blank">Sign In</a></li>
-              <li><a class="whitepaper" href="/downloads/LocalCoinBlockchain.pdf" target="_blank">WP</a></li>
-              <li><a class="whitelabel" href="#">WL</a></li>
-              <!-- <li>
-                <div class="header__lang select select-lang">
-                  <input class="select_hidden" type="hidden" value="1">
-                  <div class="select_in select-lang_in"><span class="select_title select-lang_title"><img src="img/eng.png" srcset="img/eng-2x.png 2x" alt="eng"></span><i class="select_arrow select-lang_arrow"></i></div>
-                  <ul class="select_list select-lang_list">
-                    <li class="is-active" data-value="1"><img src="img/eng.png" srcset="img/eng-2x.png 2x" alt="eng"></li>
-                    <li data-value="2"><img src="img/svg/rus.svg" alt="rus"></li>
-                  </ul>
-                </div> -->
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
+<?include '../template/header.php';?>
       <section class="white-label" id="whitelabel">
         <div class="container">
           <ul class="breadcrumbs white-label__breadcrumbs">
@@ -58,7 +11,7 @@
             </div>
             <div class="col-sm-6 col-md-4">
             <form class="white-label__form wl-form" method = "POST" action="#">
-                <input type="hidden" name = "emailTo" value ="emailTo@mail.com">
+                <input type="hidden" name = "emailTo" value ="hor@tut.by">
                 <h4 class="wl-form__title">Order now!</h4>
                 <p class = "messege"></p>
                 <div class="wl-form__input">
@@ -165,88 +118,5 @@
           </div>
         </div>
       </section>
-      <section class="getfree" id="getfree">
-        <div class="container">
-          <div class="getfree__logo"><img src="/img/d-logo.png" srcset="img/d-logo-2x.png 2x" alt="logo"></div>
-          <h2 class="wow fadeInUp">Create your account for <span>free </span>and start trading now.</h2>
-          <p class="wow fadeInUp">The first 100 000 users receive 100 LLC coins after registration on the exchange's website</p><a class="getfree__btn btn-yellow" href="https://wallet.localcoin.is/create-account/password" target="_blank">Join and start trading now</a>
-        </div>
-      </section>
-      <footer class="footer" id="footer">
-        <div class="container">
-          <ul class="footer__social f-social">
-            <li><a class="f-social__item f-social__item_vk" href="https://vk.com/localcoin" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_fb" href="#" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_tm" href="https://t.me/LocalCoinIS" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_04" href="https://discord.gg/vzxSzYN" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_05" href="https://medium.com/@localcoinis" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_06" href="https://golos.io/@localcoin" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_07" href="https://reddit.com/user/LocalCoinIS" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_08" href="https://steemit.com/@localcoin" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_bt" href="#" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_tw" href="https://twitter.com/LocalCoinIS" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_yt" href="#" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_in" href="#" target="_blank"></a></li>
-          </ul>
-          <ul class="footer__links">
-            <li><a class="footer__wl" href="#">White Label</a></li>
-            <li><a class="footer__wp" href="/downloads/LocalCoinBlockchain.pdf" target="_blank">White Paper</a></li>
-            <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
-          </ul>
-          <ul class="footer__nav wow fadeInUp">
-            <li><a href="/#main">Home</a></li>
-            <li><a href="/#advantages">Why</a></li>
-            <li><a href="/#trading">Trading</a></li>
-            <li><a href="/#tokeninfo">Token info</a></li>
-            <li><a href="/#roadmap">Road map</a></li>
-            <li><a href="/#download">Download</a></li>
-            <li><a href="https://dev.localcoin.is" target="_blank">Documentation</a></li>
-            <li><a href="https://how.localcoin.is" target="_blank">User guide</a></li>
-            <li><a href="https://localcoin.is/#airDrop">AirDrop</a></li>
-          </ul>
-          <div class="footer__desc wow fadeInUp">LocalCoin is THE true democracy decentralized ecosystem where everyone is free to do what they want and say what they want. LocalCoin is not a company or a person, it is a community of people who shares the same libertarian values and freedoms.</div>
-        </div>
-      </footer>
-      <div class="popup-modal">
-        <div class="p-modal">
-          <div class="p-modal__close"></div>
-          <div class="p-modal__form">
-            <form class="ps-form" action="#">
-              <div class="ps-form__input ps-form__input_num input-coin">
-                <input type="number" name="btc" value="0" min="0">
-                <div class="ps-form__select select select-coin">
-                  <input class="select_hidden" type="hidden" value="1">
-                  <div class="select_in select-coin_in"><span class="select_title select-coin_title">BTC</span><i class="select_arrow select-coin_arrow"></i></div>
-                  <ul class="select_list select-coin_list">
-                    <li class="is-active" data-value="1">BTC</li>
-                    <li data-value="2">CTC</li>
-                    <li data-value="3">DTC</li>
-                    <li data-value="4">ETC</li>
-                    <li data-value="5">FTC</li>
-                    <li data-value="6">GTC</li>
-                  </ul>
-                </div>
-                <div class="prev-coin"></div>
-                <div class="next-coin"></div>
-              </div>
-              <div class="ps-form__arr"></div>
-              <div class="ps-form__input ps-form__input_num input-llc">
-                <input type="number" name="llc" value="0" min="0">
-              </div>
-              <div class="ps-form__input ps-form__input_text">
-                <input type="text" placeholder="Your LocalCoin Account name"><span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/" target="_blank">Register now</a></span>
-              </div>
-              <input class="ps-form__btn btn-yellow" type="submit" value="Buy LLC coin">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- jQuery-->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <!-- Plugins-->
-    <script src="/js/wow.min.js"></script>
-    <!-- JavaScripts-->
-    <script src="/js/scripts.js"></script>
-  </body>
-</html>
+
+<?include '../template/footer.php';?>
