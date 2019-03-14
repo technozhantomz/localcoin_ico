@@ -10,7 +10,7 @@ $(document).ready(function() {
 	new WOW().init();
 
 	// Rocket Flight Point
-	var roadmapPoint = 'to-point-10'; // 01 - 14
+	var roadmapPoint = 'to-point-11'; // 01 - 14
 
 	// Active tab if link with hash
 	if (window.location.hash == '#airDrop') {
@@ -352,7 +352,7 @@ $(document).ready(function() {
 		data.push({name: "AJAX", value: "Y"});
 		$.ajax({
 			type: 'POST',
-			url: '/scripts/ajax.php',
+			url: '/whitelabel/ajax.php',
 			data: $.param(data),
 			dataType: 'json',
 			success: function(json) {			

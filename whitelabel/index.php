@@ -19,18 +19,18 @@
           </div><a class="header__logo" href="/"><img src="/img/logo.png" srcset="/img/logo-2x.png 2x" alt="Localcoin"></a>
           <div class="header__nav" style="display:none">
             <ul>
-              <li><a href="https://localcoin.is/#advantages">Why</a></li>
-              <li><a href="https://localcoin.is/#trading">Trading</a></li>
-              <li><a href="https://localcoin.is/#tokeninfo">Token info</a></li>
-              <li><a href="https://localcoin.is/#roadmap">Road map</a></li>
-              <li><a href="https://localcoin.is/#download">Download</a></li>
+              <li><a href="/#advantages">Why</a></li>
+              <li><a href="/#trading">Trading</a></li>
+              <li><a href="/#tokeninfo">Token info</a></li>
+              <li><a href="/#roadmap">Road map</a></li>
+              <li><a href="/#download">Download</a></li>
             </ul>
           </div>
           <div class="header__right-menu">
             <ul>
               <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
               <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://wallet.localcoin.is/" target="_blank">Sign In</a></li>
-              <li><a class="whitepaper" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">WP</a></li>
+              <li><a class="whitepaper" href="/downloads/LocalCoinBlockchain.pdf" target="_blank">WP</a></li>
               <li><a class="whitelabel" href="#">WL</a></li>
               <!-- <li>
                 <div class="header__lang select select-lang">
@@ -57,7 +57,7 @@
 				<h1 class="white-label__title"><span>White label </span> Decentralized autonomous organization</h1><span class="white-label__subtitle">Running your own cryptocurrency exchange website based upon the blockchain decentralized platform(The DAO) with a few clicks of a button.</span>
             </div>
             <div class="col-sm-6 col-md-4">
-              <form class="white-label__form wl-form" method = "POST" action="#">
+            <form class="white-label__form wl-form" method = "POST" action="#">
                 <input type="hidden" name = "emailTo" value ="emailTo@mail.com">
                 <h4 class="wl-form__title">Order now!</h4>
                 <p class = "messege"></p>
@@ -73,6 +73,7 @@
                   <label for="message">Your message:</label>
                   <textarea id="message" name="message"></textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LdX_XoUAAAAANzmXQd6CUx0Blgpx-ztSrSVtoTk"></div>
                 <input class="wl-form__submit" type="submit" value="Submit">
               </form>
             </div>
@@ -189,16 +190,16 @@
           </ul>
           <ul class="footer__links">
             <li><a class="footer__wl" href="#">White Label</a></li>
-            <li><a class="footer__wp" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">White Paper</a></li>
+            <li><a class="footer__wp" href="/downloads/LocalCoinBlockchain.pdf" target="_blank">White Paper</a></li>
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
           <ul class="footer__nav wow fadeInUp">
-            <li><a href="https://localcoin.is/#main">Home</a></li>
-            <li><a href="https://localcoin.is/#advantages">Why</a></li>
-            <li><a href="https://localcoin.is/#trading">Trading</a></li>
-            <li><a href="https://localcoin.is/#tokeninfo">Token info</a></li>
-            <li><a href="https://localcoin.is/#roadmap">Road map</a></li>
-            <li><a href="https://localcoin.is/#download">Download</a></li>
+            <li><a href="/#main">Home</a></li>
+            <li><a href="/#advantages">Why</a></li>
+            <li><a href="/#trading">Trading</a></li>
+            <li><a href="/#tokeninfo">Token info</a></li>
+            <li><a href="/#roadmap">Road map</a></li>
+            <li><a href="/#download">Download</a></li>
             <li><a href="https://dev.localcoin.is" target="_blank">Documentation</a></li>
             <li><a href="https://how.localcoin.is" target="_blank">User guide</a></li>
             <li><a href="https://localcoin.is/#airDrop">AirDrop</a></li>
