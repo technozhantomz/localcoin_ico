@@ -6312,6 +6312,28 @@ a {
   a:hover, a:visited, a:active, a:focus {
     text-decoration: none; }
 
+.white-label__advantages a {
+  color: #ffde25;
+  text-decoration: none;
+  border-bottom: 1px solid #ffde25;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease; }
+  a:hover, a:visited, a:active, a:focus {
+    text-decoration: none;
+    border-bottom: none;
+   } 
+
+  .white-label__fees a {
+  color: #131a73;
+  text-decoration: none;
+  border-bottom: 1px solid #131a73;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease; }
+  a:hover, a:visited, a:active, a:focus {
+    text-decoration: none;
+    border-bottom: none;
+    }    
+
 p {
   color: #000; }
 

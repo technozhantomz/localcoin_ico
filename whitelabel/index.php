@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <title>Localcoin - White Label</title>
     <!-- CSS-->
-    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="wrapper">
@@ -16,7 +16,7 @@
             <div class="hamburger-box">
               <div class="hamburger-inner"></div>
             </div>
-          </div><a class="header__logo" href="/"><img src="img/logo.png" srcset="img/logo-2x.png 2x" alt="Localcoin"></a>
+          </div><a class="header__logo" href="/"><img src="/img/logo.png" srcset="/img/logo-2x.png 2x" alt="Localcoin"></a>
           <div class="header__nav" style="display:none">
             <ul>
               <li><a href="https://localcoin.is/#advantages">Why</a></li>
@@ -31,7 +31,7 @@
               <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
               <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://wallet.localcoin.is/" target="_blank">Sign In</a></li>
               <li><a class="whitepaper" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">WP</a></li>
-              <li><a class="whitelabel" href="/">WL</a></li>
+              <li><a class="whitelabel" href="#">WL</a></li>
               <!-- <li>
                 <div class="header__lang select select-lang">
                   <input class="select_hidden" type="hidden" value="1">
@@ -166,7 +166,7 @@
       </section>
       <section class="getfree" id="getfree">
         <div class="container">
-          <div class="getfree__logo"><img src="img/d-logo.png" srcset="img/d-logo-2x.png 2x" alt="logo"></div>
+          <div class="getfree__logo"><img src="/img/d-logo.png" srcset="img/d-logo-2x.png 2x" alt="logo"></div>
           <h2 class="wow fadeInUp">Create your account for <span>free </span>and start trading now.</h2>
           <p class="wow fadeInUp">The first 100 000 users receive 100 LLC coins after registration on the exchange's website</p><a class="getfree__btn btn-yellow" href="https://wallet.localcoin.is/create-account/password" target="_blank">Join and start trading now</a>
         </div>
@@ -188,7 +188,7 @@
             <li><a class="f-social__item f-social__item_in" href="#" target="_blank"></a></li>
           </ul>
           <ul class="footer__links">
-            <li><a class="footer__wl" href="whitelabel.php">White Label</a></li>
+            <li><a class="footer__wl" href="#">White Label</a></li>
             <li><a class="footer__wp" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">White Paper</a></li>
             <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
@@ -242,10 +242,10 @@
       </div>
     </div>
     <!-- jQuery-->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
     <!-- Plugins-->
-    <script src="js/wow.min.js"></script>
+    <script src="/js/wow.min.js"></script>
     <!-- JavaScripts-->
-    <script src="js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
