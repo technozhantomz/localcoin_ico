@@ -9785,6 +9785,12 @@ img {
       bottom: 0;
       z-index: 1;
       position: absolute; }
+
+      .roadmap__desk .r-item-coming {
+        border: 8px solid #040929;
+        background-color: #171b46;
+        background-image: linear-gradient(45deg, rgba(66, 23, 130, 0.49) 0%, rgba(43, 85, 105, 0.49) 100%); }      
+      
       .roadmap__desk .r-item_01 {
         top: 71px;
         left: 0; }
@@ -9929,6 +9935,21 @@ img {
           .roadmap__desk .r-item_15 {
             top: 95%;
             left: 33%; } }
+      .roadmap__desk .r-item_16 {
+        top: 95.5%;
+        left: 8%; }
+        .roadmap__desk .r-item_16 .r-item__label {
+          left: auto;
+          right: 0;
+          text-align: right; }
+        .roadmap__desk .r-item_16 .r-item__year {
+          margin-right: 0; }
+        .roadmap__desk .r-item_16 .r-item__month {
+          margin-right: 7px; }
+        @media (max-width: 1219px) {
+          .roadmap__desk .r-item_16 {
+            top: 95%;
+            left: 8%; } }            
       .roadmap__desk .r-item__label {
         width: 200px;
         height: 84px;
