@@ -84,7 +84,7 @@
               <div class="col-sm-6 col-md-4">
                 <div class="wl-advantages__item wl-advantages__item_01">
                   <h5>High performance</h5>
-                  <p>A liquidity-ready trading platform to help you launch a cryptocurrency exchange business within 2 weeks. Over 1500 coins, fiat gateways, stable coins and unmatched security and localisations — all included, without investing heavily in development and infrastructure. LocalCoin is one of the <a href="https://localcoin.is/#trading">fastest blockchain</a> existed on the market*</p>
+                  <p>A liquidity-ready trading platform to help you launch a cryptocurrency exchange business within 2 weeks. Over 1500 coins, fiat gateways, stable coins and unmatched security and localisations — all included, without investing heavily in development and infrastructure. LocalCoin is one of the <a href="https://localcoin.is/#trading">fastest blockchain</a> existed on the market</p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -129,7 +129,7 @@
             <div class="col-md-8">
               <div class="white-label__fees">
                 <h3>Fees</h3>
-                <p>LocalCoin DEX relies on no trading fees structure, there are only fixed fees to cover blockchain transaction which is the lowest on the market. It means that you will retain 80% of the fee a registered user pays for any transaction with the system. See this document to learn more about <a href="https://wallet.localcoin.is/explorer/fees" target="_blank">LocalCoin's fees.</a></p>
+                <p>LocalCoin DEX relies on NO trading fee structure, there are only fixed small fees applicable, just to cover the broadcasting, simply to push your transaction into the blockchain. See this document to learn more about <a href="https://wallet.localcoin.is/explorer/fees" target="_blank">LocalCoin's fees.</a></p>
               </div>
               <div class="white-label__tech-req tech-req">
                 <h3>Technical requirements</h3>
