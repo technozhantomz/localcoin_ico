@@ -247,7 +247,6 @@ $(document).ready(function() {
 
 				$('.main__tab-links ul li a[href="#airDrop"]').addClass('active');
 				$(_id).addClass('active');
-				mainChartInit();
 				
 			} else $('html, body').animate({scrollTop: top}, 1000);
 
