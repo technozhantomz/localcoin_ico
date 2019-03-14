@@ -177,6 +177,16 @@
                   </tbody>
                 </table>
                 <table class="a-table">
+                  <colgroup class="col-title"></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup></colgroup>
+                  <colgroup class="col-empty"></colgroup>
                   <thead>
                     <tr>
                       <th style="width:22%"> </th>

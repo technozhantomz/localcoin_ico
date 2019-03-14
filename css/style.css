@@ -6438,6 +6438,9 @@ img {
       margin-right: 0; }
       .breadcrumbs li:last-child::after {
         display: none; }
+    .breadcrumbs li {
+      font-size: 16px;
+      color: #82899c; }
     .breadcrumbs li a {
       font-size: 16px;
       color: #82899c; }
@@ -7449,6 +7452,13 @@ img {
       .advantages__table table thead th span {
         font-size: 14px;
         line-height: 1; }
+    .advantages__table table colgroup {
+      -webkit-transition: background-color .2s ease;
+      transition: background-color .2s ease; }
+    .advantages__table table colgroup.hover {
+      background-color: #f2f2f2; }
+    .advantages__table table colgroup.col-empty.hover {
+      background-color: transparent !important; }
     .advantages__table table tbody tr {
       -webkit-transition: background-color .2s ease;
       transition: background-color .2s ease; }
@@ -7461,6 +7471,20 @@ img {
         border-left: 1px solid rgba(162, 173, 199, .3);
         padding: 8px 0;
         text-align: center; }
+        .advantages__table table tbody tr td:hover::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 1;
+          border: 1px solid #5262df; }
+        .advantages__table table tbody tr td:first-child:hover::after {
+          display: none; }
+        .advantages__table table tbody tr td:last-child:hover::after {
+          display: none; }
         @media (max-width: 1219px) and (min-width: 1000px) {
           .advantages__table table tbody tr td:last-child {
             display: none; } }
@@ -10069,6 +10093,7 @@ img {
   .download__item {
     display: block;
     min-height: 285px;
+    height: calc(100% - 30px);
     background-color: #e8e7ef;
     text-align: center;
     padding: 25px 40px 28px;

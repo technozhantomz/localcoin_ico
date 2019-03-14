@@ -21,6 +21,18 @@ $(document).ready(function() {
 			$('#airDrop').addClass('active');
 	}
 
+	// Table col hover
+	$(".a-table").delegate('td','mouseover mouseleave', function(e) {
+		if (e.type == 'mouseover') {
+			$(this).parent().addClass("hover");
+			$("colgroup").eq($(this).index()).addClass("hover");
+		}
+		else {
+			$(this).parent().removeClass("hover");
+			$("colgroup").eq($(this).index()).removeClass("hover");
+		}
+	});
+
 	//Fixed elements
 	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 	
@@ -34,7 +46,7 @@ $(document).ready(function() {
 			$('#header').removeClass('header-fixed');
 		}
 
-		if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
+		if (window.location.pathname == '/' || window.location.pathname == '') {
 
 			var	advPos           = $('#advantages').offset().top,
 					tablePos         = $('.a-table').offset().top,
@@ -206,7 +218,7 @@ $(document).ready(function() {
 
 
 	// Smooth scrolling
-	if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
+	if (window.location.pathname == '/' || window.location.pathname == '') {
 
 		$('.header__nav ul li a').on('click', function (e) {
 			e.preventDefault();
@@ -256,7 +268,7 @@ $(document).ready(function() {
 
 
 	
-	if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
+	if (window.location.pathname == '/' || window.location.pathname == '') {
 
 		// Pre-sale form
 		coinChange({
@@ -391,24 +403,24 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 
-	var urlLastSegment = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
-
-	if (urlLastSegment == 'index.html' || urlLastSegment == '' || window.location.hash !== '') {
+	if (window.location.pathname == '/' || window.location.pathname == '') {
 
 		if($(this).width() <= 999) {
 
-			$('.advantages__table').mCustomScrollbar({
-				axis: "x",
-				autoDraggerLength: false,
-				mouseWheel:{ enable: false },
-				advanced:{ autoExpandHorizontalScroll:true },
-				callbacks: {
-					whileScrolling:function() {
-						var l = this.mcs.left + 20;
-						$('.a-table-fixed').css({ left: l });
+			if (typeof $().mCustomScrollbar !== "undefined") {
+				$('.advantages__table').mCustomScrollbar({
+					axis: "x",
+					autoDraggerLength: false,
+					mouseWheel:{ enable: false },
+					advanced:{ autoExpandHorizontalScroll:true },
+					callbacks: {
+						whileScrolling:function() {
+							var l = this.mcs.left + 20;
+							$('.a-table-fixed').css({ left: l });
+						}
 					}
-				}
-			});
+				});
+			}
 
 			$('.ps-circuit__item').removeClass('item-hover');
 
@@ -429,7 +441,10 @@ $(window).resize(function() {
 			$('.download__item').removeClass('wow flipInY');
 
 		} else {
-			$('.advantages__table').mCustomScrollbar("destroy");
+
+			if (typeof $().mCustomScrollbar !== "undefined")
+				$('.advantages__table').mCustomScrollbar("destroy");
+
 			$('.a-table-fixed').css({ left: 'auto' });
 
 			$('.ps-circuit__item').addClass('item-hover');
@@ -521,150 +536,155 @@ function tabThis(t){
 // http://www.chartjs.org/docs
 // ============================================
 
-var chart    = document.getElementById('chart').getContext('2d'),
-		gradient = chart.createLinearGradient(0, 0, 0, 250);
+if ($("#chart").length) {
 
-gradient.addColorStop(0, 'rgba(255, 222, 37, 1)');
-gradient.addColorStop(0.5, 'rgba(255, 222, 37, 1)');
-gradient.addColorStop(1, 'rgba(255, 222, 37, 0.5)');
+	var chart    = document.getElementById('chart').getContext('2d'),
+			gradient = chart.createLinearGradient(0, 0, 0, 250);
+
+	gradient.addColorStop(0, 'rgba(255, 222, 37, 1)');
+	gradient.addColorStop(0.5, 'rgba(255, 222, 37, 1)');
+	gradient.addColorStop(1, 'rgba(255, 222, 37, 0.5)');
 
 
-var amountArr = [],
-		dateArr = [],
-		dataLastAmount,
-		dataLastAmountStr;
+	var amountArr = [],
+			dateArr = [],
+			dataLastAmount,
+			dataLastAmountStr;
 
-$.getJSON('scripts/amount.json', function(data) {
+	$.getJSON('scripts/amount.json', function(data) {
 
-	var dataUnique = mergeDuplicates(data, 'amount'),
-			dataLast = dataUnique.slice(-15);
+		var dataUnique = mergeDuplicates(data, 'amount'),
+				dataLast = dataUnique.slice(-15);
 
-			dataLastAmount = dataLast[dataLast.length - 1].amount;
-			dataLastAmountStr = String(dataLastAmount).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+				dataLastAmount = dataLast[dataLast.length - 1].amount;
+				dataLastAmountStr = String(dataLastAmount).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
 
-	for (var i=0; i<dataLast.length; i++) {
+		for (var i=0; i<dataLast.length; i++) {
 
-		var	_a = dataLast[i].amount,
-				_d = dataLast[i].timestamp,
-				_date = new Date(_d*1000),
-				_monthlist = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-				_monthIndex = _date.getMonth(),
-				_dateString = _date.getDate().toString() + ' ' + _monthlist[_monthIndex],
-				_amountString = String(_a).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
-				
-				amountArr.push(_a);
-				dateArr.push(_dateString);
-	}
-
-	airDropProgress();
-
-});
-
-function mergeDuplicates(array, property) { 
-	if (!array || array.length === 0) {
-		return array;
-	}
-
-	return array.filter(function (item, index) {
-		var value = item[property];
-		var nextItem = array[index + 1];
-
-		if (nextItem && value === nextItem[property] ) {
-			return false;
+			var	_a = dataLast[i].amount,
+					_d = dataLast[i].timestamp,
+					_date = new Date(_d*1000),
+					_monthlist = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+					_monthIndex = _date.getMonth(),
+					_dateString = _date.getDate().toString() + ' ' + _monthlist[_monthIndex],
+					_amountString = String(_a).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+					
+					amountArr.push(_a);
+					dateArr.push(_dateString);
 		}
 
-		return true;
+		airDropProgress();
+
 	});
-}
 
-// AirDropped progress bar
-function airDropProgress() {
-	var airDropped = 10000000 - dataLastAmount,
-			airDroppedStr = String(airDropped).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '),
-			progressBarWidth = airDropped / 10000000 * 100;
+	function mergeDuplicates(array, property) { 
+		if (!array || array.length === 0) {
+			return array;
+		}
 
-	$('.air-drop__chart-label span').html(airDroppedStr + ' ');
-	$('.air-drop__progress .s-left, .air-drop__progress .s-black').html(airDroppedStr + ' LLC AirDropped');
-	$('.air-drop__progress .s-right').html(dataLastAmountStr + ' LLC left');
-	$('.air-drop__progress-bar').width(progressBarWidth + '%');
+		return array.filter(function (item, index) {
+			var value = item[property];
+			var nextItem = array[index + 1];
 
-}
+			if (nextItem && value === nextItem[property] ) {
+				return false;
+			}
+
+			return true;
+		});
+	}
+
+	// AirDropped progress bar
+	function airDropProgress() {
+		var airDropped = 10000000 - dataLastAmount,
+				airDroppedStr = String(airDropped).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '),
+				progressBarWidth = airDropped / 10000000 * 100;
+
+		$('.air-drop__chart-label span').html(airDroppedStr + ' ');
+		$('.air-drop__progress .s-left, .air-drop__progress .s-black').html(airDroppedStr + ' LLC AirDropped');
+		$('.air-drop__progress .s-right').html(dataLastAmountStr + ' LLC left');
+		$('.air-drop__progress-bar').width(progressBarWidth + '%');
+
+	}
 
 
-var chartInstance = new Chart(chart, {
-	type: 'line',
-	data: {
-		labels: dateArr,
-		datasets: [{
-			data: amountArr,
-			backgroundColor: gradient,
-			pointBackgroundColor: '#fff',
-			borderWidth: 2,
-			borderColor: '#fff'
-		}],
-	},
-	options: {
-		responsive: true,
-		maintainAspectRatio: true,
-		animation: {
-			easing: 'easeInOutQuad',
-			duration: 520
+	var chartInstance = new Chart(chart, {
+		type: 'line',
+		data: {
+			labels: dateArr,
+			datasets: [{
+				data: amountArr,
+				backgroundColor: gradient,
+				pointBackgroundColor: '#fff',
+				borderWidth: 2,
+				borderColor: '#fff'
+			}],
 		},
-		tooltips: {
-			displayColors: false,
-			titleFontFamily: 'Open Sans',
-			backgroundColor: 'rgba(0,0,0,0.3)',
-			titleFontColor: '#ffde25',
-			caretSize: 5,
-			cornerRadius: 2,
-			xPadding: 10,
-			yPadding: 10,
-			callbacks: {
-				label: function(tooltipItem, data) {
-					var value = data.datasets[0].data[tooltipItem.index];
-					value = value.toString();
-					value = value.split(/(?=(?:...)*$)/);
-					value = value.join(' ');
-					return value;
-				}
-			} // end callbacks:
-		}, //end tooltips
-		scales: {
-			yAxes: [{
-				ticks: {
-					userCallback: function(value, index, values) {
-						// Convert the number to a string and splite the string every 3 charaters from the end
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			animation: {
+				easing: 'easeInOutQuad',
+				duration: 520
+			},
+			tooltips: {
+				displayColors: false,
+				titleFontFamily: 'Open Sans',
+				backgroundColor: 'rgba(0,0,0,0.3)',
+				titleFontColor: '#ffde25',
+				caretSize: 5,
+				cornerRadius: 2,
+				xPadding: 10,
+				yPadding: 10,
+				callbacks: {
+					label: function(tooltipItem, data) {
+						var value = data.datasets[0].data[tooltipItem.index];
 						value = value.toString();
 						value = value.split(/(?=(?:...)*$)/);
 						value = value.join(' ');
 						return value;
 					}
-				},
-				gridLines: {
-					color: 'rgba(200, 200, 200, 0.05)',
-					lineWidth: 1
+				} // end callbacks:
+			}, //end tooltips
+			scales: {
+				yAxes: [{
+					ticks: {
+						userCallback: function(value, index, values) {
+							// Convert the number to a string and splite the string every 3 charaters from the end
+							value = value.toString();
+							value = value.split(/(?=(?:...)*$)/);
+							value = value.join(' ');
+							return value;
+						}
+					},
+					gridLines: {
+						color: 'rgba(200, 200, 200, 0.05)',
+						lineWidth: 1
+					}
+				}],
+				xAxes: [{
+					gridLines: {
+						color: 'rgba(200, 200, 200, 0.05)',
+						lineWidth: 1
+					}
+				}]
+			},
+			elements: {
+				line: {
+					tension: 0.3
 				}
-			}],
-			xAxes: [{
-				gridLines: {
-					color: 'rgba(200, 200, 200, 0.05)',
-					lineWidth: 1
-				}
-			}]
-		},
-		elements: {
-			line: {
-				tension: 0.3
+			},
+			point: {
+				backgroundColor: '#fff'
+			},
+			legend: {
+				display: false
 			}
-		},
-		point: {
-			backgroundColor: '#fff'
-		},
-		legend: {
-			display: false
 		}
-	}
-});
+	});
+
+}
+
 
 
 // Token info chart

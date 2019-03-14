@@ -1,6 +1,6 @@
 <section class="getfree" id="getfree">
         <div class="container">
-          <div class="getfree__logo"><img src="/img/d-logo.png" srcset="img/d-logo-2x.png 2x" alt="logo"></div>
+          <div class="getfree__logo"><img src="./../img/d-logo.png" srcset="./../img/d-logo-2x.png 2x" alt="logo"></div>
           <h2 class="wow fadeInUp">Get <span>100 LLC </span>for <span>free</span></h2>
           <p class="wow fadeInUp">The first 100 000 users receive 100 LLC coins after registration on the exchange's website</p><a class="getfree__btn btn-yellow" href="https://wallet.localcoin.is/create-account/password">I want to get Free 100 LLC</a>
         </div>
