@@ -112,6 +112,7 @@
     <script src="/js/Chart.min.js"></script>
     <script src="/js/chartjs-plugin-style.min.js"></script>
     <script src="/js/Sticky-kit.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- JavaScripts-->
     <script src="/js/scripts.js"></script>
     <script src="/js/bridge.js"></script>
