@@ -1,4 +1,4 @@
-<?include '../template/header.php';?>
+<?include __DIR__.'/../template/header.php';?>
       <section class="white-label" id="whitelabel">
         <div class="container">
           <ul class="breadcrumbs white-label__breadcrumbs">
@@ -119,4 +119,4 @@
         </div>
       </section>
 
-<?include '../template/footer.php';?>
+<?include __DIR__.'/../template/footer.php';?>

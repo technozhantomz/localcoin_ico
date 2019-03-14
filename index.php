@@ -1,4 +1,5 @@
-<?include 'template/header.php';?>
+<?include __DIR__.'/template/header.php';?>
+
 <section class="main" id="main">
         <div class="main__bg">
           <video preload="auto" autoplay loop muted tabindex="0">
@@ -1144,4 +1145,4 @@
           </div>
         </div>
       </section>
-<?include 'template/footer.php';?>
+<?include __DIR__.'/template/footer.php';?>
