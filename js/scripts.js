@@ -329,6 +329,7 @@ $(document).ready(function() {
 	}
 
 
+//FORM AJAX SUBMIT
 
 	$('form.white-label__form.wl-form').on('submit', function(){
 		var form = $(this);

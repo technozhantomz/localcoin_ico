@@ -26,7 +26,6 @@ if(isset($_REQUEST['AJAX']) && $_REQUEST['AJAX'] == 'Y' && !empty($_REQUEST['ema
   echo json_encode($answer);
 }
 
-  
 function mailMessedg($emailTo, $emailFrom, $title, $body){
   $message = ' 
   <html> 
