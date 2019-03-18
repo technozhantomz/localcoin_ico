@@ -9,7 +9,7 @@ if(isset($_REQUEST['AJAX']) && $_REQUEST['AJAX'] == 'Y' && !empty($_REQUEST['ema
   }
   $secretKey = "6LdX_XoUAAAAAIt-Cde_BOIoZOfcGvzzzRgUORKD  ";
   $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
-  if($response['success'] == false)
+  if(!empty($response['success']))
   {
     $body = '
       <p><b>Name:</b> '.$_REQUEST['name'].'</p>
