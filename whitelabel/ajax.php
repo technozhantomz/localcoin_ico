@@ -7,7 +7,7 @@ if(isset($_REQUEST['AJAX']) && $_REQUEST['AJAX'] == 'Y' && !empty($_REQUEST['ema
   }else {
     $answer['messege'] = "Failed verification reCAPTCHA.";
   }
-  $secretKey = "6LdX_XoUAAAAAIt-Cde_BOIoZOfcGvzzzRgUORKD  ";
+  $secretKey = "6LdX_XoUAAAAAIt-Cde_BOIoZOfcGvzzzRgUORKD";
   $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
   if(!empty($response['success']))
   {
