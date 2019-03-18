@@ -11127,4 +11127,11 @@ img {
   margin-left: -8px;
 }
 
-/*# sourceMappingURL=style.css.map */
+.messege {
+  padding-bottom: 20px;
+  color: red;
+}
+
+.g-recaptcha {
+  padding-bottom: 15px;
+}

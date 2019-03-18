@@ -11,7 +11,7 @@
             </div>
             <div class="col-sm-6 col-md-4">
             <form class="white-label__form wl-form" method = "POST" action="#">
-                <input type="hidden" name = "emailTo" value ="hor@tut.by">
+                <input type="hidden" name = "emailTo" value ="localcoin@sent.com">
                 <h4 class="wl-form__title">Order now!</h4>
                 <p class = "messege"></p>
                 <div class="wl-form__input">
