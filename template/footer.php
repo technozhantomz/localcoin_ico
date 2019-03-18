@@ -116,6 +116,5 @@
     <!-- JavaScripts-->
     <script src="/js/scripts.js"></script>
     <script src="/js/bridge.js"></script>
-	<script type="text/javascript" src="/js/airdrop.json"></script>
   </body>
 </html>
