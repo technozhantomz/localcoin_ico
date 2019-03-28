@@ -111,8 +111,8 @@
                 <div class="col-md-6">
                   <div class="air-drop__right-block wow fadeInUp" data-wow-duration="1.5s">
                     <h3>Limited Airdrop</h3>
-                    <h4>We will AirDrop 10,000,000 Coins(LLC)</h4><span>to Telegram and Twitter users from 1st of Arpil till the end of ICO Campaign</span>
-                    <p>ON the 20th of Arpil It'll be announced enhanced Bounty program with Twitter and Telegram participation. All scores of Grand AirDrop will be saved and announced to participants.</p>
+                    <h4>We will AirDrop 10,000,000 Coins(LLC)</h4><span>to Telegram and Twitter users from 1st of April till the end of ICO Campaign</span>
+                    <p>ON the 20th of April It'll be announced enhanced Bounty program with Twitter and Telegram participation. All scores of Grand AirDrop will be saved and announced to participants.</p>
                     <div class="air-drop__reg-links"><a class="btn-yellow btn-yellow_small" href="https://wallet.localcoin.is" target="_blank">Register now</a><span><a href="#advantages">Click here </a>to understand why <a href="#advantages">LocalCoin is better </a>than others</span></div>
                   </div>
                 </div>
