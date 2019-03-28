@@ -111,8 +111,8 @@
                 <div class="col-md-6">
                   <div class="air-drop__right-block wow fadeInUp" data-wow-duration="1.5s">
                     <h3>Limited Airdrop</h3>
-                    <h4>We will AirDrop 10,000,000 free Coins(LLC)</h4><span>to Telegram and Twitter users from 1st of Aug till the end of ICO Campaign</span>
-                    <p>From the 20th of August will be announced enhanced Bounty program with Twitter and Telegram participation. All scores of Grand AirDrop will be saved and announced to participants.</p>
+                    <h4>We will AirDrop 10,000,000 free Coins(LLC)</h4><span>to Telegram and Twitter users from 1st of Arpil till the end of ICO Campaign</span>
+                    <p>From the 20th of Arpil will be announced enhanced Bounty program with Twitter and Telegram participation. All scores of Grand AirDrop will be saved and announced to participants.</p>
                     <div class="air-drop__reg-links"><a class="btn-yellow btn-yellow_small" href="https://wallet.localcoin.is" target="_blank">Register now</a><span><a href="#advantages">Click here </a>to understand why <a href="#advantages">LocalCoin is better </a>than others</span></div>
                   </div>
                 </div>
@@ -1003,7 +1003,7 @@
               <div class="r-item__label"><span class="r-item__month">Q3</span><span class="r-item__year">2019</span>
                 <div class="r-item__desc">GUI blind transactions release</div>
               </div>
-            </div>            
+            </div>
           </div>
           <div class="row roadmap__mob">
             <div class="col-md-11 offset-md-1 col-lg-12 offset-lg-0">
@@ -1109,7 +1109,7 @@
                     <div class="r-item-mob__header"><span class="r-item-mob__year">2019</span><span class="r-item-mob__month">Q4</span></div>
                     <div class="r-item-mob__body"><span class="r-item-mob__desc">Blockchain Dice release</span></div>
                   </div>
-                </li>                                
+                </li>
               </ul>
             </div>
           </div>
