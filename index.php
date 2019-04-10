@@ -1142,7 +1142,7 @@
                 <div class="download__icon"><img src="img/svg/d-5.svg" alt="icon"></div>
                 <div class="download__text"><span>Decentralized Exchange client source</span></div></a>
             </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-core/releases/tag/llc1.0.0"  target="_blank" data-wow-delay=".8s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-core/releases"  target="_blank" data-wow-delay=".8s">
               <h4>GitHub node release</h4>
               <div class="download__icon"><img src="img/svg/d-5.svg" alt="icon"></div>
               <div class="download__text"><span>Decentralized Exchange node and console wallet</span></div></a>
