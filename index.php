@@ -72,7 +72,7 @@
                         <h4>Social<br>Network</h4>
                         <div class="item-desc">
                           <h4>Social<br>Network</h4>
-                          <p>Blockchain based and fully encrypted decentralized Social network. <span class="md-lg-hidden">Forget about facebook, google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network</span></p>
+                          <p>Blockchain based and fully encrypted decentralized Social network. <span class="md-lg-hidden">Forget about facebook, google or twitter tracking, blocking annoying ads. True democracy supported by blockchain network</span></p>
                         </div></a></div>
                     <div class="pre-sale__slide"><a class="ps-circuit__item ps-circuit__item_08 item-hover" href="#">
                         <div class="item-img item-img_08"><img src="img/icons/pre-sale_ico8.png" srcset="img/icons/pre-sale_ico8-2x.png 2x" alt="icon8"></div>
@@ -876,7 +876,7 @@
                 <div class="tokeninfo__chart-legend chart-legend" id="useOfFundsChartLegend">
                   <ul>
                     <li class="chart-legend__item chart-legend__item_01"><a href="#" data-value="80%">80% ($32 000 000) <br>BUSINESS DEVELOPMENT & MARKETING<span>For business development, marketing & advertising. LocalCoin will implement broad marketing & advertising strategies to increase the user base of the platform upon launch. These strategies are refined and focused campaigns based on the data and analytics gathered during the LLC issuance.</span></a></li>
-                    <li class="chart-legend__item chart-legend__item_02"><a href="#" data-value="20%">20% ($8 000 000) <br>is Allocated for PLATFORM DEVELOPMENT:<span class="chart__small-description">1. Integrate the Blockchain decentralized OTC trading(needed scientific research and 8-10 month development process) - Over-the-counter (OTC) or off-exchange trading is done directly between two parties, without the supervision of an exchange. It is contrasted with exchange trading, which occurs via exchanges. A stock exchange has the benefit of facilitating liquidity, providing transparency, and maintaining the current market price. In an OTC trade, the price is not necessarily published for the public.</span><span class="chart__small-description">2. Integrate the Social Network(UI and core is ready but needed to be integrated with LLC blockchain) - Blockchain based and fully encrypted decentralized Social network, Forget about facebook , google or twitter tracking, blocking or annoying adds. True democracy supported by blockchain network.</span><span class="chart__small-description">3. Implement Untraceable transactions(ready needed UI development) - Fully private accounts with no tracing. Your personal chain is encrypted and no-one can see your transactions.</span><span class="chart__small-description">4. SECURITY. Allocated to increase the security of the platform. LocalCoin offers trading in a large variety of digital assets. To protect against all possible threats multiple layers of redundancy have been implemented in wallet systems, and security critical processes abstracted to separate servers. A large allocation of crowdsale revenue towards security will provide users assurance that LocalCoin is a safe platform on which to trade.</span><span class="chart__small-description">5. ADMINISTRATION. Allocated for administration costs incurred during the final development of the platform.</span><span class="chart__small-description">6. For further development and expansion of the platform. This will enhance scalability and the number of features which will be offered on initial launch.</span></a></li>
+                    <li class="chart-legend__item chart-legend__item_02"><a href="#" data-value="20%">20% ($8 000 000) <br>is Allocated for PLATFORM DEVELOPMENT:<span class="chart__small-description">1. Integrate the Blockchain decentralized OTC trading(needed scientific research and 8-10 month development process) - Over-the-counter (OTC) or off-exchange trading is done directly between two parties, without the supervision of an exchange. It is contrasted with exchange trading, which occurs via exchanges. A stock exchange has the benefit of facilitating liquidity, providing transparency, and maintaining the current market price. In an OTC trade, the price is not necessarily published for the public.</span><span class="chart__small-description">2. Integrate the Social Network(UI and core is ready but needed to be integrated with LLC blockchain) - Blockchain based and fully encrypted decentralized Social network, Forget about facebook , google or twitter tracking, blocking annoying ads. True democracy supported by blockchain network.</span><span class="chart__small-description">3. Implement Untraceable transactions(ready needed UI development) - Fully private accounts with no tracing. Your personal chain is encrypted and no-one can see your transactions.</span><span class="chart__small-description">4. SECURITY. Allocated to increase the security of the platform. LocalCoin offers trading in a large variety of digital assets. To protect against all possible threats multiple layers of redundancy have been implemented in wallet systems, and security critical processes abstracted to separate servers. A large allocation of crowdsale revenue towards security will provide users assurance that LocalCoin is a safe platform on which to trade.</span><span class="chart__small-description">5. ADMINISTRATION. Allocated for administration costs incurred during the final development of the platform.</span><span class="chart__small-description">6. For further development and expansion of the platform. This will enhance scalability and the number of features which will be offered on initial launch.</span></a></li>
                   </ul>
                 </div>
               </div>
@@ -1119,38 +1119,23 @@
         <div class="container">
           <h2>Download</h2>
           <div class="row">
-            <div class="col-md-4">
-              <a class="download__item wow flipInY" href="https://localcoin.is/downloads/Localcoin-Client-1.0.0-Windows.zip" data-wow-delay=".2s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#F!EQVW1IJC!LAmKF2yeyFiZbPd5RnfyQg" data-wow-delay=".2s">
                 <h4>Windows</h4>
                 <div class="download__icon"><img src="img/svg/d-2.svg" alt="icon"></div>
-                <div class="download__text">
-                  <!-- <span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span> -->
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://localcoin.is/downloads/Localcoin-Client-1.0.0-macOS.zip" data-wow-delay=".4s">
+                <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span></div></a></div>
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#F!EQVW1IJC!LAmKF2yeyFiZbPd5RnfyQg" data-wow-delay=".4s">
                 <h4>Mac OS</h4>
                 <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
-                <div class="download__text">
-                  <!-- <span style="word-break: break-all;">SHA-256 checksum:<br />79881CC1379B4550C06F08D912B2F6877D722F03766F4E4DB0C99338B433FE71</span> -->
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a class="download__item wow flipInY" href="https://localcoin.is/downloads/Localcoin-Client-1.0.0-Deb.zip" data-wow-delay=".6s">
+                <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />79881CC1379B4550C06F08D912B2F6877D722F03766F4E4DB0C99338B433FE71</span></div></a></div>
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#F!EQVW1IJC!LAmKF2yeyFiZbPd5RnfyQg" data-wow-delay=".6s">
                 <h4>Linux (Debian)</h4>
                 <div class="download__icon"><img src="img/svg/d-4.svg" alt="icon"></div>
-                <div class="download__text">
-                  <!-- <span>SHA-256 checksum: 6772600955f8f8376b8cd2a01b7c024f680439d10fb5559942cd48ba8a414090</span> -->
-                </div>
-              </a>
+                <div class="download__text"><span>SHA-256 checksum: 6772600955f8f8376b8cd2a01b7c024f<br>680439d10fb5559942cd48ba8a414090</span></div></a>
             </div>
-            <div class="col-md-4">
-              <a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>Web-version</h4>
                 <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
-                <div class="download__text"><span>Web based CryptoBridge Exchange and Wallet</span></div>
-              </a>
+                <div class="download__text"><span>Web based CryptoBridge Exchange and Wallet</span></div></a>
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-ui"  target="_blank" data-wow-delay=".8s">
                 <h4>GitHub source</h4>
