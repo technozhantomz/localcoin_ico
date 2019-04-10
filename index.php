@@ -861,7 +861,7 @@
                 </div>
                 <div class="tokeninfo__chart-legend chart-legend" id="sharesChartLegend">
                   <ul>
-                    <li class="chart-legend__item chart-legend__item_01 wow fadeInUp"><a href="#airDrop" data-value="10%">10% (10 000 000 LLC) <br>Air-Drop<span>Automatically paid into the very first 100 000 registered accounts.</span></a></li>
+                    <li class="chart-legend__item chart-legend__item_01 wow fadeInUp"><a href="#airDrop" data-value="10%">10% (10 000 000 LLC) <br>Air-Drop<span>Automatically paid into the very first 100 000 registered accounts</span></a></li>
                     <li class="chart-legend__item chart-legend__item_02 wow fadeInUp"><a href="#" data-value="10%">10% (10 000 000 LLC) <br>Bounty Program<span>allocated to bounty program for community engagement</span></a></li>
                     <li class="chart-legend__item chart-legend__item_03 wow fadeInUp"><a href="#preSale" data-value="80%">80% (80 000 000 LLC) <br>Public Crowdsale<span>no maximum allocation to investors through entire crowdsale without burn of unsold</span></a></li>
                     <li class="chart-legend__desc wow fadeInUp"><a href="#">1 000 000 000 LLC <br>Development team<span>allocated to the development team (frozen by contract for 1 year)</span></a></li>
@@ -1147,11 +1147,11 @@
               <div class="download__icon"><img src="img/svg/d-5.svg" alt="icon"></div>
               <div class="download__text"><span>Decentralized Exchange node and console wallet</span></div></a>
           </div>
-            <div class="col-md-4">
+<!--             <div class="col-md-4">
               <div class="download__item download__item_empty wow flipInY" data-wow-delay="1s">
                 <div class="download__icon download__icon_empty"><img src="img/svg/d-6.svg" alt="icon"></div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
