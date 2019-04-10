@@ -1124,11 +1124,11 @@
                 <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
                 <div class="download__text"><span>Web based CryptoBridge Exchange and Wallet</span></div></a>
             </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://localcoin.is/downloads/Localcoin-Client-1.0.0-Windows.zip" data-wow-delay=".2s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#F!EQVW1IJC!LAmKF2yeyFiZbPd5RnfyQg" data-wow-delay=".2s">
                 <h4>Windows</h4>
                 <div class="download__icon"><img src="img/svg/d-2.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://localcoin.is/downloads/Localcoin-Client-1.0.0-macOS.zip" data-wow-delay=".4s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#F!EQVW1IJC!LAmKF2yeyFiZbPd5RnfyQg" data-wow-delay=".4s">
                 <h4>Mac OS</h4>
                 <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />79881CC1379B4550C06F08D912B2F6877D722F03766F4E4DB0C99338B433FE71</span></div></a></div>
