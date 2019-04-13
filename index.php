@@ -1119,15 +1119,15 @@
         <div class="container">
           <h2>Download</h2>
           <div class="row">
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!lRkXCYzD!qmPj_DPeBsneOkZ74bzJrvBUoUy5lJkKIuSfmrvmER0" data-wow-delay=".2s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!lRkXCYzD!qmPj_DPeBsneOkZ74bzJrvBUoUy5lJkKIuSfmrvmER0" target="_blank" data-wow-delay=".2s">
                 <h4>Windows</h4>
                 <div class="download__icon"><img src="img/svg/d-2.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!ZE03XCSQ!59Oxz5rTOSeRMiVsXuR_5OCnXGKXla4DAeT6jmq5ZM0" data-wow-delay=".4s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!ZE03XCSQ!59Oxz5rTOSeRMiVsXuR_5OCnXGKXla4DAeT6jmq5ZM0" target="_blank" data-wow-delay=".4s">
                 <h4>Mac OS</h4>
                 <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />79881CC1379B4550C06F08D912B2F6877D722F03766F4E4DB0C99338B433FE71</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!cAs11aIY!mqL41WwoFen_n24JzehPv5CJuSKTf5zeAOBANq_pH-s" data-wow-delay=".6s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!cAs11aIY!mqL41WwoFen_n24JzehPv5CJuSKTf5zeAOBANq_pH-s" target="_blank" data-wow-delay=".6s">
                 <h4>Linux (Debian)</h4>
                 <div class="download__icon"><img src="img/svg/d-4.svg" alt="icon"></div>
                 <div class="download__text"><span>SHA-256 checksum: 6772600955f8f8376b8cd2a01b7c024f<br>680439d10fb5559942cd48ba8a414090</span></div></a>
@@ -1135,7 +1135,17 @@
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>Web-version</h4>
                 <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
-                <div class="download__text"><span>Web based CryptoBridge Exchange and Wallet</span></div></a>
+                <div class="download__text"><span>Web based LocalCoin Exchange and Wallet</span></div></a>
+            </div>
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
+                <h4>Android Wallet</h4>
+                <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
+                <div class="download__text"><span>Andoind LocalCoin Exchange and Wallet</span></div></a>
+            </div>
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
+                <h4>iOS Wallet</h4>
+                <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
+                <div class="download__text"><span>iOS LocalCoin Exchange and Wallet</span></div></a>
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-ui"  target="_blank" data-wow-delay=".8s">
                 <h4>GitHub source</h4>
