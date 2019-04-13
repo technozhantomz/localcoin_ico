@@ -1139,13 +1139,13 @@
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>Android Wallet</h4>
-                <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
-                <div class="download__text"><span>Andoind LocalCoin Exchange and Wallet</span></div></a>
+                <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
+                <div class="download__text"><span>Andoind LocalCoin Wallet</span></div></a>
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>iOS Wallet</h4>
                 <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
-                <div class="download__text"><span>iOS LocalCoin Exchange and Wallet</span></div></a>
+                <div class="download__text"><span>iOS LocalCoin Wallet and Iphone and Ipad</span></div></a>
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-ui"  target="_blank" data-wow-delay=".8s">
                 <h4>GitHub source</h4>
