@@ -54,7 +54,7 @@ function PR($o, $show = false) {
           <div class="header__right-menu">
             <ul>
               <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
-              <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="https://localcoin.is/#download">Sign In</a></li>
+              <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="#download">Sign In</a></li>
               <li><a class="whitepaper" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">WP</a></li>
               <li><a class="whitelabel" href="/whitelabel">WL</a></li>
               <li>
