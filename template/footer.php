@@ -67,7 +67,7 @@
               <div class="ps-form__input ps-form__input_text" style="margin-top: 30px;">
                 <input type="text" id="grapheneUsername" placeholder="Your LocalCoin Account name">
                 <span id="loginError" class="ps-form__reg" style="color: #faa; display: inherit; margin-top: 10px;"></span>
-                <span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/" target="_blank">Register now</a></span>
+                <span class="ps-form__reg">Not a member yet? <a href="https://localcoin.is/#download">Register now</a></span>
               </div>
               <input class="ps-form__btn btn-yellow" type="submit" value="Buy LLC coin" id="bridgeSubmit">
             </form>
