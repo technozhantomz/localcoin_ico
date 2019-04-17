@@ -92,7 +92,7 @@
                 <div class="col-md-6">
                   <div class="air-drop__left-block">
                     <h3 class="wow fadeInUp"><a href="https://t.me/LocalCoinIS" target="_blank">Get you <span>first 50 </span>LLC for <span>free </span>NOW!</a></h3>
-                    <p class="wow fadeInUp">In order to get you LLC, just <a href="https://wallet.localcoin.is" target="_blank">sign up here</a> and type your ACCOUNT NAME <a href="https://t.me/LocalCoinIS" target="_blank">here</a>. Your wallet will be credited with LLC instantly via telegram Bot.</p>
+                    <p class="wow fadeInUp">In order to get you LLC, just <a href="https://wallet.localcoin.is" target="_blank">sign up here</a> and type your ACCOUNT NAME <a href="https://t.me/LocalCoinIS" target="_blank">here</a>. Your wallet will be credited with LLC via telegram Bot after the reservation is over.</p>
                     <div class="air-drop__chart-label wow fadeInUp"><span>0 </span>LLC AirDropped</div>
                     <div class="air-drop__chart">
                       <div class="air-drop__chart-inner">
