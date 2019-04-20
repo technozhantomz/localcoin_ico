@@ -1139,7 +1139,7 @@
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>Android Wallet</h4>
-                <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
+                <div class="download__icon"><img src="img/svg/d-7.svg" alt="icon"></div>
                 <div class="download__text"><span>Andoind LocalCoin Wallet</span></div></a>
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
