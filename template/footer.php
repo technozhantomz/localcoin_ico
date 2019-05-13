@@ -24,7 +24,7 @@
           <ul class="footer__links">
             <li><a class="footer__wl" href="/whitelabel">White Label</a></li>
             <li><a class="footer__wp" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">White Paper</a></li>
-            <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
+            <li><a class="btn-blue" onclick="gtag('event', 'buy', {'event_category': 'footer'});"  id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
           <ul class="footer__nav wow fadeInUp">
             <li><a href="#main">Home</a></li>
