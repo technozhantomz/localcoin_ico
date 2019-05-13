@@ -123,7 +123,7 @@
       </section>
       <section class="advantages" id="advantages">
         <div class="container">
-<!--           <div class="row">
+<!--    <div class="row">
             <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2"><a class="advantages__video" href="https://www.youtube.com/watch?v=9QnH0dGNBvI?autoplay=1" data-fancybox=""><img src="img/video_bg.png" alt="video">
                 <h2 class="wow fadeInUp">Why LocalCoin</h2></a></div>
           </div> -->
@@ -219,7 +219,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="text-left">Blockchain based platfrom</td>
+                      <td class="text-left">Blockchain based platform</td>
                       <td>
                         <div class="t-plus"></div>
                       </td>
@@ -611,7 +611,7 @@
                       <td> </td>
                     </tr>
                     <tr>
-                      <td class="text-left">Mobile App</td>
+                      <td class="text-left">Mobile app</td>
                       <td>
                         <div class="t-plus"></div>
                       </td>
@@ -703,7 +703,7 @@
                       <td> </td>
                     </tr>
                     <tr>
-                      <td class="text-left">Payment proces
+                      <td class="text-left">Payment process
 			    </td>
                       <td>
                         <div class="t-plus"></div>
