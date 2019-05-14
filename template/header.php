@@ -26,6 +26,15 @@ function PR($o, $show = false) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133419070-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133419070-3');
+</script>      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -53,7 +62,7 @@ function PR($o, $show = false) {
           </div>
           <div class="header__right-menu">
             <ul>
-              <li><a class="btn-blue btn-blue_small" id="buy_coin_header" href="#">Buy LLC</a></li>
+              <li><a class="btn-blue btn-blue_small" onclick="gtag('event', 'buy', {'event_category': 'header'});" id="buy_coin_header" href="#">Buy LLC</a></li>
               <li><a class="btn-blue btn-blue_small sign-in" id="signIn" href="#download">Register</a></li>
               <li><a class="whitepaper" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">WP</a></li>
               <li><a class="whitelabel" href="/whitelabel">WL</a></li>

@@ -22,7 +22,7 @@
           <div class="main__tab active" id="preSale">
             <div class="pre-sale">
               <div class="ps-circuit">
-                <div class="ps-coin-hover"><a class="btn-yellow" href="#" id="coin_hover_btn">Buy LLC</a></div>
+                <div class="ps-coin-hover"><a class="btn-yellow" onclick="gtag('event', 'buy', {'event_category': 'coin-btn'});" href="#" id="coin_hover_btn">Buy LLC</a></div>
                 <div class="pre-sale__slider-wrap">
                   <div class="pre-sale__slider">
                     <div class="pre-sale__slide"><a class="ps-circuit__item ps-circuit__item_01 item-hover" href="#">
@@ -123,7 +123,7 @@
       </section>
       <section class="advantages" id="advantages">
         <div class="container">
-<!--           <div class="row">
+<!--    <div class="row">
             <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2"><a class="advantages__video" href="https://www.youtube.com/watch?v=9QnH0dGNBvI?autoplay=1" data-fancybox=""><img src="img/video_bg.png" alt="video">
                 <h2 class="wow fadeInUp">Why LocalCoin</h2></a></div>
           </div> -->
@@ -219,7 +219,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="text-left">Blockchain based platfrom</td>
+                      <td class="text-left">Blockchain based platform</td>
                       <td>
                         <div class="t-plus"></div>
                       </td>
@@ -611,7 +611,7 @@
                       <td> </td>
                     </tr>
                     <tr>
-                      <td class="text-left">Mobile App</td>
+                      <td class="text-left">Mobile app</td>
                       <td>
                         <div class="t-plus"></div>
                       </td>
@@ -703,7 +703,7 @@
                       <td> </td>
                     </tr>
                     <tr>
-                      <td class="text-left">Payment proces
+                      <td class="text-left">Payment process
 			    </td>
                       <td>
                         <div class="t-plus"></div>
@@ -1123,36 +1123,36 @@
                 <h4>Windows</h4>
                 <div class="download__icon"><img src="img/svg/d-2.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!4UEDUSQD!90iNctHYaQ156dAAp8gMJL0i5PEv8P_ZZvf-dsIDIFI" target="_blank" data-wow-delay=".4s">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'macos'});" href="https://mega.nz/#!4UEDUSQD!90iNctHYaQ156dAAp8gMJL0i5PEv8P_ZZvf-dsIDIFI" target="_blank" data-wow-delay=".4s">
                 <h4>Mac OS</h4>
                 <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />79881CC1379B4550C06F08D912B2F6877D722F03766F4E4DB0C99338B433FE71</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!oYMFxSxR!vtYmFhL0S_QEbtvhnnK1kHTOLRDMxys05xiSsEwm2t4" target="_blank" data-wow-delay=".6s">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'linux'});" href="https://mega.nz/#!oYMFxSxR!vtYmFhL0S_QEbtvhnnK1kHTOLRDMxys05xiSsEwm2t4" target="_blank" data-wow-delay=".6s">
                 <h4>Linux (Debian)</h4>
                 <div class="download__icon"><img src="img/svg/d-4.svg" alt="icon"></div>
                 <div class="download__text"><span>SHA-256 checksum: 6772600955f8f8376b8cd2a01b7c024f<br>680439d10fb5559942cd48ba8a414090</span></div></a>
             </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'webversion'});" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>Web-version</h4>
                 <div class="download__icon"><img src="img/svg/d-1.svg" alt="icon"></div>
                 <div class="download__text"><span>Web based LocalCoin Exchange and Wallet</span></div></a>
             </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'android'});" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>Android Wallet</h4>
                 <div class="download__icon"><img src="img/svg/d-7.svg" alt="icon"></div>
                 <div class="download__text"><span>Andoind LocalCoin Wallet</span></div></a>
             </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://wallet.localcoin.is/" target="_blank">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'ios'});" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>iOS Wallet</h4>
                 <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
                 <div class="download__text"><span>iOS LocalCoin Wallet and Iphone and Ipad</span></div></a>
             </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-ui"  target="_blank" data-wow-delay=".8s">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'github-client'});" href="https://github.com/LocalCoinIS/LocalCoin-ui"  target="_blank" data-wow-delay=".8s">
                 <h4>GitHub source</h4>
                 <div class="download__icon"><img src="img/svg/d-5.svg" alt="icon"></div>
                 <div class="download__text"><span>Decentralized Exchange client source</span></div></a>
             </div>
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-core/releases"  target="_blank" data-wow-delay=".8s">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'github-node'});" href="https://github.com/LocalCoinIS/LocalCoin-core/releases"  target="_blank" data-wow-delay=".8s">
               <h4>GitHub node release</h4>
               <div class="download__icon"><img src="img/svg/d-5.svg" alt="icon"></div>
               <div class="download__text"><span>Decentralized Exchange node and console wallet</span></div></a>
