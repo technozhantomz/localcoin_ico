@@ -1123,11 +1123,11 @@
                 <h4>Windows</h4>
                 <div class="download__icon"><img src="img/svg/d-2.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'macos'});" href="https://mega.nz/#!4UEDUSQD!90iNctHYaQ156dAAp8gMJL0i5PEv8P_ZZvf-dsIDIFI" target="_blank" data-wow-delay=".4s">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'macos'});" href="https://mega.nz/#!BUMgAKKY!M2eJRWHbmaCht-fvvMhtUA6Pd2Xa9jE6mhrtel06X04" target="_blank" data-wow-delay=".4s">
                 <h4>Mac OS</h4>
                 <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />79881CC1379B4550C06F08D912B2F6877D722F03766F4E4DB0C99338B433FE71</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'linux'});" href="https://mega.nz/#!oYMFxSxR!vtYmFhL0S_QEbtvhnnK1kHTOLRDMxys05xiSsEwm2t4" target="_blank" data-wow-delay=".6s">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'linux'});" href="https://mega.nz/#!0UEUgIqY!v32bEQSdfyeIgQCxoNuYm_suU1tpcsA0yYie0rjtNOk" target="_blank" data-wow-delay=".6s">
                 <h4>Linux (Debian)</h4>
                 <div class="download__icon"><img src="img/svg/d-4.svg" alt="icon"></div>
                 <div class="download__text"><span>SHA-256 checksum: 6772600955f8f8376b8cd2a01b7c024f<br>680439d10fb5559942cd48ba8a414090</span></div></a>
