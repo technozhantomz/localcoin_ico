@@ -1140,7 +1140,7 @@
             <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'android'});" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>Android Wallet</h4>
                 <div class="download__icon"><img src="img/svg/d-7.svg" alt="icon"></div>
-                <div class="download__text"><span>Andoind LocalCoin Wallet</span></div></a>
+                <div class="download__text"><span>Android LocalCoin Wallet</span></div></a>
             </div>
             <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'ios'});" href="https://wallet.localcoin.is/" target="_blank">
                 <h4>iOS Wallet</h4>
