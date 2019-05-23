@@ -14,7 +14,7 @@
             <li><a class="f-social__item f-social__item_04" href="https://discord.gg/vzxSzYN" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_05" href="https://medium.com/@localcoinis" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_06" href="https://golos.io/@localcoin" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_07" href="https://www.reddit.com/user/LocalCoinIS/posts/" target="_blank"></a></li>
+            <li><a class="f-social__item f-social__item_07" href="https://www.reddit.com/r/LocalCoinIs" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_08" href="https://steemit.com/@localcoin" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_bt" href="https://bitcointalk.org/index.php?topic=5125670" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_tw" href="https://twitter.com/LocalCoinIS" target="_blank"></a></li>
