@@ -820,7 +820,7 @@
       </section>
       <section class="trading" id="trading">
         <div class="container">
-          <h2 class="wow fadeInUp">LocalCoin Trading Terminal</h2>
+          <h1 class="wow fadeInUp center">LocalCoin DEX Trading Terminal</h1>
           <div class="row">
             <div class="col-md-6 offset-md-6">
               <div class="trading__item trading__item_01 wow fadeInUp">
