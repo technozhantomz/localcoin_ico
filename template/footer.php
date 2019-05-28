@@ -1,8 +1,8 @@
 <section class="getfree" id="getfree">
         <div class="container">
           <div class="getfree__logo"><img src="./../img/d-logo.png" srcset="./../img/d-logo-2x.png 2x" alt="logo"></div>
-          <h2 class="wow fadeInUp">Get <span>100 LLC </span>for <span>free</span></h2>
-          <p class="wow fadeInUp">The first 100 000 users receive 100 LLC coins after registration on the exchange's website</p><a class="getfree__btn btn-yellow" href="https://wallet.localcoin.is/create-account/password">I want to get Free 100 LLC</a>
+          <h2 class="wow fadeInUp">Get <span>LLC </span>AirDrop NOW<span>!!!</span></h2>
+          <p class="wow fadeInUp">The first 100 000 users receive 50 LLC coins</p><a class="getfree__btn btn-yellow" href="https://t.me/LocalCoinIS">Get LLC NOW!!!</a>
         </div>
       </section>
       <footer class="footer" id="footer">
@@ -14,9 +14,9 @@
             <li><a class="f-social__item f-social__item_04" href="https://discord.gg/vzxSzYN" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_05" href="https://medium.com/@localcoinis" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_06" href="https://golos.io/@localcoin" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_07" href="https://reddit.com/user/LocalCoinIS" target="_blank"></a></li>
+            <li><a class="f-social__item f-social__item_07" href="https://www.reddit.com/r/LocalCoinIs" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_08" href="https://steemit.com/@localcoin" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_bt" href="#" target="_blank"></a></li>
+            <li><a class="f-social__item f-social__item_bt" href="https://bitcointalk.org/index.php?topic=5125670" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_tw" href="https://twitter.com/LocalCoinIS" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_yt" href="#" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_in" href="#" target="_blank"></a></li>
@@ -24,7 +24,7 @@
           <ul class="footer__links">
             <li><a class="footer__wl" href="/whitelabel">White Label</a></li>
             <li><a class="footer__wp" href="https://localcoin.is/downloads/LocalCoinBlockchain.pdf" target="_blank">White Paper</a></li>
-            <li><a class="btn-blue" id="buy_coin_footer" href="#">Buy LLC coin</a></li>
+            <li><a class="btn-blue" onclick="gtag('event', 'buy', {'event_category': 'footer'});"  id="buy_coin_footer" href="#">Buy LLC coin</a></li>
           </ul>
           <ul class="footer__nav wow fadeInUp">
             <li><a href="#main">Home</a></li>
@@ -67,7 +67,7 @@
               <div class="ps-form__input ps-form__input_text" style="margin-top: 30px;">
                 <input type="text" id="grapheneUsername" placeholder="Your LocalCoin Account name">
                 <span id="loginError" class="ps-form__reg" style="color: #faa; display: inherit; margin-top: 10px;"></span>
-                <span class="ps-form__reg">Not a member yet? <a href="https://wallet.localcoin.is/" target="_blank">Register now</a></span>
+                <span class="ps-form__reg">Not a member yet? <a href="#download">Register now</a></span>
               </div>
               <input class="ps-form__btn btn-yellow" type="submit" value="Buy LLC coin" id="bridgeSubmit">
             </form>
