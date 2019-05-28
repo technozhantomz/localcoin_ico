@@ -2,7 +2,7 @@
         <div class="container">
           <div class="getfree__logo"><img src="./../img/d-logo.png" srcset="./../img/d-logo-2x.png 2x" alt="logo"></div>
           <h2 class="wow fadeInUp">Get <span>LLC </span>AirDrop NOW<span>!!!</span></h2>
-          <p class="wow fadeInUp">The first 100 000 users receive 50 LLC coins</p><a class="getfree__btn btn-yellow" href="https://t.me/LocalCoinIS">Get LLC NOW!!!</a>
+          <p class="wow fadeInUp">The first 100 000 users receive 30+ LLC coins</p><a class="getfree__btn btn-yellow" href="https://t.me/LocalCoinIS">Get LLC NOW!</a>
         </div>
       </section>
       <footer class="footer" id="footer">
