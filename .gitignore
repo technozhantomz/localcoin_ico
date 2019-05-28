@@ -1,4 +1,5 @@
 /scripts/config.php
+/scripts/php-localcoin/vendor/*
 /sources/*
 /autodeploy/*
 /downloads/*

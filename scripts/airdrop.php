@@ -103,7 +103,7 @@ function startAirdrop() {
             die('Check your config, wallet doesn\'t have enought keys.');
         }
     }    
-$i = 1;
+    $i = 1;
     foreach($arDataCsv as $value) {
         $curl_data = [
             'localcoin-airdrop',

@@ -541,13 +541,14 @@ if ($("#chart").length) {
 
 		var dataUnique = mergeDuplicates(data, 'amount'),
 				dataLast = dataUnique.slice(-15);
+				
 
-				dataLastAmount = dataLast[dataLast.length - 1].amount;
+				dataLastAmount = Math.round(dataLast[dataLast.length - 1].amount);
 				dataLastAmountStr = String(dataLastAmount).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
 
 		for (var i=0; i<dataLast.length; i++) {
 
-			var	_a = dataLast[i].amount,
+			var	_a = Math.round(dataLast[i].amount),
 					_d = dataLast[i].timestamp,
 					_date = new Date(_d*1000),
 					_monthlist = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
