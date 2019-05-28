@@ -1,5 +1,5 @@
-/scripts/*
-/sources/config.php
+/scripts/config.php
+/sources/*
 /autodeploy/*
 /downloads/*
 .*
