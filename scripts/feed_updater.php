@@ -184,11 +184,11 @@ function updateFeeds(){
                         ],
                     ],
                 ],
-                '3' => "false"
+                '3' => "true"
             ];
             sendCurl('publish_asset_feed', $curl_data); //отправляем инфу по ассету
             PR($curl_data);
-            die();
+//            die();
         }
     }
 }
