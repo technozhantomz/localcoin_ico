@@ -33,7 +33,7 @@ if (!empty($result)) {
     
         $arrResult = [ // пишем баланс и время
             "amount" => $amount,
-            "time" => $time
+            "timestamp" => $time
         ];
     
         $file = 'amount.json';//пишем в файл
