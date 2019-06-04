@@ -48,7 +48,7 @@ if (!empty($result)) {
         //$arrFile = file_get_contents($file);
         $arrFile_ar = json_decode($arrFile, true);//забираем массив из файла
     
-        $arResult_last = array_pop($arrFile_ar);
+        $arResult_last = end($arrFile_ar);
         if ($arResult_last['amount'] != $arrResult['amount'] ) {
             array_push($arrFile_ar, $arrResult);
             $arrFile_json = json_encode($arrFile_ar);
