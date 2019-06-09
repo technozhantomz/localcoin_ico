@@ -18,7 +18,7 @@
             <li><a class="f-social__item f-social__item_08" href="https://steemit.com/@localcoin" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_bt" href="https://bitcointalk.org/index.php?topic=5125670" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_tw" href="https://twitter.com/LocalCoinIS" target="_blank"></a></li>
-            <li><a class="f-social__item f-social__item_yt" href="#" target="_blank"></a></li>
+            <li><a class="f-social__item f-social__item_yt" href="https://youtu.be/R77a3Jk1eTY" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_in" href="#" target="_blank"></a></li>
           </ul>
           <ul class="footer__links">
