@@ -10297,6 +10297,9 @@ img {
       .footer .f-social__item_08 {
         background: url(../img/svg/s-576.svg) center no-repeat;
         background-size: 25px 25px; }
+        .footer .f-social__item_ch {
+          background: url(../img/svg/chainnode.svg) center no-repeat;
+          background-size: 19px 26px; }        
       .footer .f-social__item_bt {
         background: url(../img/svg/btc.svg) center no-repeat;
         background-size: 19px 26px; }
