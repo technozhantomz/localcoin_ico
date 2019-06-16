@@ -63,7 +63,7 @@
               <div class="ps-form__arr"></div>
               <div class="ps-form__input ps-form__input_num input-llc">
                 <input type="number" name="llc" value="0" id="bridgeAmountTo" style="background-color: #fff;">
-                <label id="bridgeAmountToError" style="display: none; display: block; position: relative; float: left; top: 50px; color: #ffde25; font-size: 16px;">min to buy is 200 LLC</label>
+                <label id="bridgeAmountToError" style="display: none; display: block; position: relative; float: left; top: 50px; color: #ffde25; font-size: 16px;">min to buy is 50 LLC</label>
               </div>
               <div class="ps-form__input ps-form__input_text" style="margin-top: 30px;">
                 <input type="text" id="grapheneUsername" placeholder="Your LocalCoin Account name">

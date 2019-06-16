@@ -4,7 +4,7 @@
 // #bridgeCurrenciesList
 // #bridgeAmountTo
 // #bridgeSubmit
-const MIN_LLC_VAL = 200;
+const MIN_LLC_VAL = 50;
 
 var Modal = (function(jq, d) {
     var GrapheneConnection = function() {
@@ -13,7 +13,7 @@ var Modal = (function(jq, d) {
         }
 
         this.send = function(cb, method, params) {
-            xhr = new XMLHttpRequest();            
+            xhr = new XMLHttpRequest();
             xhr.open("POST", this.getBaseUrl(), true);
             xhr.setRequestHeader("Content-type", "application/json");
             xhr.onreadystatechange = function () {
@@ -39,10 +39,10 @@ var Modal = (function(jq, d) {
                     isExist:  data.result !== null
                 });
             }, "get_account_by_name", [username]);
-        };        
+        };
     };
 
-    var LLCGatewayConnection = function() {        
+    var LLCGatewayConnection = function() {
         const MODE_BRIDGE = "1";
 
         this.getBaseUrl = function() {
@@ -84,7 +84,7 @@ var Modal = (function(jq, d) {
         };
 
         this.generateBridgeHash = function(username, asset, cb) {
-            this.ajax(function(data) {                
+            this.ajax(function(data) {
                 cb(data);
             }, "CreatePaymentAddress", {
                 account: username,
@@ -105,7 +105,7 @@ var Modal = (function(jq, d) {
             this.gateConnection = new LLCGatewayConnection();
             this.grapheneConnection = new GrapheneConnection();
 
-            //доступные монеты            
+            //доступные монеты
             this.clearCurrenciesList();
             this.gateConnection.loadCurrencies(function(currencies) {
                 self.currencies = currencies;
@@ -138,7 +138,7 @@ var Modal = (function(jq, d) {
                 } catch(ex) {}
 
                 dis();
-            }, 200);
+            }, 50);
             //**********************
 
             //init amount
@@ -180,7 +180,7 @@ var Modal = (function(jq, d) {
                 jq("#bridgeAmountTo").val(converted.toFixed(5));
             };
             jq(d).on("mouseup", "#bridgeAmountFrom", recalc);
-            jq(d).on("keyup",   "#bridgeAmountFrom", recalc);            
+            jq(d).on("keyup",   "#bridgeAmountFrom", recalc);
             //*********
 
             //обратный конвертер
@@ -196,14 +196,14 @@ var Modal = (function(jq, d) {
             //валидатор логина в блокчейне
             var checkUsername = function(successCB) {
                 var username = jq("#grapheneUsername").val();
-                if(username.length <= 3) {                    
+                if(username.length <= 2) {
                     self.usernameIsFound();
-                    
+
                     if(typeof successCB === "function") {
                         var error = jq("#translate-emptylogin-error").val();
                         jq("#loginError").html(error);
                     }
-                    
+
                     return;
                 }
 
@@ -221,7 +221,7 @@ var Modal = (function(jq, d) {
             jq(d).on("keyup",   "#grapheneUsername", function() { jq("#loginError").html(""); });
             //****************************
 
-            //prev-coin next-coin                        
+            //prev-coin next-coin
             jq(d).on("click", ".prev-coin", function() {
                 setTimeout(function() {
                     jq('.select_in.select-coin_in').click();
@@ -241,13 +241,13 @@ var Modal = (function(jq, d) {
                     var username = jq("#grapheneUsername").val();
                     $("#accountName").html(username);
                     $("#accountName").attr("href", "https://wallet.localcoin.is/account/" + username);
-                    
+
                     self.gateConnection.generateBridgeHash(username, self.getActive(), function(hashData) {
                         if(hashData.status !== "success") {
                             alert(hashData.errorMessage);
                             return;
                         }
-        
+
                         self.showAddress(hashData.asset, hashData.address, self.getMinimalAmount(hashData.asset));
                     });
                 });
@@ -261,12 +261,12 @@ var Modal = (function(jq, d) {
                 var fieldForCopy = jq(target);
                 fieldForCopy.focus();
                 fieldForCopy.select();
-                
+
                 try {
                     var successful = document.execCommand('copy');
-                    var msg = successful ? 'successful' : 'unsuccessful';                    
+                    var msg = successful ? 'successful' : 'unsuccessful';
                 } catch (err) { }
-                
+
                 return false;
             });
         };
@@ -306,7 +306,7 @@ var Modal = (function(jq, d) {
 
                     if(item.from != from) continue;
                     if(item.to   != to)   continue;
-                    
+
                     var numberAmount = parseFloat((amount + "").replace(",", "."));
                     if(reverce) return numberAmount / item.coef;
 
@@ -340,7 +340,7 @@ var Modal = (function(jq, d) {
                 if(item.asset.toLowerCase() !== asset.toLowerCase()) continue;
                 return item.minimal;
             }
-            
+
             return -1;
         };
 
@@ -376,7 +376,7 @@ var Modal = (function(jq, d) {
 
             return 6;
         };
-    };    
+    };
 })($, document);
 
 $(document).ready(function() {
