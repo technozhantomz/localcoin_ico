@@ -122,11 +122,11 @@
         </div>
       </section>
       <section class="advantages" id="advantages">
-        <div class="container">
-<!--    <div class="row">
-            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2"><a class="advantages__video" href="https://www.youtube.com/watch?v=9QnH0dGNBvI?autoplay=1" data-fancybox=""><img src="img/video_bg.png" alt="video">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2"><a class="advantages__video" href="https://www.youtube.com/watch?v=R77a3Jk1eTY?autoplay=1" data-fancybox=""><img src="img/video_bg.png" alt="video">
                 <h2 class="wow fadeInUp">Why LocalCoin</h2></a></div>
-          </div> -->
+          </div>
           <div class="advantages__table-wrap" style="padding-top: 25px;">
             <div class="advantages__table">
               <div class="advantages__table-inner">
