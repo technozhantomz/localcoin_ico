@@ -138,6 +138,14 @@ $(document).ready(function() {
 		}
 	});
 
+	// Проверяем есть ли параметр юзера в урле, если да, показываем окно покупки
+	var url = new URL( window.location.href );
+	var searchParams = new URLSearchParams(url.search.substring(1));
+	var username = searchParams.get("username");
+	///console.log( username );
+	if (username) {
+		$('.popup-modal').fadeIn('fast');
+	}
 
 
 	// Custom select

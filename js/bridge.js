@@ -151,7 +151,16 @@ var Modal = (function(jq, d) {
             jq(d).on("click",   "#bridgeCurrenciesList", function() {
                 setTimeout(function() { initAmount(MIN_LLC_VAL, self.getActive()) }, 100);
             });
-            //***********
+            //***********   
+            
+            // Автозаполняем юзернейм
+            var url = new URL( window.location.href );
+            var searchParams = new URLSearchParams(url.search.substring(1));
+            var username = searchParams.get("username");
+            ///console.log( username );
+            if (username) {
+                jq("#grapheneUsername").val(username);
+            }            
 
             //обновление курса
             var updateCourse = function() {
