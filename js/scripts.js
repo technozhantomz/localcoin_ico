@@ -10,7 +10,7 @@ $(document).ready(function() {
 	new WOW().init();
 
 	// Rocket Flight Point
-	var roadmapPoint = 'to-point-11'; // 01 - 14
+	var roadmapPoint = 'to-point-13'; // 01 - 14
 
 	// Active tab if link with hash
 	if (window.location.hash == '#airDrop') {

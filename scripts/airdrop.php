@@ -1,31 +1,21 @@
 <?
-/*
-+ Пишем функцию подключения к CURL и отправки POST-запросов в формате json.
-+ Пишем функцию которая на входе принимает название функции и массив параметров, пробрасывает их в массив и выдаёт на выходе готовый к отправке json. В ответе возвращает массив.
-+ Пишем запрос на fixer который возвращает массив курсов по всем ассетам, что у них есть к USD.
-+ Забираем массив смарт-ассеты из файла и формируем из них массив к публикации фидов
-+ Обогащаем массив смарт-ассетов, добавляя каждому ассету его курс к LLC в отношении 1 USD = 2 LLC и не забываем про precision (5 у core, 6 у smartassets)
-- Создаем массив публичных-ключей витнесов
-Забираем с cliwallet ключи через dump_private_key и проверяем с теми что уже загружены в wallet. Если каких-то ключей не хватает, выводим ошибку.
-Создаем цикл прогона массива всех смарт-ассетов с курсами под каждого витнеса добавленного в массив. Выводим на фронт инфу что обновили и у кого.
+/*Simple script for mass-payment throught cli-wallet*/
 
-TODO
-Повесить скрипт на крон на каждую минуту, проверять у смартассетов дату окончания фидов и если время <1 часа, то запускать скрипт обновления.
-Собрать простенький интерфейс
-Написать логгирование скрипта в файл
-*/
+/* Config */
+$CSVname = 'airdrop-users.csv'; //user list for payments
 
-//Конфиг
-$CSVname = 'airdrop-users.csv';
+// username => public key. you should import private key into cli-wallet application before using this script
 $arWitnessess = [
-    'localcoin-airdrop' => 'LLC51Qd8cXGxV12o6aHWdivPLst2VT23cnSr61wcov9qbR2KPy9nQ'                         
+    'username' => 'LLC51Qd8cXGxV12o6aHWdivPLst2VT23cnSr61wcov9qbR2KPy9nQ'
 ];
-$walletPass = '351003';
+$walletPass = '*********'; // password to unlock cli-wallet
 $start = microtime(true);
 
+
+//Sends data to cli-wallet
 function sendCurl(string $method, $arParams = [''], $ignoreErr = true) {
 
-    $curl = curl_init("http://localhost:8091/"); //подключаемся к локальному кошельку
+    $curl = curl_init("http://localhost:8091/"); // run cli-wallet at port 8091
 
     $data = [
         "jsonrpc" => "2.0", 
@@ -35,14 +25,14 @@ function sendCurl(string $method, $arParams = [''], $ignoreErr = true) {
     ];
 
 
-    $data_json = json_encode($data);//заворачиваем в json
+    $data_json = json_encode($data); //paste data into json
 
     //PR($data_json);
     
     curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type'=>'application/json'));
     curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $data_json);//шлём POST с инфой
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);//забираем ответ в теле
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data_json);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
     $result = curl_exec($curl);
     curl_close($curl);
@@ -65,16 +55,18 @@ function sendCurl(string $method, $arParams = [''], $ignoreErr = true) {
     //PR($arResult);
 }
 
+//gets account id by his name
 function get_account_id($account_name){
     $arResult = sendCurl('get_account_id', [$account_name]);
     return $arResult;
 }
 
+//starts payments
 function startAirdrop() {
 
     global $CSVname, $walletPass, $arWitnessess;
 
-    //Читаем файл айрдропа, получаем список юзеров и количество монет для айрдропа
+    //Get userlist from file, amount and memo
     if (isset($_SERVER['DOCUMENT_ROOT']) and !empty($_SERVER['DOCUMENT_ROOT'])){
         $dataCsv = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/scripts//' . $CSVname);
     } else {
@@ -87,11 +79,11 @@ function startAirdrop() {
     //foreach($arDataCsv as $value) $arUser[$value[0]] = $value[1];
     //PR($arUser);
 
-    if (sendCurl('is_locked') == '1') { // Не залочен ли
+    if (sendCurl('is_locked') == '1') { // Unlocks wallet
         sendCurl('unlock', [$walletPass]);
     }
 
-    $arPrivkeys = sendCurl('dump_private_keys'); // Сверяем все ли ключи на месте
+    $arPrivkeys = sendCurl('dump_private_keys'); // Check private keys in your cli-wallet
     foreach($arPrivkeys as $value) {
         $arPubkeys []= $value[0];
     }
@@ -114,10 +106,9 @@ function startAirdrop() {
             'false'
         ];
         sendCurl('transfer', $curl_data);
-        usleep(50000);
+        usleep(50000); // timeout for each operation, if disable cli-wallet could crash
         PR($curl_data);
         echo $i++;
-//        logFile($curl_data);
     }
     
 }
@@ -152,5 +143,5 @@ function logFile($textLog) {
     fclose($fOpen);
     }
 
-echo 'Время выполнения скрипта: '.round(microtime(true) - $start, 4).' сек.';
+echo 'Script was working: '.round(microtime(true) - $start, 4).' sec.';
 ?>

@@ -984,23 +984,23 @@
                 <div class="r-item__desc">DEX (decentralised exchange) launch</div>
               </div>
             </div>
-            <div class="r-item r-item_13 r-item-coming">
+            <div class="r-item r-item_13">
               <div class="r-item__label"><span class="r-item__month">March</span><span class="r-item__year">2019</span>
                 <div class="r-item__desc">Gateway for additional cryptocurrencies</div>
               </div>
             </div>
-            <div class="r-item r-item_14 r-item-coming">
-              <div class="r-item__label"><span class="r-item__month">Q2</span><span class="r-item__year">2019</span>
-                <div class="r-item__desc">Trading chat release</div>
+            <div class="r-item r-item_14">
+              <div class="r-item__label"><span class="r-item__month">July</span><span class="r-item__year">2019</span>
+                <div class="r-item__desc">Airdrop: Second round</div>
               </div>
             </div>
             <div class="r-item r-item_15 r-item-coming">
-              <div class="r-item__label"><span class="r-item__month">Q3</span><span class="r-item__year">2019</span>
+              <div class="r-item__label"><span class="r-item__month">Q4</span><span class="r-item__year">2019</span>
                 <div class="r-item__desc">LocalCoin OTC release</div>
               </div>
             </div>
             <div class="r-item r-item_16 r-item-coming">
-              <div class="r-item__label"><span class="r-item__month">Q3</span><span class="r-item__year">2019</span>
+              <div class="r-item__label"><span class="r-item__month">Q4</span><span class="r-item__year">2019</span>
                 <div class="r-item__desc">GUI blind transactions release</div>
               </div>
             </div>
@@ -1087,20 +1087,20 @@
                   </div>
                 </li>
                 <li class="col-sm-4 col-lg-3 wow fadeInUp">
-                  <div class="r-item-mob">
-                    <div class="r-item-mob__header"><span class="r-item-mob__year">2019</span><span class="r-item-mob__month">Q2</span></div>
-                    <div class="r-item-mob__body"><span class="r-item-mob__desc">Trading chat release</span></div>
+                  <div class="r-item-mob r-item-mob_complete">
+                    <div class="r-item-mob__header"><span class="r-item-mob__year">2019</span><span class="r-item-mob__month">July</span></div>
+                    <div class="r-item-mob__body"><span class="r-item-mob__desc">Airdrop: Second round</span></div>
                   </div>
                 </li>
                 <li class="col-sm-4 col-lg-3 wow fadeInUp">
                   <div class="r-item-mob">
-                    <div class="r-item-mob__header"><span class="r-item-mob__year">2019</span><span class="r-item-mob__month">Q3</span></div>
+                    <div class="r-item-mob__header"><span class="r-item-mob__year">2019</span><span class="r-item-mob__month">Q4</span></div>
                     <div class="r-item-mob__body"><span class="r-item-mob__desc">LocalCoin OTC release</span></div>
                   </div>
                 </li>
                 <li class="col-sm-4 col-lg-3 wow fadeInUp">
                   <div class="r-item-mob">
-                    <div class="r-item-mob__header"><span class="r-item-mob__year">2019</span><span class="r-item-mob__month">Q3</span></div>
+                    <div class="r-item-mob__header"><span class="r-item-mob__year">2019</span><span class="r-item-mob__month">Q4</span></div>
                     <div class="r-item-mob__body"><span class="r-item-mob__desc">GUI blind transactions release</span></div>
                   </div>
                 </li>
