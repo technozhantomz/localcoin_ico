@@ -1119,7 +1119,7 @@
         <div class="container">
           <h2>Download</h2>
           <div class="row">
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!QZ0nSAAL!e450bBrFjHPcnTfd7pe_HLniyKvAzXwu8tZXpPy4H4E" target="_blank" data-wow-delay=".2s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!cZUjSA7R!FG58B7UP5Ad9A6a7Cbyuy0bn_joFDs4ktzRHdksGI_Y" target="_blank" data-wow-delay=".2s">
                 <h4>Windows</h4>
                 <div class="download__icon"><img src="img/svg/d-2.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span></div></a></div>
