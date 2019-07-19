@@ -1117,7 +1117,7 @@
       </section>
       <section class="download" id="download">
         <div class="container">
-          <h2>Download</h2>
+          <h2>Download Trading Station</h2>
           <div class="row">
             <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!cZUjSA7R!FG58B7UP5Ad9A6a7Cbyuy0bn_joFDs4ktzRHdksGI_Y" target="_blank" data-wow-delay=".2s">
                 <h4>Windows</h4>
