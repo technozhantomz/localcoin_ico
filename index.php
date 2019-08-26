@@ -1119,11 +1119,11 @@
         <div class="container">
           <h2>Download Trading Station</h2>
           <div class="row">
-            <div class="col-md-4"><a class="download__item wow flipInY" href="https://mega.nz/#!cZUjSA7R!FG58B7UP5Ad9A6a7Cbyuy0bn_joFDs4ktzRHdksGI_Y" target="_blank" data-wow-delay=".2s">
+            <div class="col-md-4"><a class="download__item wow flipInY" href="https://github.com/LocalCoinIS/LocalCoin-ui/releases/download/1.0.5/Localcoin-Client-1.0.5-Windows.zip" target="_blank" data-wow-delay=".2s">
                 <h4>Windows</h4>
                 <div class="download__icon"><img src="img/svg/d-2.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />26F3F62FCC2CE28CFCB3A01BFDA0E26F8605C3D800EF4EC2D452261E9E60BA67</span></div></a></div>
-            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'macos'});" href="https://github.com/LocalCoinIS/LocalCoin-ui/releases/download/1.0.5/Localcoin-Client-1.0.5-Windows.zip" target="_blank" data-wow-delay=".4s">
+            <div class="col-md-4"><a class="download__item wow flipInY" onclick="gtag('event', 'download', {'event_category': 'macos'});" href="https://mega.nz/#!BUsFUKyS!Ee1JP0ueX7SjOFfwXYTEr12LDLQx1Om6AkYYY1w_7qY" target="_blank" data-wow-delay=".4s">
                 <h4>Mac OS</h4>
                 <div class="download__icon"><img src="img/svg/d-3.svg" alt="icon"></div>
                 <div class="download__text"><span style="word-break: break-all;">SHA-256 checksum:<br />79881CC1379B4550C06F08D912B2F6877D722F03766F4E4DB0C99338B433FE71</span></div></a></div>
