@@ -4,7 +4,7 @@
 // #bridgeCurrenciesList
 // #bridgeAmountTo
 // #bridgeSubmit
-const MIN_LLC_VAL = 50;
+const MIN_LLC_VAL = 55;
 
 var Modal = (function(jq, d) {
     var GrapheneConnection = function() {
@@ -138,7 +138,7 @@ var Modal = (function(jq, d) {
                 } catch(ex) {}
 
                 dis();
-            }, 50);
+            }, 55);
             //**********************
 
             //init amount
@@ -151,8 +151,8 @@ var Modal = (function(jq, d) {
             jq(d).on("click",   "#bridgeCurrenciesList", function() {
                 setTimeout(function() { initAmount(MIN_LLC_VAL, self.getActive()) }, 100);
             });
-            //***********   
-            
+            //***********
+
             // Автозаполняем юзернейм
             var url = new URL( window.location.href );
             var searchParams = new URLSearchParams(url.search.substring(1));
@@ -160,7 +160,7 @@ var Modal = (function(jq, d) {
             ///console.log( username );
             if (username) {
                 jq("#grapheneUsername").val(username);
-            }            
+            }
 
             //обновление курса
             var updateCourse = function() {
