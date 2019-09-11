@@ -5,6 +5,12 @@
 // #bridgeAmountTo
 // #bridgeSubmit
 const MIN_LLC_VAL = 55;
+const MAX_CNT_IN_DROP_DOWN = 20;
+
+// setTimeout(function() {
+//     $("#buy_coin_header").click();
+//     setTimeout(function() { $("#bridgeCurrenciesLabel").click(); }, 500);
+// }, 500);
 
 var Modal = (function(jq, d) {
     var GrapheneConnection = function() {
@@ -99,6 +105,43 @@ var Modal = (function(jq, d) {
         this.grapheneConnection = null;
         this.pairsCourse = null;
         this.currencies = null;
+        this.currencies_filter = "";
+
+        this.getCurrenciesWithFilter = function()
+        {
+            this.currencies_filter = this.currencies_filter.trim();
+            if(this.currencies_filter == "")
+                return this.currencies;
+
+            var list = [];
+
+            for(var currency of this.currencies)
+            {
+                if(
+                    currency.asset.toUpperCase().indexOf(
+                        this.currencies_filter.toUpperCase()
+                    ) > -1
+                ) {
+                    list.push(currency);
+                }
+            }
+
+            return list;
+        }
+
+        this.updateCurrenciesInView = function() {
+            this.clearCurrenciesList();
+            var currencies = this.getCurrenciesWithFilter();
+            if(currencies.length > MAX_CNT_IN_DROP_DOWN) {
+                currencies = currencies.splice(0, MAX_CNT_IN_DROP_DOWN);
+            }
+            for(var i in currencies) {
+                this.addItemInCurrenciesList(
+                    currencies[i].asset,
+                    currencies[i].forBTCService
+                );
+            }
+        }
 
         this.init = function() {
             var self = this;
@@ -106,12 +149,9 @@ var Modal = (function(jq, d) {
             this.grapheneConnection = new GrapheneConnection();
 
             //доступные монеты
-            this.clearCurrenciesList();
             this.gateConnection.loadCurrencies(function(currencies) {
                 self.currencies = currencies;
-
-                for(var i in currencies)
-                    self.addItemInCurrenciesList(currencies[i].asset, currencies[i].forBTCService);
+                self.updateCurrenciesInView();
             });
             //****************
 
@@ -230,6 +270,13 @@ var Modal = (function(jq, d) {
             jq(d).on("keyup",   "#grapheneUsername", function() { jq("#loginError").html(""); });
             //****************************
 
+            function search() {
+                self.currencies_filter = jq("#search_input").val();
+                self.updateCurrenciesInView();
+            }
+            jq(d).on("mouseup", "#search_input", search);
+            jq(d).on("keyup",   "#search_input", search);
+
             //prev-coin next-coin
             jq(d).on("click", ".prev-coin", function() {
                 setTimeout(function() {
@@ -327,15 +374,16 @@ var Modal = (function(jq, d) {
         };
 
         this.clearCurrenciesList = function() {
-            jq("#bridgeCurrenciesList").html("");
+            jq("#bridgeCurrenciesList li").remove();
         };
 
         this.addItemInCurrenciesList = function(key, value) {
-            var before = jq("#bridgeCurrenciesList").html();
+            // var before = jq("#bridgeCurrenciesList").html();
             if(value === 'TTRUSD') value = 'USDT';
             var li = '<li data-value="' + key + '">' + value + '</li>';
 
-            jq("#bridgeCurrenciesList").html(before + li);
+            // jq("#bridgeCurrenciesList").html(before + li);
+            jq("#bridgeCurrenciesList").append(li);
         };
 
         this.reset = function() {

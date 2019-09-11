@@ -54,8 +54,12 @@
                     <span class="select_title select-coin_title" id="bridgeCurrenciesLabel">BTC</span>
                     <i class="select_arrow select-coin_arrow"></i>
                   </div>
-                  <ul class="select_list select-coin_list" id="bridgeCurrenciesList">
-                  </ul>
+                  <div class="select_list select-coin_list" id="bridgeCurrenciesList">
+                    <div class="search_container">
+                      <img src="/img/search.png">
+                      <input type="text" id="search_input" placeholder="Search..">
+                    </div>
+                  </div>
                 </div>
                 <div class="prev-coin"></div>
                 <div class="next-coin"></div>
