@@ -129,12 +129,24 @@ var Modal = (function(jq, d) {
             return list;
         }
 
+        this.notFound = function()
+        {
+            var html = '<li style="font-size: 19px; color: #72798a;">Not found...</li>';
+            jq("#bridgeCurrenciesList").append(html);
+        }
+
         this.updateCurrenciesInView = function() {
             this.clearCurrenciesList();
             var currencies = this.getCurrenciesWithFilter();
             if(currencies.length > MAX_CNT_IN_DROP_DOWN) {
                 currencies = currencies.splice(0, MAX_CNT_IN_DROP_DOWN);
             }
+
+            if(currencies.length < 1) {
+                this.notFound();
+                return;
+            }
+
             for(var i in currencies) {
                 this.addItemInCurrenciesList(
                     currencies[i].asset,
@@ -410,7 +422,7 @@ var Modal = (function(jq, d) {
                 jq(this).attr("class", "");
             });
 
-            jq("#bridgeCurrenciesList li[data-value=" + key + "]").attr("class", "is-active");
+            //jq("#bridgeCurrenciesList li[data-value=" + key + "]").attr("class", "is-active");
 
             jq('.select_title.select-coin_title').html(value);
             jq("#bridgeCurrency").val(key);
