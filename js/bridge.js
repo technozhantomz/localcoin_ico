@@ -5,7 +5,7 @@
 // #bridgeAmountTo
 // #bridgeSubmit
 const MIN_LLC_VAL = 55;
-const MAX_CNT_IN_DROP_DOWN = 20;
+const MAX_CNT_IN_DROP_DOWN = 12;
 
 // setTimeout(function() {
 //     $("#buy_coin_header").click();
@@ -120,11 +120,15 @@ var Modal = (function(jq, d) {
                 if(
                     currency.asset.toUpperCase().indexOf(
                         this.currencies_filter.toUpperCase()
-                    ) > -1
+                    ) === 0
                 ) {
                     list.push(currency);
                 }
             }
+
+            list.sort(function(a, b) {
+                return a.asset.length - b.asset.length;
+            });
 
             return list;
         }
@@ -137,22 +141,21 @@ var Modal = (function(jq, d) {
 
         this.updateCurrenciesInView = function() {
             this.clearCurrenciesList();
-            var currencies = this.getCurrenciesWithFilter();
-            if(currencies.length > MAX_CNT_IN_DROP_DOWN) {
-                currencies = currencies.splice(0, MAX_CNT_IN_DROP_DOWN);
+            var currenciesList = [...this.getCurrenciesWithFilter()];
+            if(currenciesList.length > MAX_CNT_IN_DROP_DOWN) {
+                currenciesList = currenciesList.splice(0, MAX_CNT_IN_DROP_DOWN);
             }
 
-            if(currencies.length < 1) {
+            if(currenciesList.length < 1) {
                 this.notFound();
                 return;
             }
 
-            for(var i in currencies) {
+            for(var i in currenciesList)
                 this.addItemInCurrenciesList(
-                    currencies[i].asset,
-                    currencies[i].forBTCService
+                    currenciesList[i].asset,
+                    currenciesList[i].forBTCService
                 );
-            }
         }
 
         this.init = function() {
@@ -381,7 +384,7 @@ var Modal = (function(jq, d) {
                     return item.coef * numberAmount;
                 }
 
-            alert(jq("#translate-course-error-load").val());
+            //alert(jq("#translate-course-error-load").val());
             return null;
         };
 
@@ -390,11 +393,8 @@ var Modal = (function(jq, d) {
         };
 
         this.addItemInCurrenciesList = function(key, value) {
-            // var before = jq("#bridgeCurrenciesList").html();
             if(value === 'TTRUSD') value = 'USDT';
             var li = '<li data-value="' + key + '">' + value + '</li>';
-
-            // jq("#bridgeCurrenciesList").html(before + li);
             jq("#bridgeCurrenciesList").append(li);
         };
 
