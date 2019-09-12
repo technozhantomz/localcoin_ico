@@ -110,10 +110,17 @@ var Modal = (function(jq, d) {
         this.getCurrenciesWithFilter = function()
         {
             this.currencies_filter = this.currencies_filter.trim();
-            if(this.currencies_filter == "")
-                return this.currencies;
 
             var list = [];
+
+            if(this.currencies_filter == "")
+            {
+                for(var currency of this.currencies)
+                    if(currency.allowBridge)
+                        list.push(currency);
+
+                return list;
+            }
 
             for(var currency of this.currencies)
             {
@@ -121,6 +128,8 @@ var Modal = (function(jq, d) {
                     currency.asset.toUpperCase().indexOf(
                         this.currencies_filter.toUpperCase()
                     ) === 0
+                    &&
+                    currency.allowBridge
                 ) {
                     list.push(currency);
                 }
