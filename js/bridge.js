@@ -15,7 +15,7 @@ const MAX_CNT_IN_DROP_DOWN = 12;
 var Modal = (function(jq, d) {
     var GrapheneConnection = function() {
         this.getBaseUrl = function() {
-            return "https://moscow.localcoin.is/";
+            return "https://de.localcoin.is/";
         }
 
         this.send = function(cb, method, params) {
