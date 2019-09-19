@@ -144,7 +144,7 @@ var Modal = (function(jq, d) {
 
         this.notFound = function()
         {
-            var html = '<li style="font-size: 19px; color: #72798a;">Not found...</li>';
+            var html = '<li style="font-size: 16px; color: #72798a;">Not found...</li>';
             jq("#bridgeCurrenciesList").append(html);
         }
 

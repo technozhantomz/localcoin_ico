@@ -56,7 +56,6 @@
                   </div>
                   <div class="select_list select-coin_list" id="bridgeCurrenciesList">
                     <div class="search_container">
-                      <img src="/img/search.png">
                       <input type="text" id="search_input" placeholder="Search..">
                     </div>
                   </div>
