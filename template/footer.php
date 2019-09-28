@@ -79,7 +79,7 @@
             <span class="ps-form__reg" style="display: inherit; margin-top: 20px;">Deposit to account: <a id="accountName" target="_blank" href=""></a></span>
             <span class="ps-form__reg" style="display: inherit; margin-top: 20px;">Address for deposit <a id="bridgeFormInputAsset" target="_blank" href=""></a>: </span>
             <span class="ps-form__reg" style="display: inherit; font-size: 20px;">
-            <textarea id="bridgeFormInputAddress" style="margin-top: 10px; width: 450px; border: 0; background: none; color: #fff; text-align: center; font-size: 19px;"></textarea>
+            <textarea rows="3" id="bridgeFormInputAddress" style="margin-top: 10px; width: 450px; border: 0; background: none; color: #fff; text-align: center; font-size: 19px;"></textarea>
             </span>
             <span class="ps-form__reg">
               <a data-copy="#bridgeFormInputAddress" style="font-size: 25px; cursor: pointer;">copy address</a>
