@@ -6,3 +6,4 @@
 /downloads/*
 .*
 !/.gitignore
+/scripts/*.csv

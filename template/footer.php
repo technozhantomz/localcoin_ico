@@ -20,6 +20,7 @@
             <li><a class="f-social__item f-social__item_tw" href="https://twitter.com/LocalCoinIS" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_yt" href="https://www.youtube.com/localcoinis?sub_confirmation=1" target="_blank"></a></li>
             <li><a class="f-social__item f-social__item_in" href="#" target="_blank"></a></li>
+            <li><a class="f-social__item f-social__item_cm" href="https://coinmarketcap.com/exchanges/localcoin/" target="_blank"></a></li>
           </ul>
           <ul class="footer__links">
             <li><a class="footer__wl" href="/whitelabel">White Label</a></li>

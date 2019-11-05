@@ -10312,6 +10312,9 @@ img {
       .footer .f-social__item_in {
         background: url(../img/svg/insta.svg) center no-repeat;
         background-size: 25px 25px; }
+      .footer .f-social__item_cm {
+        background: url(../img/svg/cmc.svg) center no-repeat;
+        background-size: 25px 25px; }        
   .footer__links {
     margin-bottom: 99px; }
     @media (max-width: 767px) {
