@@ -1,4 +1,5 @@
 /scripts/config.php
+/scripts/polonex-bot/config.php
 /scripts/php-localcoin/vendor/*
 /scripts/amount.json
 /sources/*
@@ -7,3 +8,5 @@
 .*
 !/.gitignore
 /scripts/*.csv
+/scripts/airdrop/*.csv
+calculate.php
