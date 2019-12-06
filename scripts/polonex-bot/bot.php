@@ -3,9 +3,13 @@
 https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_XMR&depth=20
 */
 
-if ($_GET['key'] != 'startexp') die('invalid key');
+echo '<a href="index.php">Назад к форме запуска</a>';
 
-PR($userIDs[array_rand($userIDs)]);
+if ($_GET['key'] != 'startexp') die('invalid key');
+if (!empty($_GET['orderCount']) && isset($_GET['orderCount'])) $orderCount = $_GET['orderCount'];
+if (!empty($_GET['orderLife']) && isset($_GET['orderLife'])) $timeout = $_GET['orderLife'];
+
+//PR($userIDs[array_rand($userIDs)]);
 // =========== Получаем фиды с Полонекса =============
 function getOrderBook($pair, $depth) {
 
@@ -45,6 +49,7 @@ function getOrderBook($pair, $depth) {
     //[0] - количество первой валюты
     //[1] - количество второй валюты
 }
+echo '<h2>Список заявок к созданию</h2>';
 PR(getOrderBook('BTC_XMR', $orderCount));
 
 // =========== Получаем фиды с Локалкоина =============
