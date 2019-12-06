@@ -6,7 +6,7 @@ $CSVname = 'airdrop-users.csv'; //user list for payments
 
 // username => public key. you should import private key into cli-wallet application before using this script
 $arWitnessess = [
-    'username' => 'LLC51Qd8cXGxV12o6aHWdivPLst2VT23cnSr61wcov9qbR2KPy9nQ'
+    'username' => 'LLC7qwEQtfjGZgUqRX5CmjZwxo7Qr5CboaqqmowjWWEVHx7Vb8Xmo'
 ];
 $walletPass = '351003'; // password to unlock cli-wallet
 $start = microtime(true);
@@ -68,10 +68,10 @@ function startAirdrop() {
 
     //Get userlist from file, amount and memo
     if (isset($_SERVER['DOCUMENT_ROOT']) and !empty($_SERVER['DOCUMENT_ROOT'])){
-        $dataCsv = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/scripts//' . $CSVname);
+        $dataCsv = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/scripts/airdrop//' . $CSVname);
     } else {
         $_SERVER['DOCUMENT_ROOT'] = getenv('MY_DOCUMENT_ROOT');
-        $dataCsv = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/scripts//' .$CSVname);
+        $dataCsv = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/scripts/airdrop//' .$CSVname);
     }
     
     $arDataCsv = str_getcsv($dataCsv, "\n");
@@ -98,7 +98,7 @@ function startAirdrop() {
     $i = 1;
     foreach($arDataCsv as $value) {
         $curl_data = [
-            'localcoin-airdrop',
+            'localcoin-bounty',
             $value[0],
             $value[1],
             '1.3.0',
