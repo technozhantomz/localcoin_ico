@@ -14,6 +14,7 @@ if (!empty($_GET['orderLife']) && isset($_GET['orderLife'])) $timeout = $_GET['o
 function getOrderBook($pair, $depth) {
 
     global $testFeed;
+	global $percent;
 
     $url = 'https://poloniex.com/public?command=returnOrderBook&currencyPair=' . $pair .  '&depth=' . $depth;
     $curl = curl_init($url); // run cli-wallet at port 8091
@@ -33,11 +34,11 @@ function getOrderBook($pair, $depth) {
     //PR($arResult);
 
     foreach ($arResult['asks'] as $value) {
-        array_push($arAsks, array( number_format( $value[0] * 1.005 * $value[1], 6 ), number_format( $value[1], 6 ) ) );
+        array_push($arAsks, array( number_format( ($value[0] * (1 + ($percent/100))) * $value[1], 6 ), number_format( $value[1], 6 ) ) );
     }
 
     foreach ($arResult['bids'] as $value) {
-        array_push($arBids, array( number_format( $value[0] * 0.995 * $value[1], 6 ), number_format( $value[1], 6 ) ) );
+        array_push($arBids, array( number_format( ($value[0] * (1 - ($percent/100))) * $value[1], 6 ), number_format( $value[1], 6 ) ) );
     }
 
     $arLocal['asks'] = $arAsks;
@@ -229,7 +230,20 @@ function CreateOrders() {
         if (!$check) {
             die('Check your config, wallet doesn\'t have enought keys.');
         }
-    }    
+    }
+
+    $deleteOrders = getOldOrdersID();
+    foreach ($deleteOrders as $value) {
+        $curl_data = [
+            $value,
+            true
+        ];
+        
+        sendCurl('cancel_order', $curl_data);
+        echo 'Удалил:<br>';
+        PR($curl_data);
+        usleep(rand(10000, 100000));
+    }	
 
     $polonexOrders = getNewOrdersID();
 
@@ -306,18 +320,6 @@ function CreateOrders() {
         usleep(rand(10000, 100000)); // timeout for each operation, if disable cli-wallet could crash        
     }
 
-    $deleteOrders = getOldOrdersID();
-    foreach ($deleteOrders as $value) {
-        $curl_data = [
-            $value,
-            true
-        ];
-        
-        sendCurl('cancel_order', $curl_data);
-        echo 'Удалил:<br>';
-        PR($curl_data);
-        usleep(rand(10000, 100000));
-    }
 }
 
 CreateOrders();

@@ -68,7 +68,7 @@ function sendCurl(string $method, $arParams = [''], $ignoreErr = true) {
     } else {
         die('Lost connection to the CLI wallet');
     }
-    //PR($arResult);
+    PR($arResult);
 }
 
 
@@ -109,7 +109,7 @@ function getExRates() { //Получаем массив рейтов по каж
         } 
         $arDataCsv[$key] = intval(($arRates[$key])*1000000);// 1LLC =0.5USD * 1 000 000 precision смарт-ассетов
     }
-    pr($arDataCsv);
+    //pr($arDataCsv);
     return $arDataCsv;
 }
 
