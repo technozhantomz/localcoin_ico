@@ -1,5 +1,5 @@
 /scripts/config.php
-/scripts/polonex-bot/config.php
+/scripts/polonex-bot/config-local.php
 /scripts/php-localcoin/vendor/*
 /scripts/amount.json
 /sources/*
