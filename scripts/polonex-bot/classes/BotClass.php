@@ -233,7 +233,7 @@ Class Bot {
         PR($this->getNewOrdersID());
     }
 
-    protected function CreateAsk($bullet) {
+    public function CreateAsk($bullet) {
         global $userIDs;
 
         //Зеленые
@@ -264,7 +264,7 @@ Class Bot {
         usleep(rand(10000, 100000));
     }
 
-    protected function CreateBid($bullet) {
+    public function CreateBid($bullet) {
         global $userIDs;
 
         //Красные
@@ -359,7 +359,7 @@ Class Bot {
     
         $list = $this->GetActionList();
         shuffle($list);
-        PR($list);
+        //PR($list);
         foreach ($list as $item) {
             $bullet = $item['feed'];
             call_user_func(array($this, $item['invoker']), $bullet);
