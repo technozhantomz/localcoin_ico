@@ -100,7 +100,7 @@ Class Pump {
 
     function run() {
 
-        $random = rand(0,3);
+        $random = rand(0,5);
         if ($random == 0) {
             $this->createBestBid(true);
         } elseif ($random == 1) {
