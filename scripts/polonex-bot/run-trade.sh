@@ -1,13 +1,16 @@
 #!/bin/bash
-wget -O - "https://localcoin.is/scripts/polonex-bot/pair_BTC-ETH.php?key=startexp"
-sleep 10
-wget -O - "https://localcoin.is/scripts/polonex-bot/pair_BTC-XMR.php?key=startexp"
-sleep 10
-wget -O - "https://localcoin.is/scripts/polonex-bot/pair_USDC-ETH.php?key=startexp"
-sleep 10
-wget -O - "https://localcoin.is/scripts/polonex-bot/pair_USDC-XMR.php?key=startexp"
-sleep 10
-wget -O - "https://localcoin.is/scripts/polonex-bot/pair_USDT-XMR.php?key=startexp"
-sleep 10
-wget -O - "https://localcoin.is/scripts/polonex-bot/pair_USDT-BTC.php?key=startexp"
-
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=BTC&pair2=ETH"
+sleep 8
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=BTC&pair2=XMR"
+sleep 8
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=USDC&pair2=ETH"
+sleep 8
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=USDC&pair2=XMR"
+sleep 8
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=USDC&pair2=BTC"
+sleep 8
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=USDT&pair2=BTC"
+sleep 8
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=USDT&pair2=ETH"
+sleep 8
+wget -O - "https://localcoin.is/scripts/polonex-bot/fill-pair.php?key=startexp&pair1=USDT&pair2=XMR"
