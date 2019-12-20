@@ -100,11 +100,13 @@ Class Pump {
 
     function run() {
 
-        $random = rand(0,1);
+        $random = rand(0,2);
         if ($random == 0) {
             $this->createBestBid(true);
-        } else {
+        } elseif ($random == 1) {
             $this->createBestAsk(true);
+        } else {
+            die();
         }
     }
     
