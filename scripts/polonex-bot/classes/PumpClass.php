@@ -31,8 +31,8 @@ Class Pump {
         //PR($this->MarketData->getOrderBook());
         $arOrderList = $this->MarketData->getOrderBook();
 
-        $topPrice['asks'] = number_format( $arOrderList['asks'][0][0] / $arOrderList['asks'][0][1], 6 );
-        $topPrice['bids'] = number_format( $arOrderList['bids'][0][0] / $arOrderList['bids'][0][1], 6 );
+        $topPrice['asks'] = number_format( $arOrderList['asks'][0][0] / $arOrderList['asks'][0][1], 6, '.', '' );
+        $topPrice['bids'] = number_format( $arOrderList['bids'][0][0] / $arOrderList['bids'][0][1], 6, '.', '' );
         
         //PR($topPrice);
 
@@ -52,9 +52,9 @@ Class Pump {
         $topPrice = $this->getBestPrice(); //и лучшие цены
         
         //PR($arOrderList);
-        $random = number_format((rand(1, 10) / 100000), 6);
+        $random = number_format((rand(1, 10) / 100000), 6, '.', '');
         $bestPriceRed = $topPrice['asks'] - $random; // повышаем цену на красные
-        $bullet = [ number_format($arOrderList['asks'][0][1] * $bestPriceRed, 6), $arOrderList['asks'][0][1] ];
+        $bullet = [ number_format($arOrderList['asks'][0][1] * $bestPriceRed, 6, '.', ''), $arOrderList['asks'][0][1] ];
         
         $this->MarketData->CreateBid($bullet);
         $this->MarketData->CreateAsk($bullet);

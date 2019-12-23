@@ -75,11 +75,11 @@ Class Bot {
         $arBids = [];
     
         foreach ($arResult['asks'] as $value) {
-            array_push($arAsks, array( number_format( ($value[0] * (1 + ($percent/100))) * $value[1], 6 ), number_format( $value[1], 6 ) ) );
+            array_push($arAsks, array( number_format( ($value[0] * (1 + ($percent/100))) * $value[1], 6, '.', '' ), number_format( $value[1], 6 ) ) );
         }
     
         foreach ($arResult['bids'] as $value) {
-            array_push($arBids, array( number_format( ($value[0] * (1 - ($percent/100))) * $value[1], 6 ), number_format( $value[1], 6 ) ) );
+            array_push($arBids, array( number_format( ($value[0] * (1 - ($percent/100))) * $value[1], 6, '.', '' ), number_format( $value[1], 6 ) ) );
         }
     
         $arLocal['asks'] = $arAsks;
@@ -191,7 +191,7 @@ Class Bot {
         $arPolAsks = array_column($polonexOrders['asks'],1);
         $arLocAsks = [];
         foreach ($localcoinOrders['asks'] as $value) {
-            array_push($arLocAsks, number_format( $value['sell_price']['base']['amount'] / 1000000, 6) );
+            array_push($arLocAsks, number_format( $value['sell_price']['base']['amount'] / 1000000, 6, '.', '') );
         }
         $matchAsks = array_diff($arPolAsks, $arLocAsks); // Ищем суммы которых нет на Localcoin
     
@@ -207,7 +207,7 @@ Class Bot {
         $arPolBids = array_column($polonexOrders['bids'],1);
         $arLocBids = [];
         foreach ($localcoinOrders['bids'] as $value) {
-            array_push($arLocBids, number_format( $value['sell_price']['quote']['amount'] / 1000000, 6) );
+            array_push($arLocBids, number_format( $value['sell_price']['quote']['amount'] / 1000000, 6, '.', '') );
         }
         $matchBids = array_diff($arPolBids, $arLocBids); // Ищем суммы которых нет на Localcoin
     
