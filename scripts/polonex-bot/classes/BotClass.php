@@ -84,6 +84,9 @@ Class Bot {
     
         $arLocal['asks'] = $arAsks;
         $arLocal['bids'] = $arBids;
+
+        array_shift($arLocal['asks']);
+        array_shift($arLocal['bids']);
     
         return $arLocal;
         //asks - сколько первой валюты нужно купить
