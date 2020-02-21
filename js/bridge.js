@@ -4,7 +4,7 @@
 // #bridgeCurrenciesList
 // #bridgeAmountTo
 // #bridgeSubmit
-const MIN_LLC_VAL = 55;
+const MIN_LLC_VAL = 850;
 const MAX_CNT_IN_DROP_DOWN = 12;
 
 // setTimeout(function() {
@@ -202,7 +202,7 @@ var Modal = (function(jq, d) {
                 } catch(ex) {}
 
                 dis();
-            }, 55);
+            }, 850);
             //**********************
 
             //init amount
