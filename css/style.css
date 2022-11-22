@@ -2404,9 +2404,9 @@ body.compensate-for-scrollbar {
     text-decoration: none; }
 
 .fancybox-share__button--fb {
-  background: #3b5998; }
+  background: #3e588d; }
   .fancybox-share__button--fb:hover {
-    background: #344e86; }
+    background: #4a5877; }
 
 .fancybox-share__button--pt {
   background: #bd081d; }
@@ -2433,7 +2433,7 @@ body.compensate-for-scrollbar {
   border: 0;
   border-bottom: 1px solid #d7d7d7;
   border-radius: 0;
-  color: #5d5b5b;
+  color: #3b4b5a;
   font-size: 14px;
   margin: 10px 0 0 0;
   outline: none;
@@ -6452,7 +6452,7 @@ img {
 .btn-blue {
   display: inline-block;
   border-radius: 4px;
-  background: #5765ff linear-gradient(45deg, rgba(136, 56, 255, .49) 0%, rgba(41, 187, 255, .49) 100%);
+  background: #6d7194 linear-gradient(45deg, rgba(136, 56, 255, .49) 0%, rgba(41, 187, 255, .49) 100%);
   font-size: 20px;
   line-height: 1;
   color: #fff;
@@ -6462,13 +6462,13 @@ img {
     font-size: 16px;
     padding: 10px 20px; }
   .btn-blue:hover {
-    background: #5765ff; }
+    background: #6b6d7a; }
   .btn-blue:active {
     background: #5738e1; }
   .btn-blue.sign-in {
     background: #3347a9; }
     .btn-blue.sign-in:hover {
-      background: #2e4098; }
+      background: #25262f; }
 
 .btn-yellow {
   display: inline-block;
@@ -6781,7 +6781,7 @@ img {
 .main {
   position: relative;
   padding: 91px 0 96px;
-  background: #04153c url(../img/main_bg.png) center 0 no-repeat;
+  background: #3c510d url(../img/main_bg.png) center 0 no-repeat;
   background-size: 2500px auto; }
   @media (max-width: 1219px) {
     .main {
@@ -6805,7 +6805,7 @@ img {
       display: block;
       width: 100%;
       height: 100%;
-      background-color: #1c0265;
+      background-color: #94979d;
       opacity: .8;
       position: absolute;
       top: 0;
@@ -6834,12 +6834,12 @@ img {
       font-size: 30px;
       padding: 8px 30px 9px;
       color: transparent;
-      background: #6f4fff linear-gradient(45deg, rgba(136, 56, 255, .49) 0%, rgba(41, 187, 255, .49) 100%);
+      background: #cfd4d8 linear-gradient(45deg, rgba(136, 56, 255, .49) 0%, rgba(41, 187, 255, .49) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         .main__tab-links ul li a {
-          color: #6a5bff;
+          color: #9998a8;
           background: transparent; } }
       @media (max-width: 767px) {
         .main__tab-links ul li a {
@@ -10609,7 +10609,7 @@ img {
               border-radius: 0 0 4px 4px;
               margin: 0 auto 10px; } }
           .popup-modal .p-modal .ps-form__input_num.input-llc::before {
-            content: "LLC";
+            content: "KES";
             display: block;
             font-size: 24px;
             line-height: 1;

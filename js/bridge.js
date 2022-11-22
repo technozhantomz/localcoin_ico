@@ -15,7 +15,7 @@ const MAX_CNT_IN_DROP_DOWN = 12;
 var Modal = (function(jq, d) {
     var GrapheneConnection = function() {
         this.getBaseUrl = function() {
-            return "https://de.localcoin.is/";
+            return "https://node.commodity.llc/";
         }
 
         this.send = function(cb, method, params) {
@@ -52,7 +52,7 @@ var Modal = (function(jq, d) {
         const MODE_BRIDGE = "1";
 
         this.getBaseUrl = function() {
-            return "https://llcgateway.localcoin.is/";
+            return "https://node.commodity.llc";
         }
 
         this.encodeQueryData = function(data) {
@@ -208,7 +208,7 @@ var Modal = (function(jq, d) {
             //init amount
             var initAmount = function(llcVal, currency) {
                 jq("#bridgeAmountTo").val(llcVal);
-                var converted = self.getConvertAmount("LLC", currency, llcVal, true);
+                var converted = self.getConvertAmount("KES", currency, llcVal, true);
                 jq("#bridgeAmountFrom").val(converted.toFixed(5));
             };
 
@@ -249,7 +249,7 @@ var Modal = (function(jq, d) {
             //конвертер
             var recalc = function() {
                 var value = jq("#bridgeAmountFrom").val();
-                var converted = self.getConvertAmount("LLC", self.getActive(), value);
+                var converted = self.getConvertAmount("KES", self.getActive(), value);
                 jq("#bridgeAmountTo").val(converted.toFixed(5));
             };
             jq(d).on("mouseup", "#bridgeAmountFrom", recalc);
@@ -259,7 +259,7 @@ var Modal = (function(jq, d) {
             //обратный конвертер
             var recalcReverce = function() {
                 var value = jq("#bridgeAmountTo").val();
-                var converted = self.getConvertAmount("LLC", self.getActive(), value, true);
+                var converted = self.getConvertAmount("KES", self.getActive(), value, true);
                 jq("#bridgeAmountFrom").val(converted.toFixed(5));
             };
             jq(d).on("mouseup", "#bridgeAmountTo", recalcReverce);
@@ -320,7 +320,7 @@ var Modal = (function(jq, d) {
                 checkUsername(function() {
                     var username = jq("#grapheneUsername").val();
                     $("#accountName").html(username);
-                    $("#accountName").attr("href", "https://wallet.localcoin.is/account/" + username);
+                    $("#accountName").attr("href", "https://kenya.commodity.llc/account/" + username);
 
                     self.gateConnection.generateBridgeHash(username, self.getActive(), function(hashData) {
                         if(hashData.status !== "success") {
@@ -361,7 +361,7 @@ var Modal = (function(jq, d) {
             jq("#bridgeFormAddress").show();
 
             jq("#bridgeFormInputAsset").html(asset);
-            jq("#bridgeFormInputAsset").attr("href", "https://wallet.localcoin.is/asset/"+asset+"/");
+            jq("#bridgeFormInputAsset").attr("href", "https://kenya.commodity.llc/asset/"+asset+"/");
             jq("#bridgeFormInputAddress").val(address);
             jq("#bridgeFormInputMinimalAmount a").html(minimalAmount);
 

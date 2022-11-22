@@ -16,22 +16,16 @@ TODO
 */
 
 //Конфиг
-$fixerKey = '3d412586b14709b75ef2cb90703cac8a';
+$fixerKey = '6d6455f945aa4eeba41f0981798b6af8';
 $CSVname = 'smartlist.csv';
 $arWitnessess = [
-    'adamgottie' => 'LLC8hVi9DP17ctdfTG8zPDNmLSWD6CYmKa9Sfj22edfA3ges9hBq9',
-    'winstonsmith' => 'LLC816R4zNkroH66rMXdrwcGUySEctRUVMj5XzAGSpmy7upoTPGBK',
-    'julia' => 'LLC7d9NC2zoPX7zpvS3XbrZba8vu7LxihVPxSwnuDohfUYVvgRLKy',
-    'obrien' => 'LLC8S3q6334wRthZRnR31cbUiJ1PfVESTvGT9uCkjud9pFFYRpB5E',
-    'aaronson' => 'LLC5SV5jZKp6pLv1MFdtyo5edLfaRvg3uCR1m3r8tVtMbBDFPwoQA',
-    'ampleforth' => 'LLC8ZJTY1YRbkjFxmv5EzvAHwgDifDkGiuYYCbyYede89jw25abW8',
-    'charrington' => 'LLC7VmmoqLA9zMW6mzMSuV8TCQ7C1jGFsnDrEx5HUvBuqWqRjs7P5'                            
+    'dennis' => 'KES8hVi9DP17ctdfTG8zPDNmLSWD6CYmKa9Sfj22edfA3ges9hBq9'                          
 ];
 $walletPass = 'KarvrEHcP6';
 
 function sendCurl(string $method, $arParams = [''], $ignoreErr = true) {
 
-    $curl = curl_init("http://localhost:8091/"); //подключаемся к локальному кошельку
+    $curl = curl_init("https://node.commodity.llc"); //подключаемся к локальному кошельку
 
     $data = [
         "jsonrpc" => "2.0", 
@@ -76,7 +70,7 @@ function getExRates() { //Получаем массив рейтов по каж
 
     global $fixerKey, $CSVname;
 
-    $curl = curl_init("https://data.fixer.io/api/latest?access_key=" . $fixerKey . "&base=USD"); //Забираем курсы с fixer
+    $curl = curl_init("https://data.fixer.io/api/latest?access_key=" . $fixerKey . "&base=EUR"); //Забираем курсы с fixer
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);//забираем ответ в теле
 
     $result = curl_exec($curl);

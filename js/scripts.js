@@ -596,8 +596,8 @@ if ($("#chart").length) {
 				progressBarWidth = airDropped / 10000000 * 100;
 
 		$('.air-drop__chart-label span').html(airDroppedStr + ' ');
-		$('.air-drop__progress .s-left, .air-drop__progress .s-black').html(airDroppedStr + ' LLC AirDropped');
-		$('.air-drop__progress .s-right').html(dataLastAmountStr + ' LLC left');
+		$('.air-drop__progress .s-left, .air-drop__progress .s-black').html(airDroppedStr + ' KES AirDropped');
+		$('.air-drop__progress .s-right').html(dataLastAmountStr + ' KES left');
 		$('.air-drop__progress-bar').width(progressBarWidth + '%');
 
 	}

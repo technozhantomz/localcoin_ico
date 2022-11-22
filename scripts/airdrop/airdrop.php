@@ -98,7 +98,7 @@ function startAirdrop() {
     $i = 1;
     foreach($arDataCsv as $value) {
         $curl_data = [
-            'localcoin-bounty',
+            'dennis',
             $value[0],
             $value[1],
             '1.3.0',
